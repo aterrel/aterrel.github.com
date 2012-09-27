@@ -130,60 +130,59 @@ A.R. Terrel, __<a href="{{ root_url }}/vita/papers_and_talk/TopOptFEM__SIAM__200
 
 ## Research Experience
 
-__Research Associate__, Texas Advanced Computing Center, University of Texas at Austin, November 2011 - present. 
+#### __Research Associate__, Texas Advanced Computing Center, University of Texas at Austin, November 2011 - present. 
  
 
-__Postdoctoral Fellow__, Texas Advanced Computing Center, University of Texas at Austin, April 2010 - April 2011. 
-Researched automation of scientific simulations with the FLAME project with
-Victor Eijkhout and Robert van de Geijn.
+#### __Postdoctoral Fellow__, Texas Advanced Computing Center, University of Texas at Austin, April 2010 - April 2011. 
+
+Researched automation of scientific simulations with the FLAME project with Victor Eijkhout and Robert van de Geijn.
   
 
-__Research Assistant__ in Computer Science Department of University of Chicago, September 2004 - 2010. 
+#### __Research Assistant__ in Computer Science Department of University of Chicago, September 2004 - 2010. 
 Researched optimization and evaluation of finite element methods.
   
 
-__Givens Fellowship__, Argonne National Lab, Mathematics and Computer Science Division, Summer 2009. 
+####__Givens Fellowship__, Argonne National Lab, Mathematics and Computer Science Division, Summer 2009. 
 With Dmitry Karpeev and Matthew G. Knepley, researched integral operator compression using wavelet basis.
   
 
-__Visiting Research Assistant__, Delft Technical University, Delft, The Netherlands, Jun-Dec 2008.  
+####__Visiting Research Assistant__, Delft Technical University, Delft, The Netherlands, Jun-Dec 2008.  
 With Garth N. Wells, researched algorithms for non-Newtonian fluids.  
 
-__Internship__, Sandia National Labs, Computer Science and Mathematics Division, Livermore, CA, Summer 2006. 
+####__Internship__, Sandia National Labs, Computer Science and Mathematics Division, Livermore, CA, Summer 2006. 
 With Kevin Long, researched PDE constrained optimization methods with level set
 functions for topology optimizations and contributed to the Sundance software package.
   
-
-__Research Assistant__ in Physics Department of Texas Tech University, August 2001- May 2004. 
+####__Research Assistant__ in Physics Department of Texas Tech University, August 2001- May 2004. 
 With Beth Ann Thacker, I researched physics education developing cognitive models based on physics teaching.
 
 
 ## Teaching Experience
 
 
-__Teaching Certificate in University Teaching__, Center for Teaching and Learning, University of Chicago, 2010.
+#### __Teaching Certificate in University Teaching__, Center for Teaching and Learning, University of Chicago, 2010.
   
 
-__Lecturer__, World Wide Web Programming: Java and SQL, Computer Science Department, University of Chicago, Spring 2009.
+#### __Lecturer__, World Wide Web Programming: Java and SQL, Computer Science Department, University of Chicago, Spring 2009.
 
 * Prepared curriculum and materials, 
 * Lectured 3 hours a week, and 
 * Oversaw teaching assistants for grading and lab section. 
 
 
-__Lab Assistant__, Honors introductory computer science, Computer Science Department, University of Chicago, Autumn 2006 and 2007.
+#### __Lab Assistant__, Honors introductory computer science, Computer Science Department, University of Chicago, Autumn 2006 and 2007.
 
 * Prepared lab based on corresponding lecture material, and 
 * Taught 2 hour weekly lab. 
 
 
-__Discussion Leader__, Honors College, Texas Tech University, Autumn 2003 and 2004.
+#### __Discussion Leader__, Honors College, Texas Tech University, Autumn 2003 and 2004.
 
 * Helped develop new first year experience program, and 
 * Taught weekly 2 hour philosophy and humanities discussion sections. 
 
 
-__Physics Education Research/Teaching Assistant__, Physics Department, Texas Tech University, 2002 – 2004.
+#### __Physics Education Research/Teaching Assistant__, Physics Department, Texas Tech University, 2002 – 2004.
 
 * Developed peer-learning projects for non-major physics class, 
 * Graded assignments, and 
@@ -193,27 +192,27 @@ __Physics Education Research/Teaching Assistant__, Physics Department, Texas Tec
 
 ## Industry Experience
 
-### __Scientific Software Developer__, Enthought Inc., 2011.  
+#### __Scientific Software Developer__, Enthought Inc., 2011.  
 
 * Worked as a consultant for Wall Street client speeding up data intensive apps by over 100X, 
 * Contributed to open source interactive plotting software, and 
 * Built relationships with scientific clients and authored research proposals. 
   
 
-### __System Administrator__, Computer Science Department, University of  Chicago, Chicago, IL, 2007--2009.
+#### __System Administrator__, Computer Science Department, University of  Chicago, Chicago, IL, 2007--2009.
 
 * Provided general maintenance on 200+ servers (Debian Linux/GNU, OpenBSD, and Solaris), 
 * Migrated various services such as Apache webserver, MySQL databases, and Amanda backup system from legacy hardware, and 
 * Supported custom systems scripts in Python, Perl, and Bash. 
   
 
-### __Teaching Assistant__, Computer Science Department, University of Chicago, Chicago, IL.
+#### __Teaching Assistant__, Computer Science Department, University of Chicago, Chicago, IL.
 
 * Taught non-majors introduction to Java and SQL, Spring 2009, and 
 * Taught honors introductory computer science lab (using Scheme), Autumn  2006 and Autumn 2007. 
   
 
-###  __Technical Consultant__, Kove Corporation, Chicago, IL, Feb 2007--Jul 2008. 
+####  __Technical Consultant__, Kove Corporation, Chicago, IL, Feb 2007--Jul 2008. 
 
 First stage start-up company developing a network storage appliance.
   
@@ -258,11 +257,9 @@ __<a href="http://andy.terrel.us/ignition">Ignition</a> author__: a collection o
 __<a href="http://www.fenicsproject.org">FEniCS</a> contributor__: a collection of free software projects that uses finite element methods to
 automate computational mathematical modeling.
 
-* Principal author of <a href="https://launchpad.net/rheagen">Rheology
- Application Engine (rheagen)</a>, an automated non-Newtonian fluid model
- simulation engine, 
- * Manager of the FEniCS-Apps repositories, and 
- * Contributed to the DOLFIN, FIAT, and FERRARI subprojects. 
+* Principal author of <a href="https://launchpad.net/rheagen">Rheology Application Engine (rheagen)</a>, an automated non-Newtonian fluid model simulation engine, 
+* Manager of the FEniCS-Apps repositories, and 
+* Contributed to the DOLFIN, FIAT, and FERRARI subprojects. 
 
   
 
