@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Codematician]]></title>
-  <link href="http://aterrel.github.com/atom.xml" rel="self"/>
-  <link href="http://aterrel.github.com/"/>
-  <updated>2012-09-27T17:01:38-05:00</updated>
-  <id>http://aterrel.github.com/</id>
+  <link href="http://andy.terrel.us/atom.xml" rel="self"/>
+  <link href="http://andy.terrel.us/"/>
+  <updated>2012-09-27T17:10:30-05:00</updated>
+  <id>http://andy.terrel.us/</id>
   <author>
     <name><![CDATA[Andy R. Terrel]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Getting started with Python in HPC]]></title>
-    <link href="http://aterrel.github.com/blog/2012/09/27/starting-with-python/"/>
+    <link href="http://andy.terrel.us/blog/2012/09/27/starting-with-python/"/>
     <updated>2012-09-27T15:57:00-05:00</updated>
-    <id>http://aterrel.github.com/blog/2012/09/27/starting-with-python</id>
+    <id>http://andy.terrel.us/blog/2012/09/27/starting-with-python</id>
     <content type="html"><![CDATA[<p>Getting to know Python is a pretty hairy task, as diving into any language.  Fortunately Python is considered an easy language to learn and the potential for using it in HPC settings is pretty large.  Below I give an introduction to learning, speeding python, and scaling python.  Each topic can be the subject of its own book, so take these talking points and notes as only hints to what one can look at.  For a very detailed view of this topic for scientists I recommend the following three books:</p>
 
 <ul>
