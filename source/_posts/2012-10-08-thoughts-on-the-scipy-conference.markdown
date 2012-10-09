@@ -82,7 +82,7 @@ the consensus into action.
 
 #### Topics
 
-The past two years, there has been two special topics.  Last year was Big Data
+The past two years, there have been two special topics.  Last year was Big Data
 and Core Issues; this year we did High Performance Computing and Visualization.
 The truth was that we picked these topics because a few motivated folks were
 excited about them.  This is true about the domain session this year as well.
@@ -96,8 +96,10 @@ are really important as they are aimed at bringing in people from outside our
 community.
 
 With that said, my proposal this year would be:
+
 * Machine Learning, and
 * Geographic Information Systems
+
 Both topics that came out during the surveys and are a broad cutting
 technologies.  Machine Learning should be a no-brainer as the Big Data world
 needs it more than ever, but GIS is a bit harder for me to predict being a
@@ -110,7 +112,7 @@ Conference pyHPC workshop).
 
 This year I believe the plenaries were really off the chart.  I was actually
 recruited to help out after the plenaries had already been chosen, so this was
-really Stephan and Warren's doing.  I really like the format as well. A talk
+really Stéfan and Warren's doing.  I really like the format as well. A talk
 about a well-known package, a science talk about the things people are able to
 accomplish with the tools, and a look into industry and how our community
 relates.
@@ -172,7 +174,7 @@ appropriate web presence to give volunteers things to do.
 Matt Davis brought this up on Twitter, but I want to echo it louder.  There was
 a discouraging lack of diversity at SciPy.  I believe there were 100 males to
 every female and very few minorities.  When talking to a few people about this,
-the general view was that there just aren't woman coders around.  I think this is
+the general view was that there just aren't women coders around.  I think this is
 really wrong, I think that women coders either don't know about SciPy or don't
 care.
 
@@ -222,6 +224,7 @@ codes (in fact today scipy.users had a long conversation about the scipy domain 
 was hotly discussed at the sprints).
 
 The few ideas I have on bringing the coders back include:
+
 1. More sprinting (space every night *all night*)
 2. Sessions dedicated to core projects
 3. More organization around BoFs
@@ -239,7 +242,7 @@ really have, but they are the ones I feel probably need a broader discussion.
 
 For me the vision of SciPy should be simple.  SciPy is the fuel of the
 scientific Python movement.  It is where producers and consumers of
-science and technical code come to learn from each other and make each other
+scientific and technical code come to learn from each other and make each other
 better scientists and coders.  SciPy as a conference should be inclusive of all
 technical disciplines and help mentor novice programmers. Finally, it should be
 the place where we inject new life into our projects, hack the wild ideas we
