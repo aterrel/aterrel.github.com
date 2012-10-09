@@ -2,18 +2,22 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://andy.terrel.us/blog/2012/09/27/starting-with-python/</loc>
-        <lastmod>2012-09-27T16:03:30-05:00</lastmod>
+        <lastmod>2012-09-30T18:03:53-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://andy.terrel.us/blog/2012/10/08/thoughts-on-the-scipy-conference/</loc>
+        <lastmod>2012-10-08T21:30:48-05:00</lastmod>
     </url>
     <url>
         <loc>http://andy.terrel.us/blog/archives/</loc>
-        <lastmod>2012-09-27T16:03:30-05:00</lastmod>
+        <lastmod>2012-10-08T21:30:48-05:00</lastmod>
     </url>
     <url>
         <loc>http://andy.terrel.us/</loc>
-        <lastmod>2012-09-27T16:03:30-05:00</lastmod>
+        <lastmod>2012-10-08T21:30:48-05:00</lastmod>
     </url>
     <url>
         <loc>http://andy.terrel.us/vita/</loc>
-        <lastmod>2012-09-27T17:01:37-05:00</lastmod>
+        <lastmod>2012-09-30T17:34:43-05:00</lastmod>
     </url>
 </urlset>
