@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "Python Packaging"
-date: 2012-10-25 14:42
+date: 2012-10-28 20:08
 comments: true
 categories: Packaging
 ---
 
 There are two major hurdles to Python disrupting the entire HPC work stack:
-packaging and dynamic loading. Today I want to discuss the packaging issue.
+packaging and [dynamic loading](http://pyvideo.org/video/1201/solving-the-import-problem-scalable-dynamic-load). Today I want to discuss the packaging issue.
 While there are many people working on these hurdles, it is my opinion that the
 community needs to seek out methods to solve these hurdles together in a
 satisfactory way. I see this problem taking shape in many different
@@ -15,14 +15,15 @@ communities, but the HPC version of the problem is probably the most difficult,
 thus by solving it, we can provide solutions for many other communities as well.
 
 To this end, I helped host a conference call among the young, enthusiastic
-NumFOCUS community.  This call seemed much more of a get to know the problem
-rather than a listing of solutions.  We are working on editting the call and
-hope to have it published as a InSCIght podcast soon.  The call included
-several companies that produces packaged Python solutions, university folks
-from around the globe, and industrial users of Python.  The interest in the
-call was so great that we had to switch mediums at the last moment and lost out
-on some interactions with other great folks.  I hope to have another call in
-the future and a discussion at the upcoming SuperComputing 2013 conference.
+[NumFOCUS](http://numfocus.org/) community.  This call seemed much more of a
+get to know the problem rather than a listing of solutions.  We are working on
+editting the call and hope to have it published as a
+[InSCIght](http://www.inscight.org) podcast soon.  The call included several
+companies that produces packaged Python solutions, university folks from around
+the globe, and industrial users of Python.  The interest in the call was so
+great that we had to switch mediums at the last moment and lost out on some
+interactions with other great folks.  I hope to have another call in the future
+and a discussion at the upcoming [SuperComputing 2013 conference](http://sc12.supercomputing.org/schedule/event_detail.php?evid=bof154).
 
 ## What is wrong with Python Packaging
 
@@ -56,11 +57,12 @@ the right Trilinos configure was NP-Hard. It is much better today. In both cases
 though, CMake has turned out to be the tool that has stabilized everything.
 
 Why can't Python support this jumble of dependencies?  The reasons are many,
-but as David Carnepeau has pointed out, Python fundamentally mixes both build
-and packaging together in a way that makes it impossibly hard.  I don't know
-David's history, but he seems pretty critical of the community about not
-understanding the issue.  Rather than rehash all the arguments, I'm going to
-outline my view of the solution, separating build and packaging.
+but as [David Cournapeau](https://twitter.com/cournape) has pointed out, Python
+fundamentally mixes both build and packaging together in a way that makes it
+impossibly hard.  I don't know David's history, but he seems pretty critical of
+the community about not understanding the issue.  Rather than rehash all the
+arguments, I'm going to outline my view of the solution, separating build and
+packaging.
 
 ## The build process
 
@@ -69,20 +71,20 @@ configuring the environment and compiler flags to produce the desired binary.
 
 To give a simple example, if you are compiling a threaded library, say using
 OpenMP, you need to know that gcc uses -fopenmp, icc uses -openmp, pgi
--xopenmp, something else on xl, and clang doesn't even support it.  Thank you
+-mp, something else on xl, and clang doesn't even support it.  Thank you
 Apple for making my job that much harder by using a default compiler that
 doesn't support OpenMP.  
 
 Okay that's actually not hard to code, but it gets better.  Because multicore
 threading is still an infant technology, if you compose several threaded
-libraries you can see a real performance degradation (despite @dbeaz thinking
-threading is easy). Thus most vendors provide a threaded version of BLAS and a
-sequential version, the idea being if you have a big matrix to work with make
-BLAS be the multithreaded portion of the code, but if you have lots of smaller
-matrices let the application be multithreaded.  This means that each
-application could be built with 4 compilers X 2 BLAS threading modes, we also
-need to throw in debugging and optimized modes as yes -O3 versus -g -O0 really
-do matter.
+libraries you can see a real performance degradation (despite
+[@dbeaz](https://twitter.com/dabeaz) thinking threading is easy). Thus most
+vendors provide a threaded version of BLAS and a sequential version, the idea
+being if you have a big matrix to work with make BLAS be the multithreaded
+portion of the code, but if you have lots of smaller matrices let the
+application be multithreaded.  This means that each application could be built
+with 4 compilers X 2 BLAS threading modes, we also need to throw in debugging
+and optimized modes as yes -O3 versus -g -O0 really do matter.
 
 In this trivial example, we already need to test 16 different builds of a
 library, not to mention figuring out how many threads to run (which is often a
@@ -103,11 +105,12 @@ To tackle all these burdens, we need to start using real configure and build
 tools.  They need to work on all platforms, yes Windows matters in HPC. They
 need to be free and open source. And they actually already exist, the community
 just needs to start adopting them and that will take some effort.  The two
-tools I've seen used well are Bento produced by David and CMake produced by
-Kitware.  I'm not going to have a bake-off on the pros and cons of each, I have
-far more experience with CMake but people I trust tell me Bento is far easier
-to use. If NumFOCUS and the PSF really wants to help the community today, it
-would start helping people augment distutils to use one of these tools.
+tools I've seen used well are [Bento](http://cournape.github.com/Bento/)
+produced by David and [CMake](http://www.cmake.org/) produced by Kitware.  I'm
+not going to have a bake-off on the pros and cons of each, I have far more
+experience with CMake but people I trust tell me Bento is far easier to use. If
+NumFOCUS and the PSF really wants to help the community today, it would start
+helping people augment distutils to use one of these tools.
 
 ## The package selection process
 
@@ -125,13 +128,16 @@ system installer than fixing the bug.
 The truth of the matter is we really want the jumbled mess to be managed better
 too.  Just like on my supercomputer, I can issue a single command and have a
 whole new compiler stack working, why can't I do that with my current
-development tree.  Here enters HashDist.  HashDist is Dag and Ondrej's plan for
-fixing this problem.  The idea is to build libraries and stash them some place,
-recording the necessary details in a small distribution file that is hashed and
-put in a database store.  Now when you need to build different versions of a library,
-one can simply refer to the different hashes of the other built libraries. At
-this point, HashDist is vaporware that has some funding.  I have been working
-with these guys trying to fund this project for about a year and a half. 
+development tree.  Here enters
+[HashDist](https://github.com/hashdist/hashdist/wiki).  HashDist is
+[Dag](http://folk.uio.no/dagss/) and [Ondrej's](http://ondrejcertik.com/) plan
+for fixing this problem.  The idea is to build libraries and stash them some
+place, recording the necessary details in a small distribution file that is
+hashed and put in a database store.  Now when you need to build different
+versions of a library, one can simply refer to the different hashes of the
+other built libraries. At this point, HashDist is vaporware that has some
+funding.  I have been working with these guys trying to fund this project for
+about a year and a half.
 
 Let me be frank.  If this tool existed, reporting bugs could come with a
 hashdist number that would set your machine up in the bug state immediately,
