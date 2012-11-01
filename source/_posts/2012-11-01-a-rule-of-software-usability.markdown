@@ -45,7 +45,7 @@ When the performance guru tells you speed is more important, ask them why they
 don't make their users write in assembly, why BLAS doesn't require you to pack
 your own matrices, and why the CMS doesn't make you connect to your own
 sockets. To discourage performance hacks give the programmer five lashes as
-these hacks are the enemy of abstraction, which can be useful. If they
+these hacks are the enemy of abstraction, which can be useful. If the
 programmer persist in their hacks, let them continue as clearly the speed is
 useful.
 
