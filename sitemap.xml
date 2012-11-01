@@ -1,27 +1,31 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
+        <loc>http://andy.terrel.us/blog/2012/01/01/a-rule-of-software-usability/</loc>
+        <lastmod>2012-11-01T10:00:27-05:00</lastmod>
+    </url>
+    <url>
         <loc>http://andy.terrel.us/blog/2012/09/27/starting-with-python/</loc>
-        <lastmod>2012-09-30T19:03:53-04:00</lastmod>
+        <lastmod>2012-09-30T18:03:53-05:00</lastmod>
     </url>
     <url>
         <loc>http://andy.terrel.us/blog/2012/10/08/thoughts-on-the-scipy-conference/</loc>
-        <lastmod>2012-10-09T00:17:35-04:00</lastmod>
+        <lastmod>2012-10-08T23:17:35-05:00</lastmod>
     </url>
     <url>
         <loc>http://andy.terrel.us/blog/2012/10/28/python-packaging/</loc>
-        <lastmod>2012-10-28T20:58:59-04:00</lastmod>
+        <lastmod>2012-10-28T19:58:59-05:00</lastmod>
     </url>
     <url>
         <loc>http://andy.terrel.us/blog/archives/</loc>
-        <lastmod>2012-10-28T20:58:59-04:00</lastmod>
+        <lastmod>2012-11-01T10:00:27-05:00</lastmod>
     </url>
     <url>
         <loc>http://andy.terrel.us/</loc>
-        <lastmod>2012-10-28T20:58:59-04:00</lastmod>
+        <lastmod>2012-11-01T10:00:27-05:00</lastmod>
     </url>
     <url>
         <loc>http://andy.terrel.us/vita/</loc>
-        <lastmod>2012-09-30T18:34:43-04:00</lastmod>
+        <lastmod>2012-09-30T17:34:43-05:00</lastmod>
     </url>
 </urlset>
