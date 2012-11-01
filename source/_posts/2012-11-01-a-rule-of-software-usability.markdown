@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A Rule of Software: Usabilty"
-date: 2012-01-01 10:00
+date: 2012-11-01 10:00
 comments: true
 categories: Software
 ---
