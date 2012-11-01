@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Software | Codematician]]></title>
   <link href="http://andy.terrel.us/blog/categories/software/atom.xml" rel="self"/>
   <link href="http://andy.terrel.us/"/>
-  <updated>2012-11-01T10:02:07-05:00</updated>
+  <updated>2012-11-01T10:05:28-05:00</updated>
   <id>http://andy.terrel.us/</id>
   <author>
     <name><![CDATA[Andy R. Terrel]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[A Rule of Software: Usabilty]]></title>
-    <link href="http://andy.terrel.us/blog/2012/01/01/a-rule-of-software-usability/"/>
-    <updated>2012-01-01T10:00:00-06:00</updated>
-    <id>http://andy.terrel.us/blog/2012/01/01/a-rule-of-software-usability</id>
+    <link href="http://andy.terrel.us/blog/2012/11/01/a-rule-of-software-usability/"/>
+    <updated>2012-11-01T10:00:00-05:00</updated>
+    <id>http://andy.terrel.us/blog/2012/11/01/a-rule-of-software-usability</id>
     <content type="html"><![CDATA[<p>Make your software useful.  That is the point without usefulness there is no
 need for existence.</p>
 

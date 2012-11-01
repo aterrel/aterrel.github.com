@@ -1,10 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://andy.terrel.us/blog/2012/01/01/a-rule-of-software-usability/</loc>
-        <lastmod>2012-11-01T10:00:27-05:00</lastmod>
-    </url>
-    <url>
         <loc>http://andy.terrel.us/blog/2012/09/27/starting-with-python/</loc>
         <lastmod>2012-09-30T18:03:53-05:00</lastmod>
     </url>
@@ -17,12 +13,16 @@
         <lastmod>2012-10-28T19:58:59-05:00</lastmod>
     </url>
     <url>
+        <loc>http://andy.terrel.us/blog/2012/11/01/a-rule-of-software-usability/</loc>
+        <lastmod>2012-11-01T10:03:39-05:00</lastmod>
+    </url>
+    <url>
         <loc>http://andy.terrel.us/blog/archives/</loc>
-        <lastmod>2012-11-01T10:00:27-05:00</lastmod>
+        <lastmod>2012-11-01T10:03:39-05:00</lastmod>
     </url>
     <url>
         <loc>http://andy.terrel.us/</loc>
-        <lastmod>2012-11-01T10:00:27-05:00</lastmod>
+        <lastmod>2012-11-01T10:03:39-05:00</lastmod>
     </url>
     <url>
         <loc>http://andy.terrel.us/vita/</loc>
