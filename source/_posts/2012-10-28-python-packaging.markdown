@@ -23,7 +23,7 @@ companies that produces packaged Python solutions, university folks from around
 the globe, and industrial users of Python.  The interest in the call was so
 great that we had to switch mediums at the last moment and lost out on some
 interactions with other great folks.  I hope to have another call in the future
-and a discussion at the upcoming [SuperComputing 2013 conference](http://sc12.supercomputing.org/schedule/event_detail.php?evid=bof154).
+and a discussion at the upcoming [SuperComputing 2012 conference](http://sc12.supercomputing.org/schedule/event_detail.php?evid=bof154).
 
 ## What is wrong with Python Packaging
 
