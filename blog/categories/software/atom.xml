@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Software | Codematician]]></title>
   <link href="http://andy.terrel.us/blog/categories/software/atom.xml" rel="self"/>
   <link href="http://andy.terrel.us/"/>
-  <updated>2012-11-01T10:05:28-05:00</updated>
+  <updated>2012-11-01T10:11:57-05:00</updated>
   <id>http://andy.terrel.us/</id>
   <author>
     <name><![CDATA[Andy R. Terrel]]></name>
@@ -26,13 +26,13 @@ as not to offend the blessed pixels. Do not fear throwing away non-useful parts
 of your code, better to cast away these parts rather than sacrifice the
 usefulness of the whole.</p>
 
-<p>If is useful to repeat yourself, do so.  Repeating yourself in subtly different
-ways teaches your novices, which must be done well. If there is a common
-pattern for your task use it, until it is not useful anymore. Write your tests
-as soon as they will be useful, tests are always useful before giving your code
-to others. Separate your code into useful partitions. If the partitions are
-too big or too small the usefulness will be clouded as it is difficult to track
-the function and interplay between the partitions.</p>
+<p>If it is useful to repeat yourself, do so.  Repeating yourself in subtly
+different ways teaches your novices, which must be done well. If there is a
+common pattern for your task use it, until it is not useful anymore. Write your
+tests as soon as they will be useful, tests are always useful before giving
+your code to others. Separate your code into useful partitions. If the
+partitions are too big or too small the usefulness will be clouded as it is
+difficult to track the function and interplay between the partitions.</p>
 
 <p>When the program is done, let it stand on its usefulness.  If others do not
 find it useful, seek out more to judge your craft. If none count themselves
