@@ -40,23 +40,23 @@ Slicing and dicing Riemann solvers for next generation highly parallel architect
 
 A.R. Terrel, R.C. Kirby, M.G. Knepley, L.R. Scott, and G.N. Wells,
 __Finite elements for incompressible fluids__, in A. Logg, K.A. Mardal,
-and G. N. Wells, editors. <i>Automated solutions of differential
-equations by the finite element mehod</i>. Springer-Verlag. Lecture
+and G. N. Wells, editors. <i><a href="http://fenicsproject.org/book/">Automated solutions of differential
+equations by the finite element mehod</a></i>. Springer-Verlag. Lecture
 Notes in Computational Science and Engineering, Vol 84, 2011.
 
 
 R.C. Kirby, A. Logg, and A.R. Terrel, __Common and unusual finite
 elements__, in A. Logg, K.A. Mardal, and G. N. Wells,
-editors. <i>Automated solutions of differential equations by the
-finite element mehod</i>.  Springer-Verlag. Lecture Notes in
+editors. <i><a href="http://fenicsproject.org/book/">Automated solutions of differential equations by the
+finite element mehod</a></i>.  Springer-Verlag. Lecture Notes in
 Computational Science and Engineering, Vol 84, 2011.
 
 
 R.C. Kirby, M.G. Knepley, A. Logg, L.R. Scott, and A.R. Terrel,
 __Discrete optimization of finite element matrix evaluation__, in
-A. Logg, K.A. Mardal, and G. N. Wells, editors. <i>Automated solutions
+A. Logg, K.A. Mardal, and G. N. Wells, editors. <i><a href="http://fenicsproject.org/book/">Automated solutions
 of differential equations by the finite element
-mehod</i>. Springer-Verlag. Lecture Notes in Computational Science and
+mehod</a></i>. Springer-Verlag. Lecture Notes in Computational Science and
 Engineering, Vol 84, 2011.
 
 
@@ -91,9 +91,6 @@ A.R. Terrel, and B. Thacker, __<a href="http://arxiv.org/abs/0707.3106">"A Globa
 
 A.R. Terrel and T. Oliphant, __"Python beyond the CPU"__, PyCon2013, Tutorial, Santa Clara,
 March 2013.
-
-A.R. Terrel, __"Introduction to JIT Compiling and Code Generation in Scientific
-Computing"__, SIAM Computational Science and Engineering 2013, Boston, Feb 2013.
 
 A.R. Terrel, __"Introduction to JIT Compiling and Code Generation in Scientific
 Computing"__, SIAM Computational Science and Engineering 2013, Boston, Feb 2013.
@@ -188,12 +185,12 @@ With Beth Ann Thacker, I researched physics education developing cognitive model
 
 ## Teaching Experience
 
-#### __Lecturer__, Scientific and Technical Computing__, Division of Statistics and Scientific Computation, Universtity of Texas at Austin, Spring 2013
+#### __Lecturer__, Scientific and Technical Computing, Division of Statistics and Scientific Computation, Universtity of Texas at Austin, Spring 2013
 
 * Developed material and lectured
 * <a href="https://bitbucket.org/aterrel/ssc335-394-spring2013">public repository</a>
 
-#### __Lecturer__, Scientific Computing with GPUs__, Division of Statistics and Scientific Computation, Universtity of Texas at Austin, Summer 2012
+#### __Lecturer__, Scientific Computing with GPUs, Division of Statistics and Scientific Computation, Universtity of Texas at Austin, Summer 2012
 
 * Developed material and lectured
 * <a href="https://bitbucket.org/aterrel/2012summerssc395">public repository</a>
@@ -250,13 +247,6 @@ With Beth Ann Thacker, I researched physics education developing cognitive model
 * Migrated various services such as Apache webserver, MySQL databases, and Amanda backup system from legacy hardware, and
 * Supported custom systems scripts in Python, Perl, and Bash.
 
-
-#### __Teaching Assistant__, Computer Science Department, University of Chicago, Chicago, IL.
-
-* Taught non-majors introduction to Java and SQL, Spring 2009, and
-* Taught honors introductory computer science lab (using Scheme), Autumn  2006 and Autumn 2007.
-
-
 ####  __Technical Consultant__, Kove Corporation, Chicago, IL, Feb 2007--Jul 2008.
 
 First stage start-up company developing a network storage appliance.
@@ -271,14 +261,17 @@ First stage start-up company developing a network storage appliance.
 
 ## Service
 
-__Co-Chair__ SciPy 2013 Conference
-__Organizer__ Scientific Software Days Workshop
-__Program Chair__ SciPy 2012 Conference
-__Organizer__ Supercomputing conference 2011, Birds of a Feather, Python in HPC
-__Program Committee__ Supercomputing conference 2011, Python in HPC workshop
-__Organizer__ of FEniCS 2011 Conference.
-__Participant__ of Austin GiveCamp 2011.
-__Mentor__ for Google Summer of Code, Summer 2009 and 2010.
+__Board Member__ [NumFOCUS Foundation](http://numfocus.org)  
+__Co-Chair__ [SciPy 2013 Conference](http://conference.scipy.org/scipy2013/)  
+__Organizer__ [Scientific Software Days Workshop](http://scisoftdays.org/meetings/2012/)  
+__Organizer__ [Supercomputing conference 2012, Birds of a Feather, Python in HPC](http://sc12.supercomputing.org/schedule/event_detail.php?evid=bof154)  
+__Program Committee__ Supercomputing conference 2012, Python in HPC workshop  
+__Program Chair__ [SciPy 2012 Conference](http://conference.scipy.org/scipy2012)  
+__Organizer__ [Supercomputing conference 2011, Birds of a Feather, Python in HPC](http://sc11.supercomputing.org/schedule/event_detail.php?evid=bof115)  
+__Program Committee__ Supercomputing conference 2011, Python in HPC workshop  
+__Organizer__ of FEniCS 2011 Conference.  
+__Participant__ of Austin GiveCamp 2011.  
+__Mentor__ for Google Summer of Code, Summer 2009 and 2010.  
 __Reviewer__ for
 
   * Scientific Computing,
@@ -290,8 +283,9 @@ __Reviewer__ for
   * Transactions on Mathematical Software.
 
 
-__Session aide__, AAAS Annual meeting, Chicago, IL, January 2009.
-__Session chair__, SIAM Conference on Parallel Processing for Scientific Computing, Atlanta, GA, February 2008.
+__Session aide__, AAAS Annual meeting, Chicago, IL, January 2009.  
+__Session chair__, SIAM Conference on Parallel Processing for Scientific
+Computing, Atlanta, GA, February 2008.  
 
 
 ##<a name="public__software"></a>PUBLIC SOFTWARE
