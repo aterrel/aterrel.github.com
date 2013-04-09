@@ -7,10 +7,7 @@ footer: true
 
 ## Contact
 
-Texas Advanced Computing Center, University of Texas at Austin
-
-Research Office Complex 1.101, J.J. Pickle Research Campus, Building 196
-10100 Burnet Road (R8700), Austin, Texas 78758-4497
+Institute for Computing in Engineering and Science, University of Texas at Austin
 email: [andy.terrel@gmail.com](mailto:andy.terrel@gmail.com),  web: [http://andy.terrel.us/](http://andy.terrel.us/)
 
 ## Education
@@ -153,8 +150,9 @@ A.R. Terrel, __<a href="{{ root_url }}/vita/papers_and_talks/TopOptFEM_SIAM_2005
 
 ## Research Experience
 
-#### __Research Associate__, Texas Advanced Computing Center, University of Texas at Austin, November 2011 - present.
+#### __Research Associate__, Institute for Computational Engineering and Sciences, University of Texas at Austin, March 2013 - present.
 
+#### __Research Associate__, Texas Advanced Computing Center, University of Texas at Austin, November 2011 - March 2013.
 
 #### __Postdoctoral Fellow__, Texas Advanced Computing Center, University of Texas at Austin, April 2010 - April 2011.
 
@@ -228,6 +226,8 @@ With Beth Ann Thacker, I researched physics education developing cognitive model
 
 
 ## Industry Experience
+
+#### __HPC Advisor__, Continuum Analytics, 2012 -- present.
 
 #### __Scientific Software Developer__, Enthought Inc., 2011.
 
