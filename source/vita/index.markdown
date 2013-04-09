@@ -27,11 +27,11 @@ __B.A. in Philosophy__, cum laude, honors, May 2004, Texas Tech University, Lubb
 
 ## Publications
 
+M.G. Knepley and A.R. Terrel, __<a href="http://arxiv.org/abs/1103.0066">Finite Element Integration on GPUs</a>__, ACM
+Transactions on Mathematical Software, Volume 39, Number 2, 2013.
+
 A.R. Terrel and K. T. Mandli, __<a href="{{ root_url }}/vita/papers_and_talks/tacc-intel2012.pdf">ManyClaw:
 Slicing and dicing Riemann solvers for next generation highly parallel architectures</a>__, TACC-Intel Symposium on Highly Parallel Architectures. 2012.
-
-
-M.G. Knepley and A.R. Terrel, __"Finite Element Integration on GPUs"__, submitted to ACM Transactions on Mathematical Software.
 
 A.R. Terrel, R.C. Kirby, M.G. Knepley, L.R. Scott, and G.N. Wells,
 __Finite elements for incompressible fluids__, in A. Logg, K.A. Mardal,
@@ -40,7 +40,7 @@ equations by the finite element mehod</i>. Springer-Verlag. Lecture
 Notes in Computational Science and Engineering, Vol 84, 2011.
 
 
-R.C. Kirby, A. Logg, and A.R. Terrel,__Common and unusual finite
+R.C. Kirby, A. Logg, and A.R. Terrel, __Common and unusual finite
 elements__, in A. Logg, K.A. Mardal, and G. N. Wells,
 editors. <i>Automated solutions of differential equations by the
 finite element mehod</i>.  Springer-Verlag. Lecture Notes in
@@ -60,23 +60,23 @@ equations to code: Automated Scientific Computing"</a>__, Computing in
 Science and Engineering, March 2011.
 
 A.R. Terrel, L.R. Scott, M.G. Knepley, R.C. Kirby, __<a
-href="{{ root_url }}/vita/papers_and_talks/TerrelScottKnepleyKirby2008__AutoFEMDisc.pdf">"Automated
+href="{{ root_url }}/vita/papers_and_talks/TerrelScottKnepleyKirby2008_AutoFEMDisc.pdf">"Automated
 FEM Discretizations for the Stokes Equation"</a>__, BIT Numerical
 Mathematics, July 2008, Vol 48, pp 389--404.
 
 R.C. Kirby, A. Terrel, L.R. Scott, A. Logg, __<a
-href="{{ root_url }}/vita/papers_and_talks/KirbyTerrelScottLogg__TopOptFEM__2006.pdf">"Topological
+href="{{ root_url }}/vita/papers_and_talks/KirbyTerrelScottLogg_TopOptFEM_2006.pdf">"Topological
 optimization of the evaluation of finite element matrices"</a>__, SIAM
 Journal of Scientific Computing, January 2006, Vol 28 No 1, pp
 224-240.
 
-A.R. Terrel, __<a href="{{ root_url }}/vita/papers_and_talks/Terrel__PhDThesis.pdf">"Finite element
+A.R. Terrel, __<a href="{{ root_url }}/vita/papers_and_talks/Terrel_PhDThesis.pdf">"Finite element
 method automation for non-Newtonian fluid models"</a>__, PhD Thesis,
 University of Chicago, Department of Computer Science April 2010.
 
-A.R. Terrel, __<a href="{{ root_url }}/vita/papers_and_talks/Terrel__MastersPaper.pdf">"FEM Optimization with a case study of the Stokes equations"</a>__, Master's Thesis, University of Chicago, Department of Computer Science March 2007.
+A.R. Terrel, __<a href="{{ root_url }}/vita/papers_and_talks/Terrel_MastersPaper.pdf">"FEM Optimization with a case study of the Stokes equations"</a>__, Master's Thesis, University of Chicago, Department of Computer Science March 2007.
 
-A.R. Terrel and K. R. Long, __<a href="{{ root_url }}/vita/papers_and_talks/MinDispTopOpt__NECIS__2006.pdf">"Evaluation of Level Set Topology Optimization Formulations for the Design of Minimum-Dispersion Microfluidic Devices"</a>__, NECIS Summer Proceedings 2006, Sandia National Labs.
+A.R. Terrel and K. R. Long, __<a href="{{ root_url }}/vita/papers_and_talks/MinDispTopOpt_NECIS_2006.pdf">"Evaluation of Level Set Topology Optimization Formulations for the Design of Minimum-Dispersion Microfluidic Devices"</a>__, NECIS Summer Proceedings 2006, Sandia National Labs.
 
 A.R. Terrel, and B. Thacker, __<a href="http://arxiv.org/abs/0707.3106">"A Global View of Cognitive Structure and Implications for Instruction and Assessment"</a>__.
 
@@ -84,10 +84,33 @@ A.R. Terrel, and B. Thacker, __<a href="http://arxiv.org/abs/0707.3106">"A Globa
 
 ## Presentations
 
+A.R. Terrel and T. Oliphant, __"Python beyond the CPU"__, PyCon2013, Tutorial, Santa Clara,
+March 2013.
+
+A.R. Terrel, __"Introduction to JIT Compiling and Code Generation in Scientific
+Computing"__, SIAM Computational Science and Engineering 2013, Boston, Feb 2013.
+
+A.R. Terrel, __"Introduction to JIT Compiling and Code Generation in Scientific
+Computing"__, SIAM Computational Science and Engineering 2013, Boston, Feb 2013.
+
+A.R. Terrel, __"ManyClaw: Slicing and Dicing Riemann Solvers for Next
+Generation Highly Parallel Architectures"__, SIAM Computational Science and
+Engineering 2013, Boston, Feb 2013.
+
+A.R. Terrel, __<a
+href="http://scisoftdays.org/meetings/2012/speakers_and_abstracts/#terrel">Sharing
+is Caring: NumFOCUS and Open Scientific Code Initiative</a>__, Scientific
+Software Days, University of Texas, Dec 2012.
+
+A.R. Terrel, A. Ahmadia, and T. Oliphant, __"Python in HPC"__, Supercomputing
+2012, Tutorial, Salt Lake City, UT, Nov 2012.
+
+A.R. Terrel, __"Libraries versus Languages"__, Supercomputing 2012,
+Birds of a feather session: Scripting languages and DSLs in HPC, Salt Lake
+City, UT, Nov 2012
+
 A.R. Terrel, __"Numpy and Scipy as a DSL"__, Supercomputing 2011,
 Birds of a feather session: Scripting languages and DSLs in HPC, Seattle, WA, Nov 2011.
-
-A.R. Terrel, __"The FEniCS project"__, FEMTEC'2011, South Lake Tahoe, May 2011.
 
 A.R. Terrel, __"Rheagen: rheology application engine"__, Mini-Symposium, SIAM Computational
 Science and Engineering 2011, Reno, Nevada, February 2011.
@@ -95,7 +118,7 @@ Science and Engineering 2011, Reno, Nevada, February 2011.
 A.R. Terrel, __"FEniCS tutorial"__, 2nd European Seminar on Coupled
 Problems, Pilzen, Czech Republic. June 2010.
 
-A.R. Terrel, __<a href="{{ root_url }}/vita/papers_and_talks/MathInterfaces__Kansas__2007.pdf">"Mathematical Interfaces for Automated Scientific Computing"</a>__, Computing
+A.R. Terrel, __<a href="{{ root_url }}/vita/papers_and_talks/MathInterfaces_Kansas_2007.pdf">"Mathematical Interfaces for Automated Scientific Computing"</a>__, Computing
 Techniques Seminar, Fermi National Accelerator Laboratory, Batavia,
 IL, November 2009 and ITTC Seminar, University of Kansas, Lawrence, Kansas, November 2007.
 
@@ -103,11 +126,11 @@ A.R. Terrel, __"Algorithms for the Grade-Two Fluid Model"__, Simula Laboratories
 
 A.R. Terrel and M. G. Knepley, __<a href="{{ root_url }}/vita/papers_and_talks/FEniCS08Tutorial.pdf">"FEniCS and Sieve Tutorial"</a>__, Automated Scientific Computing Workshop, CCT center Louisiana State University, Baton Rouge, Louisiana, March 2008.
 
-A.R. Terrel, __<a href="{{ root_url }}/vita/papers_and_talks/AbsFEMSoft__FEniCS__2006.pdf">"Abstractions in FEM Software"</a>__, FEniCS'06, Delft Technology Institute, Delft, The Netherlands, November 2006.
+A.R. Terrel, __<a href="{{ root_url }}/vita/papers_and_talks/AbsFEMSoft_FEniCS_2006.pdf">"Abstractions in FEM Software"</a>__, FEniCS'06, Delft Technology Institute, Delft, The Netherlands, November 2006.
 
-A.R. Terrel, __<a href="{{ root_url }}/vita/papers_and_talks/TopOpt__TexasTech__2006.pdf">"Topology Optimizations with Applications in Microfluidics: a Comparison of Level Set Methods"</a>__, Applied Mathematics Seminar, Department of Mathematics and Statistics, Texas Tech University, Lubbock, September 2006.
+A.R. Terrel, __<a href="{{ root_url }}/vita/papers_and_talks/TopOpt_TexasTech_2006.pdf">"Topology Optimizations with Applications in Microfluidics: a Comparison of Level Set Methods"</a>__, Applied Mathematics Seminar, Department of Mathematics and Statistics, Texas Tech University, Lubbock, September 2006.
 
-A.R. Terrel, __<a href="{{ root_url }}/vita/papers_and_talks/NovFEn__FEniCS__2005.pdf">"A Novice Uses FEniCS"</a>__, FEniCS'05, Toyota Technical Institute at Chicago, Chicago, IL October 2005.
+A.R. Terrel, __<a href="{{ root_url }}/vita/papers_and_talks/NovFEn_FEniCS_2005.pdf">"A Novice Uses FEniCS"</a>__, FEniCS'05, Toyota Technical Institute at Chicago, Chicago, IL October 2005.
 
 A.R. Terrel, __"Code Generation in Python"__, Supercomputing 2011,
 Birds of a feather session:  Python in HPC, Seattle, WA, Nov 2011.
@@ -121,11 +144,11 @@ A.R. Terrel and M. G. Knepley, __"Automation of Finite Element Assembly using a 
 
 A.R. Terrel and M. G. Knepley, __<a href="{{ root_url }}/vita/papers_and_talks/SIAMPP08.pdf">"Finite Element Assembly on Arbitrary Meshes"</a>__, SIAM Conference on Parallel Processing for Scientific Computing, Atlanta, Georgia, March 2008.
 
-A.R. Terrel, __<a href="{{ root_url }}/vita/papers_and_talks/FEMAuto__Masters__2007.pdf">"FEM Automations with a case study on the Stokes Equations"</a>__, Masters Presentation, Department of Computer Science, University of Chicago, Chicago, IL, March 2007.
+A.R. Terrel, __<a href="{{ root_url }}/vita/papers_and_talks/FEMAuto_Masters_2007.pdf">"FEM Automations with a case study on the Stokes Equations"</a>__, Masters Presentation, Department of Computer Science, University of Chicago, Chicago, IL, March 2007.
 
-A.R. Terrel, __<a href="{{ root_url }}/vita/papers_and_talks/DevPDELang__CSE__2007.pdf">"A Case for Developing with a PDE Language"</a>__, SIAM Computer Science and Engineering, Costa Mesa, CA, February 2007.
+A.R. Terrel, __<a href="{{ root_url }}/vita/papers_and_talks/DevPDELang_CSE_2007.pdf">"A Case for Developing with a PDE Language"</a>__, SIAM Computer Science and Engineering, Costa Mesa, CA, February 2007.
 
-A.R. Terrel, __<a href="{{ root_url }}/vita/papers_and_talks/TopOptFEM__SIAM__2005.pdf">"Optimizing Local Matrix Computations for Finite Element Methods"</a>__, SIAM Annual Meeting, New Orleans, June 2005.
+A.R. Terrel, __<a href="{{ root_url }}/vita/papers_and_talks/TopOptFEM_SIAM_2005.pdf">"Optimizing Local Matrix Computations for Finite Element Methods"</a>__, SIAM Annual Meeting, New Orleans, June 2005.
 
 
 ## Research Experience
@@ -159,6 +182,20 @@ With Beth Ann Thacker, I researched physics education developing cognitive model
 
 ## Teaching Experience
 
+#### __Lecturer__, Scientific and Technical Computing__, Division of Statistics and Scientific Computation, Universtity of Texas at Austin, Spring 2013
+
+* Developed material and lectured
+* <a href="https://bitbucket.org/aterrel/ssc335-394-spring2013">public repository</a>
+
+#### __Lecturer__, Scientific Computing with GPUs__, Division of Statistics and Scientific Computation, Universtity of Texas at Austin, Summer 2012
+
+* Developed material and lectured
+* <a href="https://bitbucket.org/aterrel/2012summerssc395">public repository</a>
+
+
+#### __Trainer__, Texas Advanced Computing Center, University of Texas at Austin, 2011 - 2013
+
+* Taught 1-2 day courses on Python and Supercomputing topics.
 
 #### __Teaching Certificate in University Teaching__, Center for Teaching and Learning, University of Chicago, 2010.
 
@@ -226,6 +263,8 @@ First stage start-up company developing a network storage appliance.
 
 ## Service
 
+__Co-Chair__ SciPy 2013 Conference
+__Organizer__ Scientific Software Days Workshop
 __Program Chair__ SciPy 2012 Conference
 __Organizer__ Supercomputing conference 2011, Birds of a Feather, Python in HPC
 __Program Committee__ Supercomputing conference 2011, Python in HPC workshop
@@ -237,8 +276,10 @@ __Reviewer__ for
   * Scientific Computing,
   * Journal of Computational and Applied Mathematics,
   * International Journal of Computer Applications in Technology,
-  * Automated Scientific Computing, a contributed collection from Springer-Verlag, and
-  * Java textbook published by Pearson Addison Wesley.
+  * Automated Scientific Computing, a contributed collection from Springer-Verlag,
+  * Java textbook published by Pearson Addison Wesley,
+  * International Journal of High Performance Computing Applications, and
+  * Transactions on Mathematical Software.
 
 
 __Session aide__, AAAS Annual meeting, Chicago, IL, January 2009.
