@@ -8,7 +8,15 @@ footer: true
 ## Contact
 
 Institute for Computing in Engineering and Science, University of Texas at Austin
-email: [andy.terrel@gmail.com](mailto:andy.terrel@gmail.com),  web: [http://andy.terrel.us/](http://andy.terrel.us/)
+
+* email: [andy.terrel@gmail.com](mailto:andy.terrel@gmail.com),
+  [aterrel@ices.utexas.edu](mailto:aterrel@ices.utexas.edu)
+* web: [http://andy.terrel.us/](http://andy.terrel.us/)
+* code: [bitbucket](https://bitbucket.org/aterrel), [github](https://github.com/aterrel)
+* q/a: [stackexchange](http://stackexchange.com/users/78554/aterrel)
+* profiles:[google scholar](http://scholar.google.com/citations?user=ALzCmCEAAAAJ), [linkedin](http://www.linkedin.com/in/aterrel)
+* social: [@aterrel](https://twitter.com/aterrel), [G+](https://plus.google.com/u/0/106486100774697058597/posts)
+  
 
 ## Education
 
