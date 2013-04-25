@@ -3,7 +3,7 @@ layout: post
 title: "Python Packaging"
 date: 2012-10-28 20:08
 comments: true
-categories: Packaging
+categories: Packaging Python
 ---
 
 There are two major hurdles to Python disrupting the entire HPC work stack:

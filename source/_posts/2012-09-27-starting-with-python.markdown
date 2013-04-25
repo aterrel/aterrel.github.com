@@ -3,7 +3,7 @@ layout: post
 title: "Getting started with Python in HPC"
 date: 2012-09-27 15:57
 comments: true
-categories:
+categories: Python
 ---
 
 

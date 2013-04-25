@@ -4,7 +4,7 @@ title: "Thoughts on the SciPy Conference"
 date: 2012-10-08 01:24
 comments: true
 publish: true
-categories: 
+categories: Python
 ---
 
 For SciPy2012 I was given the privilege of serving as the co-chair of the
