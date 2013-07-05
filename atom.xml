@@ -4,7 +4,7 @@
   <title><![CDATA[Codematician]]></title>
   <link href="http://andy.terrel.us/atom.xml" rel="self"/>
   <link href="http://andy.terrel.us/"/>
-  <updated>2012-11-01T10:32:58-05:00</updated>
+  <updated>2013-07-05T14:56:44-05:00</updated>
   <id>http://andy.terrel.us/</id>
   <author>
     <name><![CDATA[Andy R. Terrel]]></name>
@@ -12,6 +12,111 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[SciPy2013 Recap]]></title>
+    <link href="http://andy.terrel.us/blog/2013/07/05/scipy2013-recap/"/>
+    <updated>2013-07-05T12:28:00-05:00</updated>
+    <id>http://andy.terrel.us/blog/2013/07/05/scipy2013-recap</id>
+    <content type="html"><![CDATA[<p>It&#8217;s been a week since the end of <a href="http://conference.scipy.com/scipy2013/">SciPy2013</a>, where I was co-chair, and I&#8217;m just now catching my breath.  It was an amazing event with so many innovative and forward looking trends that I won&#8217;t be able to give them enough credence, ever.  When I took on the role as co-chair, my guiding goal was to provide a home to scientific researcher engineers, whether they are in government labs, industry, or academia.  Just as <a href="http://pyvideo.org/video/2041/scipy-2013-keynote-the-new-scientific-publishers-1">William Schroeder said in his keynote</a>, we are the new scientific publishers and are the driving force behind much of the technology that is changing the world.</p>
+
+<h2>Favorite Moments</h2>
+
+<p>Let me give a list of the best moments for me at SciPy2013, I&#8217;m sure I will be
+commenting on them throughout the year.</p>
+
+<ul>
+<li><p>The SciPy Proceedings have moved to a fully open peer review process for more details see <a href="http://stefanv.github.io/blog/2013/06/27/scipy2013-proceedings/">Stefan van der Walt&#8217;s blog</a></p></li>
+<li><p>There were a huge number of commits to 18 projects. Including these
+highlights (mostly gleaned from <a
+href="https://twitter.com/search?q=%23scipy2013&src=typd">#scipy2013</a>.)</p>
+
+<ul>
+<li><p>Matplotlib had over a dozen contributors (including a 10K LOC patch
+review).</p></li>
+<li><p>Scikit-Image now runs on Python 3 and 2 from single code base (without
+2to3).</p></li>
+<li><p>IPython developers sequestered themselves to focus on the ever-promised
+1.0 released.</p></li>
+<li><p>Contributers to over 16 projects came together to <a
+href="https://github.com/IgnitionProject/ignition/wiki/CodeGenComposability_Scipy2013">discuss
+commonalities with the compiler technology</a> that is being reproduced in
+each other&#8217;s code.</p></li>
+<li><p>Please let me know of any other major achievements at SciPy2013 sprints.  We need to collect these stories to help convince sponsors.</p></li>
+</ul>
+</li>
+<li><p>We had >350 people attend, >500 <a href="http://eventifier.co/event/scipy2013/">people tweeting</a>, social events almost every night, <a href="http://pyvideo.org/category/37/scipy-2013">139 videos</a> including <a href=http://conference.scipy.org/scipy2013/tutorials_schedule.php">12 amazing tutorials</a> diving into every aspect of science, and over 6% of the conference either named Matt or from France.</p></li>
+<li><p>Hosted a gathering of Women in Science with a wide array of participants with the help of PyLadies, The Python Software Foundation, and NumFOCUS.</p></li>
+<li><p>Over 10 BoFs that provided for a much more participatory discussion on major topics facing our community.</p></li>
+<li><p>And yet another <a href="http://www.youtube.com/watch?feature=player_embedded&v=ywHqIEv3xXg#t=1892s">completely ridiculous lightning talk from Matt Terry</a>.</p></li>
+</ul>
+
+
+<p>Once again I want to give a shout out to all our wonderful sponsors! Without them there would be no SciPy conference (or at least one with less BBQ).</p>
+
+<h2>Other&#8217;s words</h2>
+
+<p>Also a list of other people discussing the conference:</p>
+
+<ul>
+<li><a href="http://technicaldiscovery.blogspot.com/2013/07/thoughts-after-scipy-2013-and-specific.html">Travis Oliphant</a></li>
+<li><a href="http://asmeurersympy.wordpress.com/2013/07/02/scipy-2013/">Aaron Meurer</a></li>
+<li><a href="http://software-carpentry.org/blog/2013/04/swc-at-scipy2013.html">Software Carpentry</a></li>
+<li><a href="http://ondrejcertik.blogspot.com/2013/07/my-impressions-from-scipy-2013.html">Ondrej Certik</a></li>
+<li><a href="http://astrocompute.wordpress.com/2013/07/02/scipy-2013-from-a-distance/">Bruce Berriman</a></li>
+<li><a href="http://hairycode.org/2013/06/25/scipy-2013-day-one/">Hairy Code</a>, <a href="http://hairycode.org/2013/06/25/scipy-2013-day-two/">2</a>, <a href="http://hairycode.org/2013/06/26/scipy-2013-day-three/">3</a>, <a href="http://hairycode.org/2013/06/28/scipy-2013-day-threefour/">4/5</a>,</li>
+<li>Again please let me know of any other postings and I will add them.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Usefulness of a University]]></title>
+    <link href="http://andy.terrel.us/blog/2013/04/08/use-of-a-university/"/>
+    <updated>2013-04-08T21:08:00-05:00</updated>
+    <id>http://andy.terrel.us/blog/2013/04/08/use-of-a-university</id>
+    <content type="html"><![CDATA[<p><a href="http://ivory.idyll.org/blog/2013-swc-arizona.html">The post reiterating that the biggest problem in teaching software carpentry (SWC)]
+</a> is
+installation, got me all in a tissy.  I even signed up for their mailing list!</p>
+
+<p>My first impression with SWC was a wonderful community that in encouraging
+folks to learn computing skills.  After witnessing the TeachScheme movement, I
+was skeptical that two day bootcamps could really have any impact, but then
+again I&#8217;m usually wrong.  Now coming off two and a half years of supporting
+users on supercomputers, I too see the frustration that started SWC in the
+first place.  Scientists waste quite a lot of time not using the tools
+effectively, but then again I waste too much time futzing with tools.  The
+current frustration is over the view of what education of these tools actually
+is.</p>
+
+<h2>What is a university education?</h2>
+
+<p>Some of my best friends in life were made in the classrooms of my
+university education.  While learning the essence of science, math and
+philosophy, something else was happening as well.  I was participating in a
+community of learning.  These friends were the ones who helped me struggle
+through problems, understand new topics, and motivate my continued education.</p>
+
+<p>While one can go through Bloom&#8217;s Taxonomy and be as theoretical as one likes, I
+have yet to see many people actually discuss the building of a community around
+your classroom.  For most open source developers, this is the major draw, to
+work on hard problems with a set of intellectually challenging peers.  I will
+say that some tools are being developed to help this, such as Piazza. At the
+end of the day, MOOCs, bootcamps, and plain-ol-lectures that don&#8217;t give
+students the ability to actively engage an topic on their own terms isn&#8217;t worth
+its salt.  Developing communities around learning is another method for
+continuing the education process.</p>
+
+<p>Perhaps the only thing that a University is providing that other methods of
+teaching hasn&#8217;t touched is this community of learning.  To me that&#8217;s the
+biggest problem in alternative university education, there is no community of
+learning after the day ends.</p>
+
+<p>(On that note I have an unfunded grant proposal to turn textbooks into
+community initiators. Perhaps I&#8217;ll get my act together and pursue it again.)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[A Rule of Software on Usabilty]]></title>
