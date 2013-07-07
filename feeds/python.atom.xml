@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Codematician</title><link href="http://andy.terrel.us/" rel="alternate"></link><link href="/feeds/python.atom.xml" rel="self"></link><id>http://andy.terrel.us/</id><updated>2013-04-24T18:41:00-07:00</updated><entry><title>Participate at SciPy2013</title><link href="http://andy.terrel.us/blog/2013/04/24/participate-at-scipy2013/" rel="alternate"></link><updated>2013-04-24T18:41:00-07:00</updated><author><name>Andy R. Terrel</name></author><id>tag:andy.terrel.us,2013-04-24:blog/2013/04/24/participate-at-scipy2013/</id><summary type="html">&lt;p&gt;The
+&lt;a href="https://conference.scipy.org/scipy2013/registration.php"&gt;early registration deadline&lt;/a&gt;
+is rapidly approaching for SciPy2013, and all our decisions on speakers are
+out.  This year was really tough as we had more submission than ever at a
+quality that exceeded all my expectations. If you submitted something and
+haven't heard from us, let me know.&lt;/p&gt;
+&lt;p&gt;If you missed the deadline for proposals, I want to elaborate on a number of
+ways you can still participate.  While the material for the official program is
+closed, we have ample opportunities for more spontaneous contributions for all
+attendees. &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Join the community&lt;/li&gt;
+&lt;li&gt;Speak at Lightning talks&lt;/li&gt;
+&lt;li&gt;Hack at the sprints&lt;/li&gt;
+&lt;li&gt;Participate in BoFs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Join the community&lt;/h2&gt;
+&lt;p&gt;This year we have a number of opportunities to help get acquainted with
+learning how to contribute.  Starting with two days of beginner tutorials to
+teach the basic tools of our community and a tutorial on contributing to NumPy,
+the core of almost all scientific python projects.  If you are new to the
+ecosystem or an old hand needing to know the ends and outs of contribution the
+tutorials are there to help.&lt;/p&gt;
+&lt;p&gt;We have teamed up with the Austin PyLadies to present some material on how and
+why to contribute to open source communities. It's well known that open source
+communities can be difficult to navigate and folks are not always polite.  We
+hope to show some perspectives on contributing and what to expect.&lt;/p&gt;
+&lt;h2&gt;Lightning Talks&lt;/h2&gt;
+&lt;p&gt;While we don't all have a story of printing NumPy arrays to QR codes and
+scanning them to get around bureaucracy, lightning talks remain one of the most
+fun parts of the conference.  Tell us about your new venture, your craziest
+hack, your nerdiest tech rant, or whatever you feel best fills your five
+minutes.&lt;/p&gt;
+&lt;h2&gt;Hack at Sprints&lt;/h2&gt;
+&lt;p&gt;The sprints start Friday and we hope to have a large number of the core
+projects all come out.  In the next week we should have sign ups on the
+website. Sprints are not only a good time to focus on your project for a few
+days, it also is a place where the experts in the scientific python will be in
+the room.  Any quick bugs or small details to ask can have a much quicker
+iteration cycle.&lt;/p&gt;
+&lt;p&gt;This year we are also encouraging folks to not wait until Friday to start
+hacking, and I know some of you wouldn't wait anyways.  I'm looking at you
+Fernando, Jake, Wes,  ....  But this year we will have about 6 break out rooms
+just right for 4 to 8 people to brainstorm and hack in between things.&lt;/p&gt;
+&lt;h2&gt;Birds of Feathers&lt;/h2&gt;
+&lt;p&gt;This year we have nine time spaces open for Birds of a Feather sessions.  I
+personally find these session the best to discuss ideas with the conference
+attendees. We will have a sign up on the web soon as well.  Some ideas I
+have floated include: state of the project BoFs discuss the future of many
+projects, evolution of the publication in the state of open code and data, and
+best ways for teaching scientist python.&lt;/p&gt;</summary></entry><entry><title>Thoughts on the SciPy Conference</title><link href="http://andy.terrel.us/blog/2012/10/08/thoughts-on-the-scipy-conference/" rel="alternate"></link><updated>2012-10-08T01:24:00-07:00</updated><author><name>Andy R. Terrel</name></author><id>tag:andy.terrel.us,2012-10-08:blog/2012/10/08/thoughts-on-the-scipy-conference/</id><summary type="html">&lt;p&gt;For SciPy2012 I was given the privilege of serving as the co-chair of the
+program committee.  The experience was exciting and rewarding as I was able to
+affect what I view as one of the most important conferences for the scientific
+world. Now, that's a pretty bold statement and I'm not going to dwell on it
+long here, but essentially many conferences people go to show off;
+SciPy is a conference where people come to learn best practices.  And when young
+scientists are able to see science rock stars like Joshua Bloom lift up the
+covers and show off how his scientific process works, it changes their entire
+workflow creating more efficient, better scientists. With that said, I would
+like to focus more on my opinions about the state of the conference, its
+successes and failures, and how I believe the conference should be transformed.&lt;/p&gt;
+&lt;h2&gt;The state of the SciPy Community&lt;/h2&gt;
+&lt;p&gt;It was a bit strange being the co-chair of the program committee at SciPy2012,
+because prior to 2012 I had only attended one SciPy conference.  Of course, I
+have known about the conference for years and have tried to go many times but
+life has always gotten in the way.  Additionally, I came to the scientific
+Python community after most everything had evolved to a pretty high level of
+quality.  Sure there are bits and pieces that could use some polish, but
+largely I feel that my contributions have all been cosmetic (although the GSOC
+students I have mentored have done phenomenal work). This puts me at a bit of a
+disadvantage to extol any long history of the SciPy community, but I'm sure
+someone will let me know where I get things right and wrong.&lt;/p&gt;
+&lt;p&gt;There are some interesting divides in the community.  For example, SciPy can
+refer to many different things:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The US SciPy conference,&lt;/li&gt;
+&lt;li&gt;The international SciPy conference series,&lt;/li&gt;
+&lt;li&gt;The Python package named scipy,&lt;/li&gt;
+&lt;li&gt;The basic scientific computing stack used by most pythonistas, and/or&lt;/li&gt;
+&lt;li&gt;Any piece of code slightly related to science and Python&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;For this article, when I say SciPy I am talking about the US SciPy conference
+(since if I usually can't afford to make it to SciPy in Austin, TX, I sure
+can't afford to go to Brussels or India) and a mix of the other topics.  SciPy
+was originally a set of friends who got together in a room at Caltech to chat
+and hack about the scipy package.  They use to have these talks from the core
+devs where each gave a summary of the package and largely discuss technical
+issues around these packages.  As of late, the conference has turned into much
+more of a place where any scientist or technical computing professional can go
+and hear about a very wide variety of topics on science and Python.&lt;/p&gt;
+&lt;p&gt;This change in community is both a good and a bad thing.  It means that at
+coffee, there are a lot of strange faces and let's be honest if we were the
+most social crowd we wouldn't have spent a non-trivial amount of our lives
+pouring over code and mathematics.  Second we seem to have lost some of the
+core devs attention.  For example, in the months preceding the conference the
+numpy mailing list had turned into a pretty nasty flamewar.  At the conference,
+I only saw one of the major contributors to the numpy code base.  I find the
+fact that SciPy isn't the most important event on the calendar for these devs
+kind of surprising.  After all this is where you core devs are the gurus
+everyone has come to be inspired by.&lt;/p&gt;
+&lt;p&gt;The good news is that we are able to see a more accurate view of the
+penetration of Python in science.  But not only science, pretty much all
+technical computing areas of industry, academia, and government were
+represented.  The conference had a record number of attendees and submissions,
+in fact this was the first SciPy that we knew of where people received
+rejections.  &lt;/p&gt;
+&lt;h2&gt;Successes and Failures of SciPy 2012&lt;/h2&gt;
+&lt;p&gt;In many ways SciPy is a great conference, but in other ways it is lacking.  I
+want to explore a few of these ideas, get feedback from the community, and put
+the consensus into action.  &lt;/p&gt;
+&lt;h3&gt;Success&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If it ain't broke don't fix it ~ Anonymous&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;Topics&lt;/h4&gt;
+&lt;p&gt;The past two years, there have been two special topics.  Last year was Big Data
+and Core Issues; this year we did High Performance Computing and Visualization.
+The truth was that we picked these topics because a few motivated folks were
+excited about them.  This is true about the domain session this year as well.
+Lauren and I chatted, I gave names and she went calling people down to get the
+right set of talks.  Largely I think this works, but I don't like it.&lt;/p&gt;
+&lt;p&gt;I don't like it because the community wasn't really involved and when you have
+a couple of people picking the overall direction of a community, it largely
+becomes a clique.  If we want to keep a vibrant community, I think these topics
+are really important as they are aimed at bringing in people from outside our
+community.&lt;/p&gt;
+&lt;p&gt;With that said, my proposal this year would be:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Machine Learning, and&lt;/li&gt;
+&lt;li&gt;Geographic Information Systems&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Both topics that came out during the surveys and are a broad cutting
+technologies.  Machine Learning should be a no-brainer as the Big Data world
+needs it more than ever, but GIS is a bit harder for me to predict being a
+break out success.  Of course last year I thought HPC would be the small topic
+and Vis a bigger draw, but I was dead wrong.  We could of had the whole
+conference on PyHPC (if you want sort of thing, check out the SuperComputing
+Conference pyHPC workshop).  &lt;/p&gt;
+&lt;h4&gt;Fabulous plenaries&lt;/h4&gt;
+&lt;p&gt;This year I believe the plenaries were really off the chart.  I was actually
+recruited to help out after the plenaries had already been chosen, so this was
+really Stéfan and Warren's doing.  I really like the format as well. A talk
+about a well-known package, a science talk about the things people are able to
+accomplish with the tools, and a look into industry and how our community
+relates.&lt;/p&gt;
+&lt;p&gt;I have quite a few ideas about how to replicate this formula, but I believe we
+should probably have some discussion from the community.  &lt;/p&gt;
+&lt;h4&gt;Poster session&lt;/h4&gt;
+&lt;p&gt;The poster session was great.  There was a lot of interaction between people at
+the session.  I'm somewhat beside myself on the session though.  I thought it
+would be better during the reception, but we couldn't get the posters in the
+reception room and be visible during the entire conference.  I really liked
+the poster session and hope to see it in the future.  One fact of science
+conferences is that usually it is harder to get funding if you don't have
+something to present.  Posters are a great way to increase participation,
+although I do wonder if we need to go to three parallel tracks in the future.&lt;/p&gt;
+&lt;h4&gt;Domain science symposiums&lt;/h4&gt;
+&lt;p&gt;The symposiums at the end of the day were much sparser than the day.  This was
+expected, but they play an important role.  As the main session includes a
+large number of folks that have quite different domains, these sessions allowed
+for topic specifics to be discussed.  More and more domain conferences are
+including sessions on Python, but SciPy allows for sessions to grab the
+attention of Python experts who are often able to give fresh advice.&lt;/p&gt;
+&lt;h3&gt;Failures&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Develop success from failures. Discouragement and failure are two of the
+surest stepping stones to success.  ~ Dale Carnegie&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Failure is probably too harsh a word for what I discuss in this section.  It's
+more adequately, "Things that disappointed Andy."  And as most people who know
+me know, I'm not afraid to tell you why I'm disappointed (only I usually use
+harsher words).  At any rate, I believe in &lt;a href="http://www.admittingfailure.com/"&gt;admitting
+failure&lt;/a&gt; and want to discuss a few things I
+would like to rectify.&lt;/p&gt;
+&lt;h4&gt;Community involvement&lt;/h4&gt;
+&lt;p&gt;For the most part, the conference is put on by about four people.  Sure there is
+a longer list on the website, but the brunt of the work falls on a few.  I
+would like to see this change.  For example, look at how PyCon is run.  There
+are more volunteers than you can count. While Enthought is an amazing
+institutional sponsor of the event, they only have a small number of resources
+to put into the event.  My impression is that these resources are over
+exhausted.&lt;/p&gt;
+&lt;p&gt;It is time we as a community come together to setup structures for more
+community participation.  For example, the websites need work, the process of
+reviewing papers needs work, there needs to be more logistical help at the
+meeting, and so on.  My guess is that most people don't even know that they
+could be helping. To even start though we need to build a volunteer network and
+appropriate web presence to give volunteers things to do.&lt;/p&gt;
+&lt;h4&gt;Diversity&lt;/h4&gt;
+&lt;p&gt;Matt Davis brought this up on Twitter, but I want to echo it louder.  There was
+a discouraging lack of diversity at SciPy.  I believe there were 100 males to
+every female and very few minorities.  When talking to a few people about this,
+the general view was that there just aren't women coders around.  I think this is
+really wrong, I think that women coders either don't know about SciPy or don't
+care.&lt;/p&gt;
+&lt;p&gt;Which brings up how do you attract female coders?  One metric given to me is
+that conferences with women plenary speakers and/or women on the executive
+staff have 50% more women participants.  I look at the places we advertised and
+we didn't focus on any female or minority organizations.  Closing this gap will
+only make our community more vibrant.&lt;/p&gt;
+&lt;h4&gt;Industry/Academia interactions&lt;/h4&gt;
+&lt;p&gt;SciPy is a place where there are a few industrial partners but there could be
+many more. The problem I saw on the program committee was that anyone who
+submitted work on closed source software were negatively impacted.  We are an
+open source community but hundreds (thousands?) of companies use our tools.
+Industrial partners that come back to the community and talk about how to
+interact more can only be a good thing.  For one it will give us a since of the
+impact that SciPy has beyond the halls of academia.  It will heighten our
+profile among young developers as they are able to come to SciPy to meet
+potential employers.  &lt;/p&gt;
+&lt;p&gt;My suggestion here would be to have vendor booths and a recruitment event.  I
+would even go as far to suggest hosting a few sponsor speaking sessions.  Open
+source is often supported by industry, just as the scipy stack has been
+supported by Enthought for years.  Inviting industry to our meeting will make it
+more visible.&lt;/p&gt;
+&lt;h4&gt;Social Media&lt;/h4&gt;
+&lt;p&gt;The lack of social media at the conference is quite surprising.  Are we all old
+fuddies who don't know how to use social media to discuss?  It is quite
+exciting to go to a conference where the social media around the conference is
+working well.  It allows for more dialog among the participants and thus a
+greater shared experience.  &lt;/p&gt;
+&lt;p&gt;With that said, I would like to see a greater use of Twitter, G+ and Facebook
+throughout the event, including planning. Connecting our community may even
+heal all those fights we have on mailing lists.&lt;/p&gt;
+&lt;h4&gt;Lack of Core Developers&lt;/h4&gt;
+&lt;p&gt;I've already touched on this, but one last failure is the lack of core project
+developers at the conference.  Sure people have lots competing with their time,
+but this is the conference dedicated to the code we spend so much free time
+on.  Conversations at SciPy are still having an effect on the directions of
+codes (in fact today scipy.users had a long conversation about the scipy domain which
+was hotly discussed at the sprints).&lt;/p&gt;
+&lt;p&gt;The few ideas I have on bringing the coders back include:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;More sprinting (space every night &lt;em&gt;all night&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;Sessions dedicated to core projects&lt;/li&gt;
+&lt;li&gt;More organization around BoFs&lt;/li&gt;
+&lt;li&gt;Conference sponsorship for devs to attend conference &lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Vision&lt;/h2&gt;
+&lt;p&gt;Okay 2000 words in and I'm sure you are getting bored.  But I've said this
+before and I'll say it again.  There is no reason SciPy shouldn't be as large
+as PyCon.  While there are certainly more users of the Python language, our
+community is always one of the featured groups when Python users are
+discussed.  The suggestions I outlined above are only a small set of comments I
+really have, but they are the ones I feel probably need a broader discussion.&lt;/p&gt;
+&lt;p&gt;For me the vision of SciPy should be simple.  SciPy is the fuel of the
+scientific Python movement.  It is where producers and consumers of
+scientific and technical code come to learn from each other and make each other
+better scientists and coders.  SciPy as a conference should be inclusive of all
+technical disciplines and help mentor novice programmers. Finally, it should be
+the place where we inject new life into our projects, hack the wild ideas we
+only dream about, and submit pull requests that change the face of science.&lt;/p&gt;</summary></entry><entry><title>"Getting started with Python in HPC"</title><link href="http://andy.terrel.us/blog/2012/09/27/getting-started-with-python-in-hpc/" rel="alternate"></link><updated>2012-09-27T15:57:00-07:00</updated><author><name>Andy R. Terrel</name></author><id>tag:andy.terrel.us,2012-09-27:blog/2012/09/27/getting-started-with-python-in-hpc/</id><summary type="html">&lt;p&gt;Getting to know Python is a pretty hairy task, as is diving into any language.  Fortunately Python is considered an easy language to learn and the potential for using it in HPC settings is pretty large.  Below I give an introduction to learning, speeding, and scaling Python.  Each topic can be the subject of its own book, so take these talking points and notes as only hints to what one can look at.  For a very detailed view of this topic for scientists I recommend the following three books:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://www.springer.com/mathematics/computational+science+%26+engineering/book/978-3-642-30292-3"&gt;A Primer on Scientific Programming with Python&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://www.springer.com/mathematics/computational+science+%26+engineering/book/978-3-540-73915-9"&gt;Python Scripting for Computational Science&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://shop.oreilly.com/product/0636920023784.do"&gt;Python for Data Analysis&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Learning Python&lt;/h2&gt;
+&lt;p&gt;There are a very large number of resources for learning the Python language.  The issue of course is finding a resource that is attractive to the correct mindset.  Very often something that a programmer is able to learn from has little resonance with an artist.  For this reason, I am going to list off a couple of places that I find particularly good, but of course I have been programming for over a decade.&lt;/p&gt;
+&lt;p&gt;While learning the language is important, the real value of Python is the numerous libraries and the community around the tools.  With that said finding what your particular community is doing is pretty important, but there are a core set of tools that are used by most Pythonistas. I list off a few of these tools for your consumption.&lt;/p&gt;
+&lt;p&gt;Also, because we like to see what people are doing with Python, I list off a few shining examples of Python in the wide world of scientific computing.  I have to admit that there are a huge number of possibilities but few in the realm of HPC.  At the very least, a HPC person should know Python for its scripting abilities but as the other sections of this document underscore, Python is a good candidate for HPC codes as well.&lt;/p&gt;
+&lt;h3&gt;Python Tutorials&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://docs.python.org/tutorial/"&gt;Python Doc Tutorial&lt;/a&gt;&lt;/strong&gt;: This is the tutorial written by the developers of Python, best for programmers.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://www.greenteapress.com/thinkpython/"&gt;Think Python&lt;/a&gt;&lt;/strong&gt;: A book for non-programmers.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://scipy-lectures.github.com/"&gt;SciPy Lectures&lt;/a&gt;&lt;/strong&gt;: A series of lectures written by scientists geared towards scientists.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://fperez.org/py4science/starter_kit.html"&gt;Py4Science Starter Kit&lt;/a&gt;&lt;/strong&gt;: A version of this page written in 2008.  Lots of good material but a bit less selective.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Python Tools&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="https://store.continuum.io/cshop/anaconda"&gt;Anaconda Pro&lt;/a&gt;&lt;/strong&gt;: A distribution of common Python packages for Big Data and Cluster programming.  Includes disco (a Python map-reduce) and mpi4py which is of more interest to HPCers.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://www.enthought.com/products/epd.php"&gt;Enthought Python Distribution&lt;/a&gt;&lt;/strong&gt;: A distribution of the most commonly used tools by the community (free for academics).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://numpy.scipy.org/"&gt;NumPy&lt;/a&gt;&lt;/strong&gt;:&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://scipy.org"&gt;SciPy&lt;/a&gt;&lt;/strong&gt;: A collection of scientific libraries.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://matplotlib.sourceforge.net/"&gt;MatPlotLib&lt;/a&gt;&lt;/strong&gt;: A highly customizable 2D plotting library&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://ipython.org/"&gt;IPython&lt;/a&gt;&lt;/strong&gt;: An interactive Python shell and parallel code manager.  The IPython notebook has become very popular and allows users to use an interface similar to Mathematica on a supercomputer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Python Stories&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://conference.scipy.org/"&gt;SciPy Conferences&lt;/a&gt;&lt;/strong&gt;: The series of conferences associated with the scientific Python community see recent videos at &lt;a href="http://pyvideo.org/category/20/scipy_2012"&gt;PyVideo&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://www.youtube.com/watch?v=mLuIB8aW2KA&amp;amp;feature=youtu.be"&gt;Python in Astronomy&lt;/a&gt;&lt;/strong&gt;: Joshua Bloom from UC Berkeley gave a keynote talk at SciPy 2012 on "Python as Super Glue for the Modern Scientific Workflow"&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://numfocus.org/user-stories/"&gt;NumFocus User Stories&lt;/a&gt;&lt;/strong&gt;: A foundation for scientific computing tools with a growing number of user stories.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://numerics.kaust.edu.sa/papers/pyclaw-sisc/pyclaw-sisc.html"&gt;PyCLAW&lt;/a&gt;&lt;/strong&gt;: A petascale application written in Python&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Performance&lt;/h2&gt;
+&lt;p&gt;Despite all the great features outlined above, the (mis)perception is that Python is too slow for HPC Development.  While it is true that Python might not be the best language to write your tight loop and expect a high percentage of peak flop rate, it turns out that Python has a number of tools to help switch to those lower-level languages.&lt;/p&gt;
+&lt;p&gt;To discuss performance I outline three sets of tools:  profiling, speeding up the Python code via C/Fortran, and speeding up Python via Python.  It is my view that Python has some of the best tools for looking at what your code's performance is then drilling down to the actual bottle necks.  Speeding up code without profiling is about like trying to kill a deer with an uzi.&lt;/p&gt;
+&lt;h3&gt;Python tools for profiling&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://docs.python.org/library/profile.html"&gt;profile and cProfile modules&lt;/a&gt;&lt;/strong&gt;: These modules will give you your standard run time analysis and function call stack.  It is pretty nice to save their statistics and using the pstats module you can look at the data in a number of ways.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://packages.python.org/line_profiler/"&gt;kernprof&lt;/a&gt;&lt;/strong&gt;: This tool puts together many routines for doing things like line by line code timing&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://pypi.python.org/pypi/memory_profiler"&gt;memory_profiler&lt;/a&gt;&lt;/strong&gt;: This tool produces line by line memory foot print of your code.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://ipython.org/ipython-doc/dev/interactive/tutorial.html#magic-functions"&gt;IPython timers&lt;/a&gt;&lt;/strong&gt;: The &lt;code&gt;timeit&lt;/code&gt; function is quite nice for seeing the differences in functions in a quick interactive way.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Speeding up Python&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://cython.org/"&gt;Cython&lt;/a&gt;&lt;/strong&gt;: Cython is the quickest way to take a few functions in Python and get faster code.  You can decorate the function with the cython variant of Python and it generates c code.  This is very maintainable and can also link to other hand written code in c/c++/fortran quite easily.  It is by far the preferred tool today.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://docs.python.org/library/ctypes.html"&gt;ctypes&lt;/a&gt;&lt;/strong&gt;: Ctypes will allow you to write your functions in c and then wrap them quickly with its simple decoration of the code.  It handles all the pain of casting from PyObjects and managing the gil to call the c function.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://fwrap.sourceforge.net/"&gt;FWrap&lt;/a&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;a href="http://cens.ioc.ee/projects/f2py2e/"&gt;f2py&lt;/a&gt;&lt;/strong&gt;: Fortran wrapping tools. FWrap is a newer tool for F90 and integrates with the rest of cython, and f2py is the older more standard tool.  Unfortunately, neither of these libraries are well maintained but are used in numerous projects.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Other approaches exist for writing your code in C but they are all somewhat more for taking a C/C++ library and wrapping it in Python.&lt;/p&gt;
+&lt;h3&gt;Python-only approaches&lt;/h3&gt;
+&lt;p&gt;If you want to stay inside Python mostly, my advice is to figure out what data you are using and picking correct data types for implementing your algorithms. It has been my experience that you will usually get much farther by optimizing your data structures then any low level c hack. For example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://numpy.scipy.org/"&gt;numpy&lt;/a&gt;&lt;/strong&gt;: A contiguous array very fast for strided operations of arrays&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://code.google.com/p/numexpr/"&gt;numexpr&lt;/a&gt;&lt;/strong&gt;: A numpy array expression optimizer.  It allows for multithreading numpy array expressions and also gets rid of the numerous temporaries numpy makes because of restrictions of the Python interpreter.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://pypi.python.org/pypi/blist"&gt;blist&lt;/a&gt;&lt;/strong&gt;: A b-tree implementation of a list, very fast for inserting, indexing, and moving the internal nodes of a list&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://pandas.pydata.org/"&gt;pandas&lt;/a&gt;&lt;/strong&gt;: Data frames (or tables) very fast analytics on the arrays.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://www.pytables.org/moin"&gt;pytables&lt;/a&gt;&lt;/strong&gt;: Fast structured hierarchical tables (like hdf5), especially good for out of core calculations and queries to large data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Scaling Python&lt;/h2&gt;
+&lt;p&gt;Right now there are a few distributed Python tools but the list is growing rapidly.  Here I just give a list the tools and some domain tools that are used in HPC that provide a Python interface.&lt;/p&gt;
+&lt;h3&gt;Distributed computing libraries&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://mpi4py.scipy.org/"&gt;mpi4py&lt;/a&gt;&lt;/strong&gt;: Fastest most complete mpi Python wrapper.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://discoproject.org/"&gt;disco&lt;/a&gt;&lt;/strong&gt;: Python Hadoop-like framework.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://ipython.org/ipython-doc/dev/parallel/index.html"&gt;IPython Parallel&lt;/a&gt;&lt;/strong&gt;: A mpi or zero-mq based parallel Python.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://dev.danse.us/trac/pathos"&gt;pathos&lt;/a&gt;&lt;/strong&gt;: Framework for heterogeneous computing&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://www.emsl.pnl.gov/docs/global/"&gt;Global Arrays&lt;/a&gt;&lt;/strong&gt;: A shared memory interface to distributed computing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Domain specific libraries&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://code.google.com/p/petsc4py/"&gt;petsc4py&lt;/a&gt;&lt;/strong&gt;: Python bindings for PETSc, the Portable, Extensible Toolkit for Scientific Computation.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://slepc4py.googlecode.com/"&gt;slepc4py&lt;/a&gt;&lt;/strong&gt;: Python bindings for SLEPc, the Scalable Library for Eigenvalue Problem Computations.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://tao4py.googlecode.com/"&gt;tao4py&lt;/a&gt;&lt;/strong&gt;: Python bindings for TAO, the Toolkit for Advanced Optimization.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href="http://trilinos.sandia.gov/packages/pytrilinos/"&gt;pyTrilinos&lt;/a&gt;&lt;/strong&gt;: Trilinos wrappers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h3&gt;Changelog&lt;/h3&gt;
+&lt;p&gt;2012-09-27 Andy R. Terrel
+    * Initial version
+2012-09-30 Andy R. Terrel
+    * Added links to Fernando Perez's 2008 version of this document
+    * Added link to Anaconda Pro
+    * Added link to Gael Varoquaux's scipy lectures
+    * Added link to Jeff Daily's Global Array Python bindings
+    * Added link to FWrap and f2py
+    * Fixed some grammatical mistakes&lt;/p&gt;</summary></entry></feed>
