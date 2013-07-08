@@ -87,7 +87,9 @@ TWITTER_SHOW_FOLLOWER_COUNT = 'true'
 # RSS/Atom feeds
 FEED_DOMAIN = SITEURL
 FEED_ATOM = 'atom.xml'
+FEED_RSS = 'rss.xml'
 TAG_FEED_ATOM = 'feeds/%s-tag.atom.xml'
+TAG_FEED_RSS = 'feeds/%s-tag.rss.xml'
 
 # Search
 SEARCH_BOX = True
