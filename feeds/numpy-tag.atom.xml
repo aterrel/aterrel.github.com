@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Codematician</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2013-07-07T21:08:00-07:00</updated><entry><title>NumPy SciPy Benchmarks</title><link href="/blog/2013/07/07/numpy-scipy-benchmarks/" rel="alternate"></link><updated>2013-07-07T21:08:00-07:00</updated><author><name>Andy R. Terrel</name></author><id>tag:,2013-07-07:blog/2013/07/07/numpy-scipy-benchmarks/</id><summary type="html">&lt;p&gt;At PyCon2013, a group of about 30 developers got together to discuss
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Codematician</title><link href="/" rel="alternate"></link><link href="/feeds/numpy-tag.atom.xml" rel="self"></link><id>/</id><updated>2013-07-07T21:08:00-07:00</updated><entry><title>NumPy SciPy Benchmarks</title><link href="/blog/2013/07/07/numpy-scipy-benchmarks/" rel="alternate"></link><updated>2013-07-07T21:08:00-07:00</updated><author><name>Andy R. Terrel</name></author><id>tag:,2013-07-07:blog/2013/07/07/numpy-scipy-benchmarks/</id><summary type="html">&lt;p&gt;At PyCon2013, a group of about 30 developers got together to discuss
 NumPy and SciPy.  The room mostly included folks that use NumPy and
 SciPy extensively, such as myself, a few who were just learning, and
 several core contributors (if not currently in the past), such as Eric
@@ -67,35 +67,4 @@ element access is often slower than lists).  &lt;/p&gt;
 &lt;p&gt;This post is intended to start a wider discussion among the community.  I'm
 posting here because there are enough places in the community and I wanted a
 single place rather than four or five mailing lists.  The hope is we can start
-a repository and get some tests rolling.&lt;/p&gt;</summary><category term="Python"></category><category term="NumPy"></category><category term="SciPy"></category></entry><entry><title>Usefulness of a University</title><link href="/blog/2013/04/08/use-of-a-university/" rel="alternate"></link><updated>2013-04-08T21:08:00-07:00</updated><author><name>Andy R. Terrel</name></author><id>tag:,2013-04-08:blog/2013/04/08/use-of-a-university/</id><summary type="html">&lt;p&gt;&lt;a href="http://ivory.idyll.org/blog/2013-swc-arizona.html"&gt;The post reiterating that the biggest problem in teaching software carpentry (SWC)&lt;/a&gt; is
-installation, got me all in a tissy.  I even signed up for their mailing list!&lt;/p&gt;
-&lt;p&gt;My first impression with SWC was a wonderful community that in encouraging
-folks to learn computing skills.  After witnessing the TeachScheme movement, I
-was skeptical that two day bootcamps could really have any impact, but then
-again I'm usually wrong.  Now coming off two and a half years of supporting
-users on supercomputers, I too see the frustration that started SWC in the
-first place.  Scientists waste quite a lot of time not using the tools
-effectively, but then again I waste too much time futzing with tools.  The
-current frustration is over the view of what education of these tools actually
-is.&lt;/p&gt;
-&lt;h2&gt;What is a university education?&lt;/h2&gt;
-&lt;p&gt;Some of my best friends in life were made in the classrooms of my
-university education.  While learning the essence of science, math and
-philosophy, something else was happening as well.  I was participating in a
-community of learning.  These friends were the ones who helped me struggle
-through problems, understand new topics, and motivate my continued education.&lt;/p&gt;
-&lt;p&gt;While one can go through Bloom's Taxonomy and be as theoretical as one likes, I
-have yet to see many people actually discuss the building of a community around
-your classroom.  For most open source developers, this is the major draw, to
-work on hard problems with a set of intellectually challenging peers.  I will
-say that some tools are being developed to help this, such as Piazza. At the
-end of the day, MOOCs, bootcamps, and plain-ol-lectures that don't give
-students the ability to actively engage an topic on their own terms isn't worth
-its salt.  Developing communities around learning is another method for
-continuing the education process.&lt;/p&gt;
-&lt;p&gt;Perhaps the only thing that a University is providing that other methods of
-teaching hasn't touched is this community of learning.  To me that's the
-biggest problem in alternative university education, there is no community of
-learning after the day ends.&lt;/p&gt;
-&lt;p&gt;(On that note I have an unfunded grant proposal to turn textbooks into
-community initiators. Perhaps I'll get my act together and pursue it again.)&lt;/p&gt;</summary></entry></feed>
+a repository and get some tests rolling.&lt;/p&gt;</summary><category term="Python"></category><category term="NumPy"></category><category term="SciPy"></category></entry></feed>

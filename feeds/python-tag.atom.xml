@@ -1,5 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Codematician</title><link href="/" rel="alternate"></link><link href="/feeds/code.atom.xml" rel="self"></link><id>/</id><updated>2013-07-05T12:28:00-07:00</updated><entry><title>SciPy2013 Recap</title><link href="/blog/2013/07/05/scipy2013-recap/" rel="alternate"></link><updated>2013-07-05T12:28:00-07:00</updated><author><name>Andy R. Terrel</name></author><id>tag:,2013-07-05:blog/2013/07/05/scipy2013-recap/</id><summary type="html">&lt;p&gt;It's been a week since the end of &lt;a href="http://conference.scipy.com/scipy2013/"&gt;SciPy2013&lt;/a&gt;, where I was co-chair, and I'm just now catching my breath.  It was an amazing event with so many innovative and forward looking trends that I won't be able to give them enough credence, ever.  When I took on the role as co-chair, my guiding goal was to provide a home to scientific researcher engineers, whether they are in government labs, industry, or academia.  Just as &lt;a href="http://pyvideo.org/video/2041/scipy-2013-keynote-the-new-scientific-publishers-1"&gt;William Schroeder said in his keynote&lt;/a&gt;, we are the new scientific publishers and are the driving force behind much of the technology that is changing the world.  &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Codematician</title><link href="/" rel="alternate"></link><link href="/feeds/python-tag.atom.xml" rel="self"></link><id>/</id><updated>2013-07-07T21:08:00-07:00</updated><entry><title>NumPy SciPy Benchmarks</title><link href="/blog/2013/07/07/numpy-scipy-benchmarks/" rel="alternate"></link><updated>2013-07-07T21:08:00-07:00</updated><author><name>Andy R. Terrel</name></author><id>tag:,2013-07-07:blog/2013/07/07/numpy-scipy-benchmarks/</id><summary type="html">&lt;p&gt;At PyCon2013, a group of about 30 developers got together to discuss
+NumPy and SciPy.  The room mostly included folks that use NumPy and
+SciPy extensively, such as myself, a few who were just learning, and
+several core contributors (if not currently in the past), such as Eric
+Jones, Travis Oliphant, Anthony Scopatz, and Jake Vanderplas.  It was
+an impromptu meeting, as most birds of a feather sessions are, so I
+don't think we even got the full number of interested participants at
+PyCon2013.  The scientific large support at PyCon was surprising,
+since most of us scientists think the wider Python ecosystem leaves us
+behind in many of their activities.&lt;/p&gt;
+&lt;p&gt;There were three topics we discussed: briefly about the development and
+maintenance of the libraries, about the use of newer technologies, e.g. Cython,
+PyPy, Copperhead, Numba, and finally about having a benchmark for new
+implementations of NumPy to see how complete they are.  Since there were not
+very many core developers in the room, it was hard to really push a topic on
+the development side but the other two topics were the most discussed.&lt;/p&gt;
+&lt;p&gt;To briefly summarize the maintenance and future plans section, I asked about
+how the community was doing since I've been organizing this whole conference
+thing and haven't been on the mailing lists in a while. Travis mentioned that
+NumFOCUS was trying to raise money for the projects, especially around the
+topic of paying a maintainer.  &lt;/p&gt;
+&lt;h2&gt;Miniature Applications&lt;/h2&gt;
+&lt;p&gt;Next we turn to the topic of benchmarks.  At the end we decided that there are
+at least two types of benchmarks that are really needed by the community.
+First, is a set of miniature applications that show off the tools well.  Since
+there is such a wide variety of tools available right now, it is difficult to
+know what to invest in as a developer.  Ian Osvald mentioned his book that
+includes one of the only major comparisons I've seen in the tools.  I suggested
+we look at how the Mantevo project implemented its mini-apps for the US DOE.
+Another suggestion was to organize the applications in the seven dwarfs
+of scientific computing suggested by Phil Collela. I believe these have been
+renamed to motifs and extended to eleven by the Berkeley crowd.&lt;/p&gt;
+&lt;p&gt;The idea moving forward will be to collect a number of applications, give a
+reference implementation, and accept contributions showing how to implement
+them in a Python runnable way.  The idea is not to make everyone use Python for
+everything but to show off the capabilities of Python as an integration (and
+implementation) platform.  One participant brought up that we could have a site
+like the Computer Language Benchmarks, while we agreed in spirit enough of us
+do not like that benchmark because of its purist ideas that applications should
+stick to a single language.  To be friendly to vendor solutions, I'm willing to
+accept closed runtimes but since the point is to highlight the code, all code
+must be free and open, preferably BSD.  I am sure we will refine the rules as
+we go.&lt;/p&gt;
+&lt;h2&gt;NumPy Benchmarks&lt;/h2&gt;
+&lt;p&gt;Matti, a contributor to NumPyPy, brought up the idea of creating a suite of
+benchmarks to compare different implementations of NumPy.  The idea here is
+once again not to compete ruthlessly for fame and glory, but rather provide a
+baseline for developer to hit when implementing alternatives and users to know
+how complete and single implementation is. Right now I know of several NumPy
+implementations (or close to implementations), e.g., NumPyPy, Numba,
+Copperhead, and a benchmark will be a welcome addition to the tools.&lt;/p&gt;
+&lt;p&gt;The plan to start off will be to grab out some tests from the NumPy regression
+tests and grab a benchmark runner.  Matti suggested trying to port the PyPy
+runners for our needs. Once we get something up and going we can try to put it
+up somewhere for people to make contributions.&lt;/p&gt;
+&lt;p&gt;There were many concerns about the benchmarks not being productive and bringing
+out too much competition.  My view is that we should try to be as open and
+welcoming as the rest of the Python ecosystem.  That is let the numbers speak
+for themselves and make these benchmarks something anyone can contribute to.&lt;/p&gt;
+&lt;p&gt;A final aspect of the benchmark would be to show off that NumPy is useful for
+more then numeric algorithms.  Many people see "Num" and assume there is no use
+for their specific needs, but in actuality, NumPy should be thought of as more
+a typed array.  This allows fast access to contiguous blocks (although the
+element access is often slower than lists).  &lt;/p&gt;
+&lt;h2&gt;Going Forward&lt;/h2&gt;
+&lt;p&gt;This post is intended to start a wider discussion among the community.  I'm
+posting here because there are enough places in the community and I wanted a
+single place rather than four or five mailing lists.  The hope is we can start
+a repository and get some tests rolling.&lt;/p&gt;</summary><category term="Python"></category><category term="NumPy"></category><category term="SciPy"></category></entry><entry><title>SciPy2013 Recap</title><link href="/blog/2013/07/05/scipy2013-recap/" rel="alternate"></link><updated>2013-07-05T12:28:00-07:00</updated><author><name>Andy R. Terrel</name></author><id>tag:,2013-07-05:blog/2013/07/05/scipy2013-recap/</id><summary type="html">&lt;p&gt;It's been a week since the end of &lt;a href="http://conference.scipy.com/scipy2013/"&gt;SciPy2013&lt;/a&gt;, where I was co-chair, and I'm just now catching my breath.  It was an amazing event with so many innovative and forward looking trends that I won't be able to give them enough credence, ever.  When I took on the role as co-chair, my guiding goal was to provide a home to scientific researcher engineers, whether they are in government labs, industry, or academia.  Just as &lt;a href="http://pyvideo.org/video/2041/scipy-2013-keynote-the-new-scientific-publishers-1"&gt;William Schroeder said in his keynote&lt;/a&gt;, we are the new scientific publishers and are the driving force behind much of the technology that is changing the world.  &lt;/p&gt;
 &lt;h2&gt;Favorite Moments&lt;/h2&gt;
 &lt;p&gt;Let me give a list of the best moments for me at SciPy2013, I'm sure I will be
 commenting on them throughout the year.&lt;/p&gt;
@@ -109,60 +177,7 @@ personally find these session the best to discuss ideas with the conference
 attendees. We will have a sign up on the web soon as well.  Some ideas I
 have floated include: state of the project BoFs discuss the future of many
 projects, evolution of the publication in the state of open code and data, and
-best ways for teaching scientist python.&lt;/p&gt;</summary><category term="Python"></category><category term="SciPy"></category></entry><entry><title>A Rule of Software on Usabilty</title><link href="/blog/2012/11/01/a-rule-of-software-usability/" rel="alternate"></link><updated>2012-11-01T10:00:00-07:00</updated><author><name>Andy R. Terrel</name></author><id>tag:,2012-11-01:blog/2012/11/01/a-rule-of-software-usability/</id><summary type="html">&lt;p&gt;Make your software useful.  That is the point without usefulness there is no
-need for existence.&lt;/p&gt;
-&lt;p&gt;If you write a function that is not useful, scrub it from your text editors
-as not to offend the blessed pixels. Do not fear throwing away non-useful parts
-of your code, better to cast away these parts rather than sacrifice the
-usefulness of the whole.&lt;/p&gt;
-&lt;p&gt;If it is useful to repeat yourself, do so.  Repeating yourself in subtly
-different ways teaches your novices, which must be done well. If there is a
-common pattern for your task use it, until it is not useful anymore. Write your
-tests as soon as they will be useful, tests are always useful before giving
-your code to others. Separate your code into useful partitions. If the
-partitions are too big or too small the usefulness will be clouded as it is
-difficult to track the function and interplay between the partitions.&lt;/p&gt;
-&lt;p&gt;When the program is done, let it stand on its usefulness.  If others do not
-find it useful, seek out more to judge your craft. If none count themselves
-blessed to have witnessed your skill, throw out the program. Better had the
-program not been born than to prop it up with false claims of usefulness or
-many words about its beauty, adherence to principles, or features that none
-have found useful.&lt;/p&gt;
-&lt;p&gt;Each programmer must look from within to find the metric of usefulness.
-Some programs are only useful to the programmer, others must be useful to a
-multiplicity of programmers, and few hold themselves to such high esteem as
-being useful to the unwashed non-programming masses.  Do not make the program
-raise malcontent by seeking affection in those it cannot help.&lt;/p&gt;
-&lt;p&gt;The API can hold back the usefulness of your code. Write many useful programs
-with the API and minimize their length.  Large APIs are weaker than small APIs,
-but both can be useful.  Do not be afraid to erase parts of the API which were
-only scaffolding to find the better API, the masterpiece could not have been
-made without the scaffolding, but if it is left standing it will obstruct.&lt;/p&gt;
-&lt;p&gt;When the performance guru tells you speed is more important, ask them why they
-don't make their users write in assembly, why BLAS doesn't require you to pack
-your own matrices, and why the CMS doesn't make you connect to your own
-sockets. To discourage performance hacks give the programmer five lashes as
-these hacks are the enemy of abstraction, which can be useful. If the
-programmer persist in their hacks, let them continue as clearly the speed is
-useful.&lt;/p&gt;
-&lt;p&gt;When the enterprise architect recommends yet another abstract factory
-manager class, ask them why they started programming and at what point they
-decided to make others despise reading their code.  Separate them from the
-strong, eager, useful programmers and burn their resumes so that others do not
-confuse their ways as useful.&lt;/p&gt;
-&lt;p&gt;If the functional zealot tells you your side effects destroy the formal
-analysis, explain to him that monads rhymes with gonads which are quite
-useful. Ask them to travel discalced to the far reaches of the empty quarter so
-they do not harm useful programmers ears.  Remember these prophets ramblings as
-even they are sometimes useful. Teach them to the young, but always remind them
-of the first rule.&lt;/p&gt;
-&lt;p&gt;When your sales representative tells you to remove the useful parts of your
-code, give them wind and ask them to sell the liberated air.  When your project
-manager wants features that are not useful, give them a shovel and ask them to
-remove dirt from the parched earth only to have them place it back again for
-they have forgotten the first rule and should be left to sisyphean
-tasks. When other programmers check in code that is not useful, give them the
-rule and ask them if they are on the path to manager or guru.&lt;/p&gt;</summary><category term="Software Engineering"></category></entry><entry><title>Python Packaging</title><link href="/blog/2012/10/28/python-packaging/" rel="alternate"></link><updated>2012-10-28T20:08:00-07:00</updated><author><name>Andy R. Terrel</name></author><id>tag:,2012-10-28:blog/2012/10/28/python-packaging/</id><summary type="html">&lt;p&gt;There are two major hurdles to Python disrupting the entire HPC work stack:
+best ways for teaching scientist python.&lt;/p&gt;</summary><category term="Python"></category><category term="SciPy"></category></entry><entry><title>Python Packaging</title><link href="/blog/2012/10/28/python-packaging/" rel="alternate"></link><updated>2012-10-28T20:08:00-07:00</updated><author><name>Andy R. Terrel</name></author><id>tag:,2012-10-28:blog/2012/10/28/python-packaging/</id><summary type="html">&lt;p&gt;There are two major hurdles to Python disrupting the entire HPC work stack:
 packaging and &lt;a href="http://pyvideo.org/video/1201/solving-the-import-problem-scalable-dynamic-load"&gt;dynamic loading&lt;/a&gt;. Today I want to discuss the packaging issue.
 While there are many people working on these hurdles, it is my opinion that the
 community needs to seek out methods to solve these hurdles together in a
