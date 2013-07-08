@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Codematician</title><link>http://andy.terrel.us/</link><description>Homepage of Andy R. Terrel</description><atom:link href="/feeds/scipy-tag.rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 07 Jul 2013 21:08:00 -0700</lastBuildDate><item><title>NumPy SciPy Benchmarks</title><link>http://andy.terrel.us/blog/2013/07/07/numpy-scipy-benchmarks/</link><description>&lt;p&gt;At PyCon2013, a group of about 30 developers got together to discuss
+NumPy and SciPy.  The room mostly included folks that use NumPy and
+SciPy extensively, such as myself, a few who were just learning, and
+several core contributors (if not currently in the past), such as Eric
+Jones, Travis Oliphant, Anthony Scopatz, and Jake Vanderplas.  It was
+an impromptu meeting, as most birds of a feather sessions are, so I
+don't think we even got the full number of interested participants at
+PyCon2013.  The scientific large support at PyCon was surprising,
+since most of us scientists think the wider Python ecosystem leaves us
+behind in many of their activities.&lt;/p&gt;
+&lt;p&gt;There were three topics we discussed: briefly about the development and
+maintenance of the libraries, about the use of newer technologies, e.g. Cython,
+PyPy, Copperhead, Numba, and finally about having a benchmark for new
+implementations of NumPy to see how complete they are.  Since there were not
+very many core developers in the room, it was hard to really push a topic on
+the development side but the other two topics were the most discussed.&lt;/p&gt;
+&lt;p&gt;To briefly summarize the maintenance and future plans section, I asked about
+how the community was doing since I've been organizing this whole conference
+thing and haven't been on the mailing lists in a while. Travis mentioned that
+NumFOCUS was trying to raise money for the projects, especially around the
+topic of paying a maintainer.  &lt;/p&gt;
+&lt;h2&gt;Miniature Applications&lt;/h2&gt;
+&lt;p&gt;Next we turn to the topic of benchmarks.  At the end we decided that there are
+at least two types of benchmarks that are really needed by the community.
+First, is a set of miniature applications that show off the tools well.  Since
+there is such a wide variety of tools available right now, it is difficult to
+know what to invest in as a developer.  Ian Osvald mentioned his book that
+includes one of the only major comparisons I've seen in the tools.  I suggested
+we look at how the Mantevo project implemented its mini-apps for the US DOE.
+Another suggestion was to organize the applications in the seven dwarfs
+of scientific computing suggested by Phil Collela. I believe these have been
+renamed to motifs and extended to eleven by the Berkeley crowd.&lt;/p&gt;
+&lt;p&gt;The idea moving forward will be to collect a number of applications, give a
+reference implementation, and accept contributions showing how to implement
+them in a Python runnable way.  The idea is not to make everyone use Python for
+everything but to show off the capabilities of Python as an integration (and
+implementation) platform.  One participant brought up that we could have a site
+like the Computer Language Benchmarks, while we agreed in spirit enough of us
+do not like that benchmark because of its purist ideas that applications should
+stick to a single language.  To be friendly to vendor solutions, I'm willing to
+accept closed runtimes but since the point is to highlight the code, all code
+must be free and open, preferably BSD.  I am sure we will refine the rules as
+we go.&lt;/p&gt;
+&lt;h2&gt;NumPy Benchmarks&lt;/h2&gt;
+&lt;p&gt;Matti, a contributor to NumPyPy, brought up the idea of creating a suite of
+benchmarks to compare different implementations of NumPy.  The idea here is
+once again not to compete ruthlessly for fame and glory, but rather provide a
+baseline for developer to hit when implementing alternatives and users to know
+how complete and single implementation is. Right now I know of several NumPy
+implementations (or close to implementations), e.g., NumPyPy, Numba,
+Copperhead, and a benchmark will be a welcome addition to the tools.&lt;/p&gt;
+&lt;p&gt;The plan to start off will be to grab out some tests from the NumPy regression
+tests and grab a benchmark runner.  Matti suggested trying to port the PyPy
+runners for our needs. Once we get something up and going we can try to put it
+up somewhere for people to make contributions.&lt;/p&gt;
+&lt;p&gt;There were many concerns about the benchmarks not being productive and bringing
+out too much competition.  My view is that we should try to be as open and
+welcoming as the rest of the Python ecosystem.  That is let the numbers speak
+for themselves and make these benchmarks something anyone can contribute to.&lt;/p&gt;
+&lt;p&gt;A final aspect of the benchmark would be to show off that NumPy is useful for
+more then numeric algorithms.  Many people see "Num" and assume there is no use
+for their specific needs, but in actuality, NumPy should be thought of as more
+a typed array.  This allows fast access to contiguous blocks (although the
+element access is often slower than lists).  &lt;/p&gt;
+&lt;h2&gt;Going Forward&lt;/h2&gt;
+&lt;p&gt;This post is intended to start a wider discussion among the community.  I'm
+posting here because there are enough places in the community and I wanted a
+single place rather than four or five mailing lists.  The hope is we can start
+a repository and get some tests rolling.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andy R. Terrel</dc:creator><pubDate>Sun, 07 Jul 2013 21:08:00 -0700</pubDate><guid>tag:andy.terrel.us,2013-07-07:blog/2013/07/07/numpy-scipy-benchmarks/</guid><category>Python</category><category>NumPy</category><category>SciPy</category></item><item><title>SciPy2013 Recap</title><link>http://andy.terrel.us/blog/2013/07/05/scipy2013-recap/</link><description>&lt;p&gt;It's been a week since the end of &lt;a href="http://conference.scipy.com/scipy2013/"&gt;SciPy2013&lt;/a&gt;, where I was co-chair, and I'm just now catching my breath.  It was an amazing event with so many innovative and forward looking trends that I won't be able to give them enough credence, ever.  When I took on the role as co-chair, my guiding goal was to provide a home to scientific researcher engineers, whether they are in government labs, industry, or academia.  Just as &lt;a href="http://pyvideo.org/video/2041/scipy-2013-keynote-the-new-scientific-publishers-1"&gt;William Schroeder said in his keynote&lt;/a&gt;, we are the new scientific publishers and are the driving force behind much of the technology that is changing the world.  &lt;/p&gt;
+&lt;h2&gt;Favorite Moments&lt;/h2&gt;
+&lt;p&gt;Let me give a list of the best moments for me at SciPy2013, I'm sure I will be
+commenting on them throughout the year.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The SciPy Proceedings have moved to a fully open peer review process for more details see &lt;a href="http://stefanv.github.io/blog/2013/06/27/scipy2013-proceedings/"&gt;Stefan van der Walt's blog&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;There were a huge number of commits to 18 projects. Including these
+highlights (mostly gleaned from &lt;a
+href="https://twitter.com/search?q=%23scipy2013&amp;src=typd"&gt;#scipy2013&lt;/a&gt;.)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Matplotlib had over a dozen contributors (including a 10K LOC patch
+  review).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Scikit-Image now runs on Python 3 and 2 from single code base (without
+  2to3).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;IPython developers sequestered themselves to focus on the ever-promised
+  1.0 released.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Contributers to over 16 projects came together to &lt;a
+  href="https://github.com/IgnitionProject/ignition/wiki/CodeGenComposability_Scipy2013"&gt;discuss
+  commonalities with the compiler technology&lt;/a&gt; that is being reproduced in
+  each other's code.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Please let me know of any other major achievements at SciPy2013 sprints.  We need to collect these stories to help convince sponsors.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;We had &amp;gt;350 people attend, &amp;gt;500 &lt;a href="http://eventifier.co/event/scipy2013/"&gt;people tweeting&lt;/a&gt;, social events almost every night, &lt;a href="http://pyvideo.org/category/37/scipy-2013"&gt;139 videos&lt;/a&gt; including &lt;a href=http://conference.scipy.org/scipy2013/tutorials_schedule.php"&gt;12 amazing tutorials&lt;/a&gt; diving into every aspect of science, and over 6% of the conference either named Matt or from France.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Hosted a gathering of Women in Science with a wide array of participants with the help of PyLadies, The Python Software Foundation, and NumFOCUS.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Over 10 BoFs that provided for a much more participatory discussion on major topics facing our community.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;And yet another &lt;a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=ywHqIEv3xXg#t=1892s"&gt;completely ridiculous lightning talk from Matt Terry&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once again I want to give a shout out to all our wonderful sponsors! Without them there would be no SciPy conference (or at least one with less BBQ).&lt;/p&gt;
+&lt;h2&gt;Other's words&lt;/h2&gt;
+&lt;p&gt;Also a list of other people discussing the conference:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://technicaldiscovery.blogspot.com/2013/07/thoughts-after-scipy-2013-and-specific.html"&gt;Travis Oliphant&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href="http://asmeurersympy.wordpress.com/2013/07/02/scipy-2013/"&gt;Aaron Meurer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://software-carpentry.org/blog/2013/04/swc-at-scipy2013.html"&gt;Software Carpentry&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://ondrejcertik.blogspot.com/2013/07/my-impressions-from-scipy-2013.html"&gt;Ondrej Certik&lt;/a&gt;   &lt;/li&gt;
+&lt;li&gt;&lt;a href="http://astrocompute.wordpress.com/2013/07/02/scipy-2013-from-a-distance/"&gt;Bruce Berriman&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://hairycode.org/2013/06/25/scipy-2013-day-one/"&gt;Hairy Code&lt;/a&gt;, &lt;a href="http://hairycode.org/2013/06/25/scipy-2013-day-two/"&gt;2&lt;/a&gt;, &lt;a href="http://hairycode.org/2013/06/26/scipy-2013-day-three/"&gt;3&lt;/a&gt;, &lt;a href="http://hairycode.org/2013/06/28/scipy-2013-day-threefour/"&gt;4/5&lt;/a&gt;,&lt;/li&gt;
+&lt;li&gt;Again please let me know of any other postings and I will add them.&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andy R. Terrel</dc:creator><pubDate>Fri, 05 Jul 2013 12:28:00 -0700</pubDate><guid>tag:andy.terrel.us,2013-07-05:blog/2013/07/05/scipy2013-recap/</guid><category>Python</category><category>SciPy</category></item><item><title>Participate at SciPy2013</title><link>http://andy.terrel.us/blog/2013/04/24/participate-at-scipy/</link><description>&lt;p&gt;The
+&lt;a href="https://conference.scipy.org/scipy2013/registration.php"&gt;early registration deadline&lt;/a&gt;
+is rapidly approaching for SciPy2013, and all our decisions on speakers are
+out.  This year was really tough as we had more submission than ever at a
+quality that exceeded all my expectations. If you submitted something and
+haven't heard from us, let me know.&lt;/p&gt;
+&lt;p&gt;If you missed the deadline for proposals, I want to elaborate on a number of
+ways you can still participate.  While the material for the official program is
+closed, we have ample opportunities for more spontaneous contributions for all
+attendees. &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Join the community&lt;/li&gt;
+&lt;li&gt;Speak at Lightning talks&lt;/li&gt;
+&lt;li&gt;Hack at the sprints&lt;/li&gt;
+&lt;li&gt;Participate in BoFs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Join the community&lt;/h2&gt;
+&lt;p&gt;This year we have a number of opportunities to help get acquainted with
+learning how to contribute.  Starting with two days of beginner tutorials to
+teach the basic tools of our community and a tutorial on contributing to NumPy,
+the core of almost all scientific python projects.  If you are new to the
+ecosystem or an old hand needing to know the ends and outs of contribution the
+tutorials are there to help.&lt;/p&gt;
+&lt;p&gt;We have teamed up with the Austin PyLadies to present some material on how and
+why to contribute to open source communities. It's well known that open source
+communities can be difficult to navigate and folks are not always polite.  We
+hope to show some perspectives on contributing and what to expect.&lt;/p&gt;
+&lt;h2&gt;Lightning Talks&lt;/h2&gt;
+&lt;p&gt;While we don't all have a story of printing NumPy arrays to QR codes and
+scanning them to get around bureaucracy, lightning talks remain one of the most
+fun parts of the conference.  Tell us about your new venture, your craziest
+hack, your nerdiest tech rant, or whatever you feel best fills your five
+minutes.&lt;/p&gt;
+&lt;h2&gt;Hack at Sprints&lt;/h2&gt;
+&lt;p&gt;The sprints start Friday and we hope to have a large number of the core
+projects all come out.  In the next week we should have sign ups on the
+website. Sprints are not only a good time to focus on your project for a few
+days, it also is a place where the experts in the scientific python will be in
+the room.  Any quick bugs or small details to ask can have a much quicker
+iteration cycle.&lt;/p&gt;
+&lt;p&gt;This year we are also encouraging folks to not wait until Friday to start
+hacking, and I know some of you wouldn't wait anyways.  I'm looking at you
+Fernando, Jake, Wes,  ....  But this year we will have about 6 break out rooms
+just right for 4 to 8 people to brainstorm and hack in between things.&lt;/p&gt;
+&lt;h2&gt;Birds of Feathers&lt;/h2&gt;
+&lt;p&gt;This year we have nine time spaces open for Birds of a Feather sessions.  I
+personally find these session the best to discuss ideas with the conference
+attendees. We will have a sign up on the web soon as well.  Some ideas I
+have floated include: state of the project BoFs discuss the future of many
+projects, evolution of the publication in the state of open code and data, and
+best ways for teaching scientist python.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andy R. Terrel</dc:creator><pubDate>Wed, 24 Apr 2013 18:41:00 -0700</pubDate><guid>tag:andy.terrel.us,2013-04-24:blog/2013/04/24/participate-at-scipy/</guid><category>Python</category><category>SciPy</category></item><item><title>Thoughts on the SciPy Conference</title><link>http://andy.terrel.us/blog/2012/10/08/thoughts-on-the-scipy-conference/</link><description>&lt;p&gt;For SciPy2012 I was given the privilege of serving as the co-chair of the
+program committee.  The experience was exciting and rewarding as I was able to
+affect what I view as one of the most important conferences for the scientific
+world. Now, that's a pretty bold statement and I'm not going to dwell on it
+long here, but essentially many conferences people go to show off;
+SciPy is a conference where people come to learn best practices.  And when young
+scientists are able to see science rock stars like Joshua Bloom lift up the
+covers and show off how his scientific process works, it changes their entire
+workflow creating more efficient, better scientists. With that said, I would
+like to focus more on my opinions about the state of the conference, its
+successes and failures, and how I believe the conference should be transformed.&lt;/p&gt;
+&lt;h2&gt;The state of the SciPy Community&lt;/h2&gt;
+&lt;p&gt;It was a bit strange being the co-chair of the program committee at SciPy2012,
+because prior to 2012 I had only attended one SciPy conference.  Of course, I
+have known about the conference for years and have tried to go many times but
+life has always gotten in the way.  Additionally, I came to the scientific
+Python community after most everything had evolved to a pretty high level of
+quality.  Sure there are bits and pieces that could use some polish, but
+largely I feel that my contributions have all been cosmetic (although the GSOC
+students I have mentored have done phenomenal work). This puts me at a bit of a
+disadvantage to extol any long history of the SciPy community, but I'm sure
+someone will let me know where I get things right and wrong.&lt;/p&gt;
+&lt;p&gt;There are some interesting divides in the community.  For example, SciPy can
+refer to many different things:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The US SciPy conference,&lt;/li&gt;
+&lt;li&gt;The international SciPy conference series,&lt;/li&gt;
+&lt;li&gt;The Python package named scipy,&lt;/li&gt;
+&lt;li&gt;The basic scientific computing stack used by most pythonistas, and/or&lt;/li&gt;
+&lt;li&gt;Any piece of code slightly related to science and Python&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;For this article, when I say SciPy I am talking about the US SciPy conference
+(since if I usually can't afford to make it to SciPy in Austin, TX, I sure
+can't afford to go to Brussels or India) and a mix of the other topics.  SciPy
+was originally a set of friends who got together in a room at Caltech to chat
+and hack about the scipy package.  They use to have these talks from the core
+devs where each gave a summary of the package and largely discuss technical
+issues around these packages.  As of late, the conference has turned into much
+more of a place where any scientist or technical computing professional can go
+and hear about a very wide variety of topics on science and Python.&lt;/p&gt;
+&lt;p&gt;This change in community is both a good and a bad thing.  It means that at
+coffee, there are a lot of strange faces and let's be honest if we were the
+most social crowd we wouldn't have spent a non-trivial amount of our lives
+pouring over code and mathematics.  Second we seem to have lost some of the
+core devs attention.  For example, in the months preceding the conference the
+numpy mailing list had turned into a pretty nasty flamewar.  At the conference,
+I only saw one of the major contributors to the numpy code base.  I find the
+fact that SciPy isn't the most important event on the calendar for these devs
+kind of surprising.  After all this is where you core devs are the gurus
+everyone has come to be inspired by.&lt;/p&gt;
+&lt;p&gt;The good news is that we are able to see a more accurate view of the
+penetration of Python in science.  But not only science, pretty much all
+technical computing areas of industry, academia, and government were
+represented.  The conference had a record number of attendees and submissions,
+in fact this was the first SciPy that we knew of where people received
+rejections.  &lt;/p&gt;
+&lt;h2&gt;Successes and Failures of SciPy 2012&lt;/h2&gt;
+&lt;p&gt;In many ways SciPy is a great conference, but in other ways it is lacking.  I
+want to explore a few of these ideas, get feedback from the community, and put
+the consensus into action.  &lt;/p&gt;
+&lt;h3&gt;Success&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If it ain't broke don't fix it ~ Anonymous&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;Topics&lt;/h4&gt;
+&lt;p&gt;The past two years, there have been two special topics.  Last year was Big Data
+and Core Issues; this year we did High Performance Computing and Visualization.
+The truth was that we picked these topics because a few motivated folks were
+excited about them.  This is true about the domain session this year as well.
+Lauren and I chatted, I gave names and she went calling people down to get the
+right set of talks.  Largely I think this works, but I don't like it.&lt;/p&gt;
+&lt;p&gt;I don't like it because the community wasn't really involved and when you have
+a couple of people picking the overall direction of a community, it largely
+becomes a clique.  If we want to keep a vibrant community, I think these topics
+are really important as they are aimed at bringing in people from outside our
+community.&lt;/p&gt;
+&lt;p&gt;With that said, my proposal this year would be:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Machine Learning, and&lt;/li&gt;
+&lt;li&gt;Geographic Information Systems&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Both topics that came out during the surveys and are a broad cutting
+technologies.  Machine Learning should be a no-brainer as the Big Data world
+needs it more than ever, but GIS is a bit harder for me to predict being a
+break out success.  Of course last year I thought HPC would be the small topic
+and Vis a bigger draw, but I was dead wrong.  We could of had the whole
+conference on PyHPC (if you want sort of thing, check out the SuperComputing
+Conference pyHPC workshop).  &lt;/p&gt;
+&lt;h4&gt;Fabulous plenaries&lt;/h4&gt;
+&lt;p&gt;This year I believe the plenaries were really off the chart.  I was actually
+recruited to help out after the plenaries had already been chosen, so this was
+really Stéfan and Warren's doing.  I really like the format as well. A talk
+about a well-known package, a science talk about the things people are able to
+accomplish with the tools, and a look into industry and how our community
+relates.&lt;/p&gt;
+&lt;p&gt;I have quite a few ideas about how to replicate this formula, but I believe we
+should probably have some discussion from the community.  &lt;/p&gt;
+&lt;h4&gt;Poster session&lt;/h4&gt;
+&lt;p&gt;The poster session was great.  There was a lot of interaction between people at
+the session.  I'm somewhat beside myself on the session though.  I thought it
+would be better during the reception, but we couldn't get the posters in the
+reception room and be visible during the entire conference.  I really liked
+the poster session and hope to see it in the future.  One fact of science
+conferences is that usually it is harder to get funding if you don't have
+something to present.  Posters are a great way to increase participation,
+although I do wonder if we need to go to three parallel tracks in the future.&lt;/p&gt;
+&lt;h4&gt;Domain science symposiums&lt;/h4&gt;
+&lt;p&gt;The symposiums at the end of the day were much sparser than the day.  This was
+expected, but they play an important role.  As the main session includes a
+large number of folks that have quite different domains, these sessions allowed
+for topic specifics to be discussed.  More and more domain conferences are
+including sessions on Python, but SciPy allows for sessions to grab the
+attention of Python experts who are often able to give fresh advice.&lt;/p&gt;
+&lt;h3&gt;Failures&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Develop success from failures. Discouragement and failure are two of the
+surest stepping stones to success.  ~ Dale Carnegie&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Failure is probably too harsh a word for what I discuss in this section.  It's
+more adequately, "Things that disappointed Andy."  And as most people who know
+me know, I'm not afraid to tell you why I'm disappointed (only I usually use
+harsher words).  At any rate, I believe in &lt;a href="http://www.admittingfailure.com/"&gt;admitting
+failure&lt;/a&gt; and want to discuss a few things I
+would like to rectify.&lt;/p&gt;
+&lt;h4&gt;Community involvement&lt;/h4&gt;
+&lt;p&gt;For the most part, the conference is put on by about four people.  Sure there is
+a longer list on the website, but the brunt of the work falls on a few.  I
+would like to see this change.  For example, look at how PyCon is run.  There
+are more volunteers than you can count. While Enthought is an amazing
+institutional sponsor of the event, they only have a small number of resources
+to put into the event.  My impression is that these resources are over
+exhausted.&lt;/p&gt;
+&lt;p&gt;It is time we as a community come together to setup structures for more
+community participation.  For example, the websites need work, the process of
+reviewing papers needs work, there needs to be more logistical help at the
+meeting, and so on.  My guess is that most people don't even know that they
+could be helping. To even start though we need to build a volunteer network and
+appropriate web presence to give volunteers things to do.&lt;/p&gt;
+&lt;h4&gt;Diversity&lt;/h4&gt;
+&lt;p&gt;Matt Davis brought this up on Twitter, but I want to echo it louder.  There was
+a discouraging lack of diversity at SciPy.  I believe there were 100 males to
+every female and very few minorities.  When talking to a few people about this,
+the general view was that there just aren't women coders around.  I think this is
+really wrong, I think that women coders either don't know about SciPy or don't
+care.&lt;/p&gt;
+&lt;p&gt;Which brings up how do you attract female coders?  One metric given to me is
+that conferences with women plenary speakers and/or women on the executive
+staff have 50% more women participants.  I look at the places we advertised and
+we didn't focus on any female or minority organizations.  Closing this gap will
+only make our community more vibrant.&lt;/p&gt;
+&lt;h4&gt;Industry/Academia interactions&lt;/h4&gt;
+&lt;p&gt;SciPy is a place where there are a few industrial partners but there could be
+many more. The problem I saw on the program committee was that anyone who
+submitted work on closed source software were negatively impacted.  We are an
+open source community but hundreds (thousands?) of companies use our tools.
+Industrial partners that come back to the community and talk about how to
+interact more can only be a good thing.  For one it will give us a since of the
+impact that SciPy has beyond the halls of academia.  It will heighten our
+profile among young developers as they are able to come to SciPy to meet
+potential employers.  &lt;/p&gt;
+&lt;p&gt;My suggestion here would be to have vendor booths and a recruitment event.  I
+would even go as far to suggest hosting a few sponsor speaking sessions.  Open
+source is often supported by industry, just as the scipy stack has been
+supported by Enthought for years.  Inviting industry to our meeting will make it
+more visible.&lt;/p&gt;
+&lt;h4&gt;Social Media&lt;/h4&gt;
+&lt;p&gt;The lack of social media at the conference is quite surprising.  Are we all old
+fuddies who don't know how to use social media to discuss?  It is quite
+exciting to go to a conference where the social media around the conference is
+working well.  It allows for more dialog among the participants and thus a
+greater shared experience.  &lt;/p&gt;
+&lt;p&gt;With that said, I would like to see a greater use of Twitter, G+ and Facebook
+throughout the event, including planning. Connecting our community may even
+heal all those fights we have on mailing lists.&lt;/p&gt;
+&lt;h4&gt;Lack of Core Developers&lt;/h4&gt;
+&lt;p&gt;I've already touched on this, but one last failure is the lack of core project
+developers at the conference.  Sure people have lots competing with their time,
+but this is the conference dedicated to the code we spend so much free time
+on.  Conversations at SciPy are still having an effect on the directions of
+codes (in fact today scipy.users had a long conversation about the scipy domain which
+was hotly discussed at the sprints).&lt;/p&gt;
+&lt;p&gt;The few ideas I have on bringing the coders back include:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;More sprinting (space every night &lt;em&gt;all night&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;Sessions dedicated to core projects&lt;/li&gt;
+&lt;li&gt;More organization around BoFs&lt;/li&gt;
+&lt;li&gt;Conference sponsorship for devs to attend conference &lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Vision&lt;/h2&gt;
+&lt;p&gt;Okay 2000 words in and I'm sure you are getting bored.  But I've said this
+before and I'll say it again.  There is no reason SciPy shouldn't be as large
+as PyCon.  While there are certainly more users of the Python language, our
+community is always one of the featured groups when Python users are
+discussed.  The suggestions I outlined above are only a small set of comments I
+really have, but they are the ones I feel probably need a broader discussion.&lt;/p&gt;
+&lt;p&gt;For me the vision of SciPy should be simple.  SciPy is the fuel of the
+scientific Python movement.  It is where producers and consumers of
+scientific and technical code come to learn from each other and make each other
+better scientists and coders.  SciPy as a conference should be inclusive of all
+technical disciplines and help mentor novice programmers. Finally, it should be
+the place where we inject new life into our projects, hack the wild ideas we
+only dream about, and submit pull requests that change the face of science.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andy R. Terrel</dc:creator><pubDate>Mon, 08 Oct 2012 01:24:00 -0700</pubDate><guid>tag:andy.terrel.us,2012-10-08:blog/2012/10/08/thoughts-on-the-scipy-conference/</guid><category>Python</category><category>SciPy</category></item></channel></rss>
