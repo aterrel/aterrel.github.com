@@ -4,7 +4,7 @@ Date: 2013-07-18 16:00
 tags: Python, NumPy, SciPy
 slug: women-sci-comp
 
-**This post written by Kristen M. Thyng about an event we both worked to organize at SciPy2013.**
+**This post written by [Kristen M. Thyng][kristen] about an event we both worked to organize at SciPy2013.**
 
 ![][pic1] ![][pic2] 
 
@@ -64,11 +64,11 @@ Overall, a good time was had by all and it was very enjoyable meeting and discus
 ![][pic7]
 
 
-
-[pic1]: |filename|/figures/1-IMG_0723.JPG "Image title" width="5in" 
-[pic2]: |filename|/figures/2-IMG_0726.JPG "Image title" width="5in"
-[pic3]: |filename|/figures/3-IMG_0728.JPG "Image title" width="5in"
-[pic4]: |filename|/figures/4-IMG_0732.JPG "Image title" width="5in"
-[pic5]: |filename|/figures/5-IMG_0736.JPG "Image title" width="5in"
-[pic6]: |filename|/figures/6-IMG_0737.JPG "Image title" width="5in"
-[pic7]: |filename|/figures/7-IMG_0738.JPG "Image title" width="12in"
+[kristen]: http://kristenthyng.com/
+[pic1]: |filename|/figures/1-IMG_0723.JPG "Image title" width="45%" 
+[pic2]: |filename|/figures/2-IMG_0726.JPG "Image title" width="45%"
+[pic3]: |filename|/figures/3-IMG_0728.JPG "Image title" width="45%"
+[pic4]: |filename|/figures/4-IMG_0732.JPG "Image title" width="45%"
+[pic5]: |filename|/figures/5-IMG_0736.JPG "Image title" width="45%"
+[pic6]: |filename|/figures/6-IMG_0737.JPG "Image title" width="45%"
+[pic7]: |filename|/figures/7-IMG_0738.JPG "Image title" width="90%"
