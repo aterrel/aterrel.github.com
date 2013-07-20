@@ -17,8 +17,7 @@ ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 
 # Title menu options
-MENUITEMS = [('Archives', '/archives.html'),
-             ('Vita', 'http://andy.terrel.us/vita/')]
+MENUITEMS = [('Archives', '/archives.html'),]
 NEWEST_FIRST_ARCHIVES = False
 
 #Github include settings
@@ -42,7 +41,7 @@ DEFAULT_PAGINATION = 10
 
 # STATIC_OUT_DIR requires pelican 3.3
 STATIC_OUT_DIR = ''
-STATIC_PATHS = ['images', 'figures', 'downloads']
+STATIC_PATHS = ['images', 'figures', 'downloads', 'papers_and_talks']
 FILES_TO_COPY = [] #[('favicon.png', 'favicon.png')]
 CODE_DIR = 'downloads/code'
 NOTEBOOK_DIR = 'downloads/notebooks'
