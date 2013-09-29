@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
+from __future__ import unicode_literals
+
+import os
+
 
 AUTHOR = u'Andy R. Terrel'
 
@@ -17,10 +21,15 @@ ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 
 # Title menu options
-MENUITEMS = [('Archives', '/archives.html'),]
-NEWEST_FIRST_ARCHIVES = False
+DISPLAY_PAGES_ON_MENU = False
+MENUITEMS = [('Home', '/'),
+             ('Vita', '/vita.html'),
+#             ('Research', '/research.html'),
+#             ('Software', '/software.html'),
+             ('Archives', '/archives.html')]
+NEWEST_FIRST_ARCHIVES = True
 
-#Github include settings
+#Github include settings used in octopress and neat themes
 GITHUB_USER = 'aterrel'
 GITHUB_REPO_COUNT = 5
 GITHUB_SKIP_FORK = True
@@ -33,7 +42,11 @@ GITHUB_SHOW_USER_LINK = True
 #          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL =  (('twitter', 'http://twitter.com/aterrel'),)
+SOCIAL =  (('Twitter', 'http://twitter.com/aterrel'),
+           ('Github', 'http://github.com/aterrel'),
+           ('Bitbucket', 'https://bitbucket.org/aterrel/'),
+           ('Google Scholar', 'http://scholar.google.com/citations?user=ALzCmCEAAAAJ&hl=en'),
+           ('LinkedIn', 'http://www.linkedin.com/in/aterrel'))
 # (('You can add links in your config file', '#'),
 #          ('Another social link', '#'),)
 
@@ -42,14 +55,18 @@ DEFAULT_PAGINATION = 10
 # STATIC_OUT_DIR requires pelican 3.3
 STATIC_OUT_DIR = ''
 STATIC_PATHS = ['images', 'figures', 'downloads', 'papers_and_talks']
-FILES_TO_COPY = [] #[('favicon.png', 'favicon.png')]
 CODE_DIR = 'downloads/code'
 NOTEBOOK_DIR = 'downloads/notebooks'
 
 # Theme and plugins
 #  Theme requires http://github.com/duilio/pelican-octopress-theme/
 #  Plugins require http://github.com/getpelican/pelican-plugins/
-THEME = '/Users/aterrel/Sites/pelican-octopress-theme/'
+# Theme
+THEME_DIR = os.path.join(os.getcwd(), "theme")
+THEME_NAME = "tuxlite_tbs"
+THEME = os.path.join(THEME_DIR, THEME_NAME)
+RECENT_ARTICLES_COUNT = 3
+
 PLUGIN_PATH = '/Users/aterrel/Sites/pelican-plugins/'
 PLUGINS = ['summary', 
            'liquid_tags.img', 
