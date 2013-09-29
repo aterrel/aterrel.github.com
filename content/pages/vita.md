@@ -5,7 +5,7 @@ save_as: vita/index.html
 About
 -----
 
-Dr. Andy R. Terrel is a Research Associate for the [Computational Hydraulics Group](http://chg.ices.utexas.edu/) at the [Institute for Computational Engineering and Science](http://www.ices.utexas.edu/) which is at the [Universiy of Texas at Austin](http://www.utexas.edu).  Previously, Andy was a High Performance Computing researcher at the [Texas Advanced Computing Center](http://www.tacc.utexas.edu/).
+Dr. Andy R. Terrel is a Research Associate Scientist for the [Computational Hydraulics Group](http://chg.ices.utexas.edu/) at the [Institute for Computational Engineering and Science](http://www.ices.utexas.edu/) which is at the [Universiy of Texas at Austin](http://www.utexas.edu).  Previously, Andy was a High Performance Computing researcher at the [Texas Advanced Computing Center](http://www.tacc.utexas.edu/).
 
 Andy's research includes utilizing supercomputers with Python and studying methods for speeding up computational fluid dynamics. He graduated from the [University of Chicago](http://www.uchicago.edu/") with a PhD in [Computer Science](http://cs.uchicago.edu/) in 2010 and has been programming in Python for the last decade. Andy has contributed to numerous open source projects notably the [FEniCS Project](http://fenicsproject.org/) and [Sympy](http://sympy.org/).
 
@@ -50,9 +50,11 @@ University, Lubbock, Texas.
 Publications
 ------------
 
+C. Burstedde, D. Calhoun, K.T. Mandli, and A.R. Terrel, **ForestClaw: Hybrid forest-of-octrees AMR for hyperbolic conservation laws**, to appear ParCo 2013, [arXiv:1308.1472](http://arxiv.org/abs/1308.1472)
+
 M.G. Knepley and A.R. Terrel, **[Finite Element Integration on GPUs](|filename|/papers_and_talks/KnepleyTerrel2012.pdf)**, ACM Transactions on Mathematical Software (TOMS), Volume 39 Issue 2, February 2013 Article No. 10. [doi 10.1145/2427023.2427027](http://dx.doi.org/10.1145/2427023.2427027)
 
-A.R. Terrel and K. T. Mandli, **[ManyClaw: Slicing and dicing Riemann solvers for next generation highly parallel architectures](|filename|/papers_and_talks/tacc-intel2012.pdf)**, TACC-Intel Symposium on Highly Parallel Architectures. 2012.
+A.R. Terrel and K.T. Mandli, **[ManyClaw: Slicing and dicing Riemann solvers for next generation highly parallel architectures](|filename|/papers_and_talks/tacc-intel2012.pdf)**, TACC-Intel Symposium on Highly Parallel Architectures. 2012.
 
 A.R. Terrel, R.C. Kirby, M.G. Knepley, L.R. Scott, and G.N. Wells, **Finite elements for incompressible fluids**, in A. Logg, K.A. Mardal, and G. N. Wells, editors. *Automated solutions of differential equations by the finite element mehod*. Springer-Verlag. Lecture Notes in Computational Science and Engineering, Vol 84, 2011.
 
