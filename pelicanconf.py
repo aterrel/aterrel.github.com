@@ -54,7 +54,7 @@ DEFAULT_PAGINATION = 10
 
 # STATIC_OUT_DIR requires pelican 3.3
 STATIC_OUT_DIR = ''
-STATIC_PATHS = ['images', 'figures', 'downloads', 'papers_and_talks']
+STATIC_PATHS = ['CNAME', 'images', 'figures', 'downloads', 'papers_and_talks']
 CODE_DIR = 'downloads/code'
 NOTEBOOK_DIR = 'downloads/notebooks'
 
