@@ -22,8 +22,7 @@ ARTICLE_SAVE_AS = 'blog/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 
 # Title menu options
 DISPLAY_PAGES_ON_MENU = False
-MENUITEMS = [('Home', '/'),
-             ('Vita', '/vita/'),
+MENUITEMS = [('Vita', '/vita/'),
 #             ('Research', '/research.html'),
 #             ('Software', '/software.html'),
              ('Archives', '/archives.html')]

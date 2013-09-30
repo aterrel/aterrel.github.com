@@ -106,5 +106,6 @@ github: publish
 	git add -A
 	git commit -m "Update site at `date`"
 	git push origin master
+	git checkout source
 
 .PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload s3_upload cf_upload github
