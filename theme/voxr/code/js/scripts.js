@@ -54,12 +54,13 @@ $(document).ready(function(){
 
     //google maps
     function initialize() {
-        var mapOptions = {
+/*        var mapOptions = {
             zoom: 4,
             center: new google.maps.LatLng(-25.363882, 131.044922),
             mapTypeId: google.maps.MapTypeId.ROADMAP
         }
         map = new google.maps.Map(document.getElementById('google_maps'), mapOptions);
+
 
         var marker = new google.maps.Marker({
             position: map.getCenter(),
@@ -79,9 +80,10 @@ $(document).ready(function(){
             map.setZoom(8);
             map.setCenter(marker.getPosition());
         });
+*/
     }
 
-    google.maps.event.addDomListener(window, 'load', initialize);
+//    google.maps.event.addDomListener(window, 'load', initialize);
 
 
     var scrollPage = function(page) {
@@ -94,6 +96,7 @@ $(document).ready(function(){
 
         //hide current page
         var current_page = $(".menu ul li a.active").attr("href");
+        if (!current_page) { return }
         current_page = current_page.substring(1);
 
         //remove active class from menu items
@@ -206,7 +209,7 @@ $(document).ready(function(){
 
                 //contact page
                 if (page == "contact"){
-                    google.maps.event.trigger(map, "resize");
+//                    google.maps.event.trigger(map, "resize");
                 }
 
                 //blog page
@@ -236,9 +239,10 @@ $(document).ready(function(){
             page = page.substring(1);
             console.log(page)
             scrollPage(page)
+            return false;
         }
-        return false;
 
+        return true;
     });
 
     // Scroll the page on load.
