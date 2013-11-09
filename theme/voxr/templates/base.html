@@ -20,132 +20,167 @@
 
 </head>
 
-<body>
+<body class="blue_color">
 
-<div class="navbar">
-    <div class="navbar-inner">
-    <div class="container">
 
-         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-             <span class="icon-bar"></span>
-             <span class="icon-bar"></span>
-             <span class="icon-bar"></span>
-         </a>
+    <!-- Wrapper -->
+    <div id="wrapper">
 
-        <a class="brand" href="{{ SITEURL }}">{{ SITENAME }}</a>
 
-        <div class="nav-collapse">
-        <ul class="nav">
-        {% for title, link in MENUITEMS %}
-            <li><a href="{{ link }}">{{ title }}</a></li>
-        {% endfor %}
-            
-        {% if DISPLAY_PAGES_ON_MENU %}
-        {% for page in PAGES %}
-            <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
-        {% endfor %}
-        {% endif %}
-
-	{% if FEED_RSS %}
-	<li><a href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" class="feed" rel="subscribe-rss"></a></li>
-	{% endif %}
-
-        </ul>
-        </div>
-    </div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="content">
-    <div class="row">
-
-        <div class="span9">
-        {% block content %}{% endblock %}
-        </div>
-        
-        <div class="span3">
-            <div class="social">
-	    <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
-	    <ul class="nav nav-list">
-	      <li class="nav-header">Details</li>
-	      <li><img alt="Web Presence Image" src="/figures/gravatar.jpeg" /></a> <br/><br/></li>
-	      <li><a href="mailto:andy.terrel@gmail.com">Email</a></li>
-	    </ul>
-	    </div>
-	    </div>
-
-            {% if SOCIAL %}
-            <div class="social">
-            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
-            <ul class="nav nav-list">
-                <li class="nav-header"> 
-                Social
-                </li>
-           
-                {% for name, link in SOCIAL %}
-                <li><a href="{{ link }}">{{ name }}</a></li>
-                {% endfor %}
-            </ul>
+        <!-- Menu -->
+        <div class="static-menu menu_width_page">
+            <div class="left animate">
+                <div class="img"><a href="img/profile_picture.jpg" class="prettyPhoto"><img src="img/profile_picture.jpg" alt="Profile Picture" /></a></div>
+                <span class="name">Codematician</span>
             </div>
+            <div class="menu_inner">
+                <div class="m_menu_toggle"><i class="icon-reorder"></i></div>
+                <ul>
+                    <li>
+                        <a href="index.html#home"><i class="menu_icon icon-home"></i><span class="text">Home</span></a>
+                    </li>
+                    <li>
+                        <a href="index.html#about"><i class="menu_icon icon-user"></i><span class="text">About</span></a>
+                    </li>
+                    <li>
+                        <a href="index.html#resume"><i class="menu_icon icon-file-text"></i><span class="text">Resume</span></a>
+                    </li>
+                    <li>
+                        <a href="index.html#portfolio"><i class="menu_icon icon-picture"></i><span class="text">Portfolio</span></a>
+                    </li>
+                    <li>
+                        <a href="test.html" class="active"><i class="menu_icon icon-list-ul active"></i><span class="text">Blog</span></a>
+                    </li>
+                    <li>
+                        <a href="index.html#contact"><i class="menu_icon icon-envelope"></i><span class="text">Contact</span></a>
+                    </li>
+                </ul>
             </div>
+            <div class="right">
+                {% if FEED_RSS %}
+                <li><a href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" class="feed" rel="subscribe-rss"></a></li>
+                {% endif %}
+            </div>
+        </div>
+        <!-- /Menu -->
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <div id="blog_page" class="new_page_class" style="display: block">
+                <h1 class="page_title color_title">Blog</h1>
+
+                <hr class="hr_line" />
+
+                <a class="return_to_blog" href="#">Back to Blog</a>
+
+                <!-- Blog Posts -->
+                <div class="posts">
+                    {% block content %}{% endblock %}
+                </div>
+                <!-- /Blog Posts -->
+
+
+
+                <!-- Right side -->
+                <div class="right_side">
+
+                    <!-- Search -->
+                    <div class="search">
+                        <input type="text" value="" placeholder="Search" />
+                        <i class="icon-search"></i>
+                    </div>
+                    <!-- /Search -->
+
+
+                                {% if SOCIAL %}
+
+                    <!-- Social Links -->
+                    <div class="categories">
+                        <h1 class="color_title">Social</h1>
+                        <hr class="hr_line" />
+
+                        <ul class="list">
+
+            {% for name, link in SOCIAL %}
+                            <li span class="dot">&bull;</span><a href="{{ link }}">{{ name }}</a></li>
+            {% endfor %}
+                        </ul>
+                    </div>
+                    <!-- /Links -->
             {% endif %}
 
             {% if LINKS %}
-            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
-            <ul class="nav nav-list">
-                <li class="nav-header"> 
-                Links
-                </li>
-            
+                    <!-- Links -->
+                    <div class="categories">
+                        <h1 class="color_title">Links</h1>
+                        <hr class="hr_line" />
+
+                        <ul class="list">
+
             {% for name, link in LINKS %}
-                <li><a href="{{ link }}">{{ name }}</a></li>
+                            <li span class="dot">&bull;</span><a href="{{ link }}">{{ name }}</a></li>
             {% endfor %}
-            </ul>
-            </div>
+                        </ul>
+                    </div>
+                    <!-- /Links -->
             {% endif %}
 
             {% if categories %}
-            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
-            <ul class="nav nav-list">
-                <li class="nav-header"> 
-                Categories
-                </li>
-                
-                {% for cat, null in categories %}
-                <li><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
-                {% endfor %}                   
-            </ul>
-            </div>
+                    <!-- Categories -->
+                    <div class="categories">
+                        <h1 class="color_title">Categories</h1>
+                        <hr class="hr_line" />
+
+                        <ul class="list">
+                            {% for cat, null in categories %}
+                            <li span class="dot">&bull;</span><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <!-- /Categories -->
             {% endif %}
 
 	    {% if tags %}
-            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
-            <ul class="nav nav-list">
-                <li class="nav-header"> 
-                <li class="nav-header"> 
-		Tags
-                </li>
+                    <!-- Tags -->
+                    <div class="categories">
+                        <h1 class="color_title">Tags</h1>
+                        <hr class="hr_line" />
+
+                        <ul class="list">
 		{% for tag, article in tags %}
-		<li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
+                            <li span class="dot">&bull;</span><a href="{{ SITEURL }}/{{ tag.url}}">{{ tag }}</a></li>
 		{% endfor %}
-	    </ul>
-	    </div>
+                        </ul>
+                    </div>
+                    <!-- /Tags -->
 	    {% endif %}
 
-        </div> {# End span3 #} 
-    </div> {# End row #}
-    </div> {# End content #}
+        </div>
+        <!-- /Main Content -->
 
-<footer>
-<br />
-<p><a href="{{ SITEURL }}">{{ SITENAME }}</a> &copy; {{ AUTHOR }} 2012-2013</p>
-</footer>
+        <!-- Footer -->
+        <div id="footer">
+            <div class="inner">
+                2013 &copy; {{ AUTHOR }}. Voxr Template by <a href="http://www.codecanyon.net/user/Maxdp?ref=Maxdp">Maxdp</a> modified by Andy R. Terrel
+            </div>
+        </div>
+        <!-- /Footer -->
 
-</div> <!-- /container -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-collapse.js"></script>
+    </div>
+    <!-- /Wrapper -->
+
+    <script type="text/javascript" src="{{ STATIC_URL }}/template/js/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}/template/js/sequence.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}/template/js/mixitup.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}/template/js/scripts.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 {% include "analytics.html" %}
-{% include "github.html" %} 
+{% include "github.html" %}
 </body>
 </html>
+

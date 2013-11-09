@@ -62,7 +62,8 @@ NOTEBOOK_DIR = 'downloads/notebooks'
 #  Plugins require http://github.com/getpelican/pelican-plugins/
 # Theme
 THEME_DIR = os.path.join(os.getcwd(), "theme")
-THEME_NAME = "tuxlite_tbs"
+#THEME_NAME = "tuxlite_tbs"
+THEME_NAME = "voxr"
 THEME = os.path.join(THEME_DIR, THEME_NAME)
 RECENT_ARTICLES_COUNT = 3
 
