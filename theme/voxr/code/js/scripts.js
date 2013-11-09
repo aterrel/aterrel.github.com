@@ -169,7 +169,7 @@ $(document).ready(function(){
                 if (page == 'about'){
                     if (!$("#content > div#"+page+"_page > .details.box").hasClass("animated")){
                         $("#content > div#"+page+"_page > .details.box .item").each(function(){
-                            menu_elem.addClass("animated bounceIn");
+                            $(this).addClass("animated bounceIn");
                         });
                         $("#content > div#"+page+"_page > .details.box").addClass("animated");
                     }
@@ -177,25 +177,28 @@ $(document).ready(function(){
 
                 //resume page
                 if (page == 'resume'){
+                    console.log("Here lin 180")
+
                     //animate left side
                     if (!$("#content > div#resume_page > .left_side").hasClass("animated")){
                         $("#content > div#resume_page .left .item").each(function(){
-                            menu_elem.addClass("animated flipInX");
+                            $(this).addClass("animated flipInX");
                         });
                         $("#content > div#resume_page > .left_side").addClass("animated");
 
                         //animate skills
                         $('#content > div#resume_page .right_side .skills .skill .color').each(function(){
-                            var val = menu_elem.attr("data-width");
-                            menu_elem.animate({
+                            console.log("Here line 188")
+                            var val = $(this).attr("data-width");
+                            $(this).animate({
                                 'width':val
                             }, 1000, 'easeInQuint');
                         });
                     }
                 }else{
                     $("#content > div#resume_page .left .item").each(function(){
-                        menu_elem.removeClass("animate");
-                        menu_elem.addClass("animation_done");
+                        $(this).removeClass("animate");
+                        $(this).addClass("animation_done");
                     });
                 }
 
