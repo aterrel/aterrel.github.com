@@ -1,23 +1,16 @@
 <!DOCTYPE html>
-<html lang="{{ DEFAULT_LANG }}">
+<html lang="{{ DEFAULT_LANG }}"  style="background: url({{ SITEURL }}/theme/img/patterns/pattern-06.png) repeat left top; background-attachment: fixed;">
 <head>
     <meta charset="utf-8">
     <title>{% block windowtitle %}{{ SITENAME }}{% endblock %}</title>
     <meta name="description" content="">
     <meta name="author" content="{{ AUTHOR }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-    <script src="{{ SITEURL }}/theme/html5.js"></script>
-    <![endif]-->
-
-    <!-- Le styles -->
-    <link href="{{ SITEURL }}/theme/bootstrap.min.css" rel="stylesheet">
-    <link href="{{ SITEURL }}/theme/bootstrap.min.responsive.css" rel="stylesheet">
-    <link href="{{ SITEURL }}/theme/local.css" rel="stylesheet">
-    <link href="{{ SITEURL }}/theme/pygments.css" rel="stylesheet">
-
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/animate.css"/>
+    <link href="{{ SITEURL }}/theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600|Oswald:300,400' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="{{ SITEURL }}/theme/image/gif" href="{{ SITEURL }}/theme/img/gravatar_64x64.gif" />
 </head>
 
 <body class="blue_color">
@@ -30,7 +23,7 @@
         <!-- Menu -->
         <div class="static-menu menu_width_page">
             <div class="left animate">
-                <div class="img"><a href="img/profile_picture.jpg" class="prettyPhoto"><img src="img/profile_picture.jpg" alt="Profile Picture" /></a></div>
+                <div class="img"><a href="{{ SITEURL }}/theme/img/profile_picture.jpg" class="prettyPhoto"><img src="{{ SITEURL }}/theme/img/profile_picture.jpg" alt="Profile Picture" /></a></div>
                 <span class="name">Codematician</span>
             </div>
             <div class="menu_inner">
@@ -49,7 +42,7 @@
                         <a href="index.html#portfolio"><i class="menu_icon icon-picture"></i><span class="text">Portfolio</span></a>
                     </li>
                     <li>
-                        <a href="test.html" class="active"><i class="menu_icon icon-list-ul active"></i><span class="text">Blog</span></a>
+                        <a href="blog.html" class="active"><i class="menu_icon icon-list-ul active"></i><span class="text">Blog</span></a>
                     </li>
                     <li>
                         <a href="index.html#contact"><i class="menu_icon icon-envelope"></i><span class="text">Contact</span></a>
@@ -170,11 +163,11 @@
     </div>
     <!-- /Wrapper -->
 
-    <script type="text/javascript" src="{{ STATIC_URL }}/template/js/jquery.min.js"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}/template/js/sequence.js"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}/template/js/mixitup.js"></script>
+    <script type="text/javascript" src="{{ SITEURL }}/theme/js/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ SITEURL }}/theme/js/sequence.js"></script>
+    <script type="text/javascript" src="{{ SITEURL }}/theme/js/mixitup.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}/template/js/scripts.js"></script>
+    <script type="text/javascript" src="{{ SITEURL }}/theme/js/scripts.js"></script>
 
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>

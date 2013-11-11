@@ -12,18 +12,26 @@
 
 <hr />
 
-<h1> Blog </h1>
-
 <br/><br/>
 
 {% if articles %}
-{% for article in articles_page.object_list %}        
+<div id="blog_page">
+  <h1 class="page_title color_title">Blog</h1>
+  <hr class="hr_line" />
 
-    <div class='article'>
-        <a href="{{ SITEURL }}/{{ article.url }}"><h2>{{ article.title }}</h2></a>
-        <div class= "well small"> {% include "metadata.html" %} </div>
-        <div class="summary">{{ article.summary }} <a class="btn btn-info xsmall" href="{{ SITEURL }}/{{ article.url }}">read more</a></div>
-    </div>	
+  <div class="posts">
+    {% for article in articles_page.object_list %}        
+
+    <div class="body">
+      <h1 class="title"><a href="{{ SITEURL }}/{{ article.url }}" class="blog_view_btn color_title" data-id="1">{{ article.title }}</a></h1> 
+      <div class="body">
+        <p>{{ article.summary }}</p>
+      </div>
+    </div>
+
+    <!--     <div class= "well small"> {% include "metadata.html" %} </div> -->
+    <!--     <div class="summary">{{ article.summary }} <a class="btn btn-info xsmall" href="{{ SITEURL }}/{{ article.url }}">read more</a></div> -->
+    <!-- </div>	 -->
 				
     {% if loop.last and (articles_page.has_previous() or not articles_page.has_previous() and loop.length > 1) %}
         {% include 'pagination.html' %}
@@ -31,6 +39,8 @@
 
 
 {% endfor %} {# For article #}
+  </div>
+</div>
 {% endif %} {# If articles #}
 
 {% endblock content %}
