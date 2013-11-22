@@ -1,5 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Codematician</title><link href="http://andy.terrel.us/" rel="alternate"></link><link href="/atom.xml" rel="self"></link><id>http://andy.terrel.us/</id><updated>2013-07-18T16:00:00-07:00</updated><entry><title>Women in Scientific Computing, SciPy 2013</title><link href="http://andy.terrel.us/blog/2013/07/18/women-sci-comp/" rel="alternate"></link><updated>2013-07-18T16:00:00-07:00</updated><author><name>Kristen M. Thyng</name></author><id>tag:andy.terrel.us,2013-07-18:blog/2013/07/18/women-sci-comp/</id><summary type="html">&lt;p&gt;&lt;strong&gt;This post written by &lt;a href="http://kristenthyng.com/"&gt;Kristen M. Thyng&lt;/a&gt; about an event we both worked to organize at SciPy2013.&lt;/strong&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Codematician</title><link href="http://andy.terrel.us/" rel="alternate"></link><link href="/atom.xml" rel="self"></link><id>http://andy.terrel.us/</id><updated>2013-11-21T00:00:00-08:00</updated><entry><title>Joining the Big Data Brain Drain</title><link href="http://andy.terrel.us/blog/2013/11/21/joining-big-data-brain-drain/" rel="alternate"></link><updated>2013-11-21T00:00:00-08:00</updated><author><name>Andy R. Terrel</name></author><id>tag:andy.terrel.us,2013-11-21:blog/2013/11/21/joining-big-data-brain-drain/</id><summary type="html">&lt;p&gt;&lt;img alt="" src="http://andy.terrel.us/figures/21GunSalute.jpg" title="21 Gun Salute&amp;quot; width=&amp;quot;45%" /&gt;&lt;/p&gt;
+&lt;p&gt;So long academia and thanks for all the debates!  &lt;/p&gt;
+&lt;p&gt;Today is my last day of a wonderful three years at the University of Texas at
+Austin. Starting Monday, following Jake Vanderplas'
+&lt;a href="http://jakevdp.github.io/blog/2013/10/26/big-data-brain-drain/"&gt;terminology&lt;/a&gt;,
+I join the big data brain drain.  I will be joining Continuum Analytics a their
+Chief Computational Scientist, with a focus of helping them join HPC
+technologies to the Big Data world.  But that is another story.&lt;/p&gt;
+&lt;h2&gt;My story&lt;/h2&gt;
+&lt;p&gt;I have wanted to be a scientist since I was quite young, okay I really wanted
+to be a jet pilot but my genes killed that one. I remember the day that I
+decided to become a computational scientist.  It was at the
+&lt;a href="http://www.math.ttu.edu/Department/Calendar/Conferences/redraider/rr2003/red03.html"&gt;Red Raider Minisymposium on Biological Systems&lt;/a&gt;.
+I heard an excellent discussions by James Keener and Charles Taylor on the role
+of computational mathematics and understanding cardiovascular
+systems. Additionally I was basically offered a position at the prestigious
+University of Chicago on the spot.  The idea that I could contribute to
+treating the medical ailment that has claimed the lives of many in my family.
+To this end, I was elated when
+&lt;a href="http://cbc.simula.no/pub/"&gt;center for biomedical computing at Simula&lt;/a&gt; started
+using the &lt;a href="http://fenicsproject.org/"&gt;software&lt;/a&gt; I helped with in graduate
+school.&lt;/p&gt;
+&lt;p&gt;After graduate school, I've had the amazing opportunity to collaborate with
+scientists from a diverse set of applications and backgrounds. I've traveled to
+four continents to present my work and collaborate.  I've released several
+coding projects that have pushed the boundaries of computational mathematics
+field in numerics on accelerators, adaptive meshes, and domain specific
+languages.  Some of these discoveries have even pushed into
+&lt;a href="http://www.mcs.anl.gov/petsc/"&gt;PETSc&lt;/a&gt;, the premier HPC platform produced by
+the Argonne Lab.  Additionally, I have had the privileged of helping with the
+scientific python community taking the role of advocating and organizing the
+SciPy conference and the NumFOCUS foundation.  In the coming months I will be
+an editor for the Scientific Software Days issue in CiSE magazine.  Its been a
+jam packed three years and there are only a few things I would do differently.&lt;/p&gt;
+&lt;p&gt;Despite my deep respect for academia, I have come to terms that I it is
+fundamentally not the right fit. I've had on and off moments where I start
+something in industry and come back, but this time is much different. After
+finally getting a rather large grant from the US Army, I had thought that I
+would finally have some time to determine my own direction.  Unfortunately, due
+to no part of mine, the grant was cut in half. My own deliverables were
+slipping so the rest of the money was on a slippery slope. The government
+sequestration and shutdown meant that my money would definitely be out before
+it could be renewed.  Just like that, I went from well funded PI to soft
+money beggar.  &lt;/p&gt;
+&lt;p&gt;This presented with a choice of bouncing around on other PI's grants and hoping to get
+a more permanent position or moving to industry.  I shopped around my CV to
+see if I had a shot on the academic job market, but was told that I was
+not competitive by several friendly collaborators.  Most hires, even in
+computer science and applied mathematics, are people who have been out of
+graduate school for five or more years. On top of this, the general perception
+was I am "just the coder" for the work.  So when my friends at &lt;a href="http://continuum.io"&gt;Continuum
+Analytics&lt;/a&gt; gave me a call to do some of the most ambitious work I've seen, I
+didn't hesitate.&lt;/p&gt;
+&lt;h2&gt;Call for sustaining career paths for scientific coders&lt;/h2&gt;
+&lt;p&gt;Could I have salvaged my academic career? Absolutely.  But the events above
+makes me stop and ask if I wanted to.  Having turned down offers that tripled my
+salary for years, I've stayed with science to make an impact on the wider
+world.  I think academia does make the world a much better place.
+Unfortunately, I also see my role as the scientific coder being diminished year
+after year.&lt;/p&gt;
+&lt;p&gt;I can point to half a dozen folks I know not getting tenure.  People in post
+doctoral roles for a decade. Families living in different countries trying to
+keep their academic careers alive. And almost no academic I've ever met has a
+good work life balance. I'm willing to give up a lot to be an academic, but now
+that I have two children and one on the way, I'm not interested in giving up as
+much as it takes.&lt;/p&gt;
+&lt;p&gt;Even with academia being a hard place to make a career, you add to the fray
+that the field doesn't acknowledge code as a scholarly work and I'm out. At
+Supercomputing 2013 I saw three different presentations
+(&lt;a href="http://wssspe.researchcomputing.org.uk/"&gt;WSSSPE&lt;/a&gt;,
+&lt;a href="http://sc13.supercomputing.org/schedule/event_detail.php?evid=inspkr101"&gt;Saul Perlmutter's plenary&lt;/a&gt;,
+and
+&lt;a href="http://sc13.supercomputing.org/schedule/event_detail.php?evid=bof184"&gt;a BoF on Sequencing and Accelerators&lt;/a&gt;
+) all calling for better coders in science. But as pointed out again and again,
+the motivating factors are not in favor of better code in science.  Without a
+sustainable career path for those who are motivated to be "just the coder",
+science will continue to not compete.&lt;/p&gt;
+&lt;p&gt;One of the more persistent complaints I and many of my colleagues have had is
+being the lone coder in a larger group. One astrophysicist turned startup
+monkey once told me, "I'm tired of being the only one in my group that knows
+what an expression tree is."  We need more computer science skills for our
+scientific staff.  Unfortunately, computer science departments across the
+country are trying to move scientific computing out of their department. With
+only a few scientific computing departments in the entire US, there is a lack
+of options for scientific computing professionals.&lt;/p&gt;
+&lt;p&gt;I have volunteered as much time as I can afford to promoting and
+training folks like me with
+&lt;a href="http://software-carpentry.org/"&gt;Software Carpentry&lt;/a&gt; and
+&lt;a href="http://conference.scipy.org/index.html"&gt;SciPy conferences&lt;/a&gt;. The recent news of
+the
+&lt;a href="http://www.moore.org/newsroom/press-releases/2013/11/12/%20bold_new_partnership_launches_to_harness_potential_of_data_scientists_and_big_data"&gt;Moore Foundation and Sloan Foundation&lt;/a&gt;
+to further the careers of folks like me is a welcome message.  With the
+increase of science relying on advanced technologies and the increased rate of
+retracted publications due to software errors, academia must adapt. As a person
+who advocated for better software at an
+&lt;a href="www.tacc.utexas.edu"&gt;NSF Supercomputing facility&lt;/a&gt;, I can only wonder how long
+until the NSF makes a center for open sustainable software. Money for the hardware is
+just not enough to advance the cyber-infrastructure of the US.&lt;/p&gt;
+&lt;h2&gt;Future Advocate&lt;/h2&gt;
+&lt;p&gt;While the door to academia never truly closes, I will have an opportunity to
+work with an amazing team that is using much of the scientific technologies
+I've grown to love.  A scientist at heart, I plan to continue helping with
+SciPy and NumFOCUS, but as a industrial scientist with a team of very talented
+coders. My hope is to keep working with folks in academia to take their ideas
+to new levels of impact on the world they are passionate about helping.&lt;/p&gt;
+&lt;p&gt;As the great @dabeaz did while I was a student in his class, I give the 21 gun
+salute to my academic career. So long and thanks for all the great debates.&lt;/p&gt;
+&lt;h3&gt;Photo attribution&lt;/h3&gt;
+&lt;p&gt;By U.S. Navy photo by Photographer’s Mate 2nd Class Denise
+Martin. [Public domain], &lt;a
+href="http://commons.wikimedia.org/wiki/File%3AUS_Navy_021023-N-4211M-001_21_gun_salute_at_Naval_Air_Station_Lemoore.jpg"&gt;via
+Wikimedia Commons&lt;/a&gt;&lt;/p&gt;</summary><category term=""></category></entry><entry><title>Women in Scientific Computing, SciPy 2013</title><link href="http://andy.terrel.us/blog/2013/07/18/women-sci-comp/" rel="alternate"></link><updated>2013-07-18T16:00:00-07:00</updated><author><name>Kristen M. Thyng</name></author><id>tag:andy.terrel.us,2013-07-18:blog/2013/07/18/women-sci-comp/</id><summary type="html">&lt;p&gt;&lt;strong&gt;This post written by &lt;a href="http://kristenthyng.com/"&gt;Kristen M. Thyng&lt;/a&gt; about an event we both worked to organize at SciPy2013.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="http://andy.terrel.us/figures/1-IMG_0723.JPG" title="Image title&amp;quot; width=&amp;quot;45%" /&gt; &lt;img alt="" src="http://andy.terrel.us/figures/2-IMG_0726.JPG" title="Image title&amp;quot; width=&amp;quot;45%" /&gt; &lt;/p&gt;
 &lt;p&gt;As in other computing fields, women make up a small percentage of the people in scientific computing. In order to bring together the women at the SciPy conference to aid in building community and to discuss related issues, a mixer was held during one of the evening Birds of a Feather sessions, moderated by SciPy Conference co-chair Andy Terrel and attendee Kristen Thyng. The mixer was co-sponsored by generous support from NumFOCUS, the Python Software Foundation, and the SciPy conference.&lt;/p&gt;
 &lt;p&gt;Approximately three women attended SciPy 2012. In 2013, there was a substantially higher representation of women, with about 35 women or 10% of the participants between the tutorials, the conference, and the sprints. However, this number is still low, and more elucidating is how the numbers break down by participation activity. More detailed numbers for female participation are as follows, noting that some of these numbers are exact and some are rough best estimates since demographic information was not gathered from conference participants:&lt;/p&gt;
