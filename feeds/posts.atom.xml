@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Codematician</title><link href="http://andy.terrel.us/" rel="alternate"></link><link href="/feeds/posts.atom.xml" rel="self"></link><id>http://andy.terrel.us/</id><updated>2013-11-21T00:00:00-08:00</updated><entry><title>Joining the Big Data Brain Drain</title><link href="http://andy.terrel.us/blog/2013/11/21/joining-big-data-brain-drain/" rel="alternate"></link><updated>2013-11-21T00:00:00-08:00</updated><author><name>Andy R. Terrel</name></author><id>tag:andy.terrel.us,2013-11-21:blog/2013/11/21/joining-big-data-brain-drain/</id><summary type="html">&lt;p&gt;&lt;img alt="" src="http://andy.terrel.us/figures/21GunSalute.jpg" title="21 Gun Salute&amp;quot; width=&amp;quot;45%" /&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Codematician</title><link href="http://andy.terrel.us/" rel="alternate"></link><link href="/feeds/posts.atom.xml" rel="self"></link><id>http://andy.terrel.us/</id><updated>2013-11-21T00:00:00-08:00</updated><entry><title>Joining the Big Data Brain Drain</title><link href="http://andy.terrel.us/blog/2013/11/21/joining-big-data-brain-drain/" rel="alternate"></link><updated>2013-11-21T00:00:00-08:00</updated><author><name>Andy R. Terrel</name></author><id>tag:andy.terrel.us,2013-11-21:blog/2013/11/21/joining-big-data-brain-drain/</id><summary type="html">&lt;p&gt;&lt;img alt="" src="|filename|/figures/21GunSalute.jpg" title="21 Gun Salute&amp;quot; width=&amp;quot;45%" /&gt;&lt;/p&gt;
 &lt;p&gt;So long academia and thanks for all the debates!  &lt;/p&gt;
 &lt;p&gt;Today is my last day of a wonderful three years at the University of Texas at
 Austin. Starting Monday, following Jake Vanderplas'
@@ -33,7 +33,7 @@ scientific python community taking the role of advocating and organizing the
 SciPy conference and the NumFOCUS foundation.  In the coming months I will be
 an editor for the Scientific Software Days issue in CiSE magazine.  Its been a
 jam packed three years and there are only a few things I would do differently.&lt;/p&gt;
-&lt;p&gt;Despite my deep respect for academia, I have come to terms that I it is
+&lt;p&gt;Despite my deep respect for academia, I have come to terms that it is
 fundamentally not the right fit. I've had on and off moments where I start
 something in industry and come back, but this time is much different. After
 finally getting a rather large grant from the US Army, I had thought that I
