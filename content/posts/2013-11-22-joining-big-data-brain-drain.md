@@ -5,7 +5,7 @@ tags:
 slug: joining-big-data-brain-drain
 
 
-![][pic1]
+![21 Gun Salute][pic1]
 
 So long academia and thanks for all the debates!  
 
