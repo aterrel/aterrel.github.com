@@ -15,18 +15,39 @@
 <br/><br/>
 
 {% if articles %}
-<div id="blog_page">
+<div id="blog_page" class="new_page_class" style="display: block">
   <h1 class="page_title color_title">Blog</h1>
   <hr class="hr_line" />
 
   <div class="posts">
     {% for article in articles_page.object_list %}        
 
-    <div class="body">
-      <h1 class="title"><a href="{{ SITEURL }}/{{ article.url }}" class="blog_view_btn color_title" data-id="1">{{ article.title }}</a></h1> 
-      <div class="body">
-        <p>{{ article.summary }}</p>
+    <div class="post text" data-post="{{ loop.index }}">
+
+      <div class="right">
+        <div class="bot">
+          <span class="user">
+            <i class="icon-user"></i>
+            <span><a href="#">Admin</a></span>
+          </span>
+          <span class="time">
+            <i class="icon-time"></i>
+            <span>August 28, 2013</span>
+          </span>
+          <span class="tags">
+            <i class="icon-tags"></i>
+            <span><a href="#">web</a></span>&nbsp;,
+            <span><a href="#">design</a></span>
+          </span>
+        </div>
+	<div class="body">
+	  <h1 class="title"><a href="{{ SITEURL }}/{{ article.url }}" class="blog_view_btn color_title" data-id="1">{{ article.title }}</a></h1> 
+	  <div class="body">
+	    <p>{{ article.summary }}</p>
+	  </div>
+	</div>
       </div>
+
     </div>
 
     <!--     <div class= "well small"> {% include "metadata.html" %} </div> -->

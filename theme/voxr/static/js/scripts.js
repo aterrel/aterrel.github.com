@@ -570,6 +570,7 @@ $(document).ready(function(){
 
     $(window).scroll(function(){
 
+       if (typeof $("#conent > div#resume_page .awards").offset() != "undefined") {
         if($("#content > div#resume_page .awards").offset().top + 200 < $(window).scrollTop() + $(window).outerHeight() && $("#content > div#resume_page").is(":visible") && !$("#content > div#resume_page .awards").hasClass("animated")) {
             $("#content > div#resume_page .awards").addClass("animated");
             $("#content > div#resume_page .awards .award").addClass("animated flipInX");
@@ -579,6 +580,7 @@ $(document).ready(function(){
             $("#content > div#resume_page .clients").addClass("animated");
             $("#content > div#resume_page .clients img").addClass("animated flipInX");
         }
+       }
 
         if ($("#content > div#blog_page").is(":visible") && !$("#content > div#blog_page .posts").hasClass("animated") && !in_post_view){
 
