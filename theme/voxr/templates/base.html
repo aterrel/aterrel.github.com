@@ -96,7 +96,7 @@
                         <ul class="list">
 
             {% for name, link in SOCIAL %}
-                            <li span class="dot">&bull;</span><a href="{{ link }}">{{ name }}</a></li>
+                            <li><span class="dot">&bull;</span><a href="{{ link }}">{{ name }}</a></li>
             {% endfor %}
                         </ul>
                     </div>
@@ -112,7 +112,7 @@
                         <ul class="list">
 
             {% for name, link in LINKS %}
-                            <li span class="dot">&bull;</span><a href="{{ link }}">{{ name }}</a></li>
+                            <li><span class="dot">&bull;</span><a href="{{ link }}">{{ name }}</a></li>
             {% endfor %}
                         </ul>
                     </div>
@@ -127,7 +127,7 @@
 
                         <ul class="list">
                             {% for cat, null in categories %}
-                            <li span class="dot">&bull;</span><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+                            <li><span class="dot">&bull;</span><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
                             {% endfor %}
                         </ul>
                     </div>
@@ -142,7 +142,7 @@
 
                         <ul class="list">
 		{% for tag, article in tags %}
-                            <li span class="dot">&bull;</span><a href="{{ SITEURL }}/{{ tag.url}}">{{ tag }}</a></li>
+                            <li><span class="dot">&bull;</span><a href="{{ SITEURL }}/{{ tag.url}}">{{ tag }}</a></li>
 		{% endfor %}
                         </ul>
                     </div>
