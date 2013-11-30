@@ -6,7 +6,8 @@ slug: women-sci-comp
 
 **This post written by [Kristen M. Thyng][kristen] about an event we both worked to organize at SciPy2013.**
 
-![][pic1] ![][pic2] 
+<img src="|filename|/figures/1-IMG_0723.JPG"style="width:90%" />
+<img src="|filename|/figures/2-IMG_0726.JPG"style="width:90%" />
 
 As in other computing fields, women make up a small percentage of the people in scientific computing. In order to bring together the women at the SciPy conference to aid in building community and to discuss related issues, a mixer was held during one of the evening Birds of a Feather sessions, moderated by SciPy Conference co-chair Andy Terrel and attendee Kristen Thyng. The mixer was co-sponsored by generous support from NumFOCUS, the Python Software Foundation, and the SciPy conference.
 
@@ -22,7 +23,8 @@ Approximately three women attended SciPy 2012. In 2013, there was a substantiall
 * At least 3 of 27 poster presenters
 * At least 4 of 70 speakers
 
-![][pic3] ![][pic4] 
+<img src="|filename|/figures/3-IMG_0728.JPG"style="width:90%" />
+<img src="|filename|/figures/4-IMG_0732.JPG "style="width:90%" />
 
 Soon after arriving at the event, people became acquainted with each other and started chatting. There was a good number of people at the mixer to meet new people but still have a chance to meet everyone. There were, all together, 16 people at the mixer: 13 women and 3 men.
 
@@ -44,7 +46,8 @@ A question brought up was how to get more women involved with conference plannin
 
 To get more women to attend SciPy and submit abstracts, people thought that helping with the process could be beneficial. This sort of support would be most logical to come from a group like PyLadies.
 
-![][pic5] ![][pic6] 
+<img src="|filename|/figures/5-IMG_0736.JPG"style="width:90%" />
+<img src="|filename|/figures/6-IMG_0737.JPG"style="width:90%" />
 
 Various organizations were suggested as being helpful to seek out, including:
 
@@ -61,14 +64,6 @@ A general suggestion for getting more people to SciPy was to have differentiated
 
 Overall, a good time was had by all and it was very enjoyable meeting and discussing with a small group of like-minded individuals. Having these sorts of discussions could be helpful in having a more diverse set of scientific coders over time! For more information about this event, contact Andy Terrel at andy.terrel [at] gmail.com or Kristen Thyng at kthyng [at] gmail.com.
 
-![][pic7]
-
+<img src="|filename|/figures/7-IMG_0738.JPG"style="width:90%" />
 
 [kristen]: http://kristenthyng.com/
-[pic1]: |filename|/figures/1-IMG_0723.JPG "Image title" width="45%" 
-[pic2]: |filename|/figures/2-IMG_0726.JPG "Image title" width="45%"
-[pic3]: |filename|/figures/3-IMG_0728.JPG "Image title" width="45%"
-[pic4]: |filename|/figures/4-IMG_0732.JPG "Image title" width="45%"
-[pic5]: |filename|/figures/5-IMG_0736.JPG "Image title" width="45%"
-[pic6]: |filename|/figures/6-IMG_0737.JPG "Image title" width="45%"
-[pic7]: |filename|/figures/7-IMG_0738.JPG "Image title" width="90%"
