@@ -25,21 +25,7 @@
     <div class="post text" data-post="{{ loop.index }}">
 
       <div class="right">
-        <div class="bot">
-          <span class="user">
-            <i class="icon-user"></i>
-            <span><a href="#">Admin</a></span>
-          </span>
-          <span class="time">
-            <i class="icon-time"></i>
-            <span>August 28, 2013</span>
-          </span>
-          <span class="tags">
-            <i class="icon-tags"></i>
-            <span><a href="#">web</a></span>&nbsp;,
-            <span><a href="#">design</a></span>
-          </span>
-        </div>
+	{% include "metadata.html" %}
 	<div class="body">
 	  <h1 class="title"><a href="{{ SITEURL }}/{{ article.url }}" class="blog_view_btn color_title" data-id="1">{{ article.title }}</a></h1> 
 	  <div class="body">
@@ -49,10 +35,6 @@
       </div>
 
     </div>
-
-    <!--     <div class= "well small"> {% include "metadata.html" %} </div> -->
-    <!--     <div class="summary">{{ article.summary }} <a class="btn btn-info xsmall" href="{{ SITEURL }}/{{ article.url }}">read more</a></div> -->
-    <!-- </div>	 -->
 				
     {% if loop.last and (articles_page.has_previous() or not articles_page.has_previous() and loop.length > 1) %}
         {% include 'pagination.html' %}
