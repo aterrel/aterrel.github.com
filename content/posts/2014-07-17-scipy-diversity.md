@@ -6,7 +6,7 @@ slug:
 
 ![SciPy2014 logo][pic1]
 
-SciPy2014 is over, but there is so much more to do. I expect to be reviving my blog with a set of prose on my experience. Today I want to talk about a topic that was dear to my heart when I started this blog, [diversity in the scientific python ecosystem](|filename|/posts/2012-10-08-thoughts-on-the-scipy-conference.md). I'm focusing on gender diversity, but we also need to be aware of racial and other diversities, as well. I hope helping on will lead to helping others.
+SciPy2014 is over, but there is so much more to do. I expect to be reviving my blog with a set of prose on my experience. Today I want to talk about a topic that was dear to my heart when I started this blog, [diversity in the scientific python ecosystem](|filename|/posts/2012-10-08-thoughts-on-the-scipy-conference.md). I'm focusing on gender diversity, but we also need to be aware of racial and other diversities, as well. I hope helping one will lead to helping others.
 
 For the record, I am writing this post from my personal perspective. It is not representative of any company or community that has graciously chosen me as a representative.
 
@@ -22,7 +22,7 @@ The first thought on how to change was to find more women to be on our organizin
 
 In 2013, we also had a [social funded](|filename|/posts/2013-07-18-women-sci-comp.md) by [NumFOCUS](http://numfocus.org) and [the PSF](http://https://www.python.org/psf/). The result was about 20 women of a variety of races coming together to talk about the issues. The message the organizers took home was cast a wider net. There is amazing quality from women in scientific computing, but they will not be looking at conferences that are primarily white men.  We are also a very small growing conference (150 in 2012 to 460 in 2014) so people outside our clique aren't going to come for prestige. Also the overwhelming opinion was, a social is nice, but less alcohol more food.
 
-This year, 2014, we did similar things as last. Increase women on the organizing committee ([19 of 84](https://conference.scipy.org/scipy2014/organizers/)), added a diversity committee, asked my uber-prof friend to give one of [the best SciPy keynotes ever](http://lorenabarba.com/gallery/prof-barba-gave-keynote-at-scipy-2014/) and [host an event for diversity](http://kristenthyng.com/blog/2014/07/09/scipy-2014-disc/). We also worked with NumFOCUS to [fund scholarships explicitly for women in technology](http://conference.scipy.org/news/2014/04/12/scipy2014-submissions-diversity-funding/) through a [generous donation from JP Morgan](http://numfocus.org/news/2013/11/08/jp-morgan-sponsors-pydata-and-women-in-technology/). This funding helped 5 more women attend the conference, in addition to the 15 other students (which included 3 women) supported to attend. We estimated 15% of attendees were women, not great but better that that original 1.5% in 2012.
+This year, 2014, we did similar things as last. Increase women on the organizing committee ([19 of 84](https://conference.scipy.org/scipy2014/organizers/)), added a diversity committee, asked my uber-prof friend to give one of [the best SciPy keynotes ever](http://lorenabarba.com/gallery/prof-barba-gave-keynote-at-scipy-2014/) and [host an event for diversity](http://kristenthyng.com/blog/2014/07/09/scipy-2014-disc/). We also worked with NumFOCUS to [fund scholarships explicitly for women in technology](http://conference.scipy.org/news/2014/04/12/scipy2014-submissions-diversity-funding/) through a [generous donation from JP Morgan](http://numfocus.org/news/2013/11/08/jp-morgan-sponsors-pydata-and-women-in-technology/). This funding helped 5 more women attend the conference, in addition to the 15 other students (which included 3 women) supported to attend. We estimated 15% of attendees were women, not great but better than that original 1.5% in 2012.
 
 The conference also had several discussions on the topic during the conference.
 
@@ -59,11 +59,11 @@ Community building doesn't fit nicely on a resume nor does it always feel good, 
 
 When I sat down with folks to encourage them to join our executive committee, I typically made the argument that if we don't build the community we want, no one else will. There are a lot of challenges we need to face, e.g. promoting code as a real scholarly work and promoting an open sharing culture among coders in scientific computing. We cannot do this without a diverse functional community.
 
-Please go sign up for the mailing list and start making this a better place. http://mail.scipy.org/mailman/listinfo/scipy-organizers
+Please go sign up for the mailing list and start making this a better place. [http://mail.scipy.org/mailman/listinfo/scipy-organizers](http://mail.scipy.org/mailman/listinfo/scipy-organizers)
 
 ### Acknowledgements
 
-Thank you to: April Wright, Kelsey Jordahl, Anthony Scopatz, Matthew Turk, Dan Katz, and Sheila Miguez for edits to this document.
+Thank you to: April Wright, Kelsey Jordahl, Anthony Scopatz, Matthew Turk, Dan Katz, Sheila Miguez, and Kyle Mandli for reading an early version and edits to this document.
 
 
 [pic1]: |filename|/figures/scipy2014_logo.png "SciPy2014 Logo" width="45%"
