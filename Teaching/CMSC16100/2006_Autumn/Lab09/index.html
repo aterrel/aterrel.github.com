@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+<title>Andy R Terrel - CMSC 16100 - Eliza: Natural Language Emulation</title>
+
+<link type="text/css" href="../css/style.css" rel="StyleSheet"/>
+
+</head>
+
+
+<!-- Main Body -->
+<body>
+
+<!-- Title -->
+<div id="title">Lab 9 -  Eliza: Natural Language Emulation</div>
+
+
+<!-- Content -->
+<div id="content2">
+  <h2>Introduction</h2>
+
+  <p>
+  This week you will be implementing the famous <a href="http://en.wikipedia.org/wiki/ELIZA">Eliza</a> program.  This lab is going to be open ended, meaning I'm not going to tell you what to implement so much as give you some guidelines for getting started and let you make the program.  There are several implementations on the web and even one in Emacs to give you some ideas on what to do, I'll show you at least one in lab and you can use that for some ideas.
+  </p>
+
+  <hr/>
+  <h2>Eliza description</h2>
+
+  <p>
+  The Eliza program takes a string, returns a string, and waits for another string.  The idea is to create an experience similar to that of a psychotherapist, by parsing the string and turning it into a question of some sort.  For example, if I enter "I hate Scheme!", Eliza might reply "Why do you hate Scheme?".  This was done by turning 'I' to 'you' and then appending the action phrase 'hate Scheme' onto 'Why do'+'you'.  There are lots of ways to do different things, such as ask "Do you hate Scheme because of issues in your life?"  I will let you have fun with coming up with different ways to match the string and respond.  I should be able to say "goodbye" in order to stop the program.
+  </p>
+
+  <h3>Notes on getting things to work</h3>
+  <p>
+  In order to get things running you will need a function that will read input from the user, reply and then ask for more input.  I recommend that you don't take just strings but rather use lists of symbols.  For example "I hate Scheme" should be inputted at (I hate Scheme).
+  </p>
+
+  <p>
+  You will need to use the (read) function in order to get input from the user.  Make sure you can read how what is inputted ... ie play around with functions to make sure you are reading input correctly.
+  </p>
+
+  <p>
+  You should then give your string to a function that will try to parse it and respond.  If that function is unable to parse the string you should return false and give it to another function that might succeed and so on.  Finally you can resort to either asking for more details or just give some random message.
+  </p>
+
+  <hr/>
+  <h2>Documentation</h2>
+  <p>
+  I expect your programs to be documented so that I know exactly what you have implemented.  If there is no documentation I cannot judge if your code is doing what you intended and thus am unable to grade it ... which makes a very poor grade for you.  
+  </p>
+
+
+  <hr/>
+  <h2>Turning Everything in</h2>
+  <p>
+  Add appropriate test cases to the end of your file as usual.  Save the definitions window as (your_cnet_id)-Lab09.scm and put it in the <a href="http://maclab.cs.uchicago.edu/index.php?swap=dropbox">dropbox</a>.  So for example I would save my file as aterrel-Lab09.scm.  Also do yourself a favour and save your file somewhere you can look back at it (email yourself or store it on your own media). 
+  </p>
+
+  <p>
+  Have a happy Thanksgiving!
+  </p>
+</div>
+ 
+<div id="footer">
+    <a href="/">Main</a> |
+    <a href="/Professional/">Professional</a> |
+    <a href="/Teaching/">Teaching</a>
+    <br/>&copy;2006-2009 Andy R. Terrel
+    </div>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-388278-1";
+urchinTracker();
+</script>
+
+</body>
+</html>
+

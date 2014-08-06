@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+<title>Andy R Terrel - CMSC 16100 Lab 2 - Generating the Mandelbrot Set</title>
+
+<link type="text/css" href="../css/style.css" rel="StyleSheet"/>
+
+</head>
+
+
+<!-- Main Body -->
+<body>
+
+<!-- Title -->
+<div id="title">Lab 2 - Generating the Mandelbrot Set</div>
+
+
+<!-- Content -->
+<div id="content2">
+  <h2>The Mandelbrot Set</h2>
+  
+  <p> 
+  The Mandelbrot set is the set of complex numbers {c} such that the
+  iteration on the function f<sub>c</sub>(0) is always bounded, where:
+  </p>
+
+  <div style="text-align:center;">f<sub>c</sub>(z) = z<sup>2</sup> + c</div><br/>
+
+  <p>
+  To check for boundedness, it is sufficent to check if the magnitude
+  of any iteration becomes greater than 2. For example to check if 1+i
+  is in the set:
+  </p>
+
+  <div style="text-align:center;">
+    | f<sub>1+i</sub>(0) | = | 0<sup>2</sup> + 1+i | = (sqrt 2)<br/>
+    | f<sub>1+i</sub>(f<sub>1+i</sub>(0)) | = | (1+i)<sup>2</sup> + 1+i | = | 1 + 3i | = (sqrt 10)<br/>
+  </div>
+
+  <p>
+  Since |f<sub>1+i</sub><sup>2</sup>(0)| > 2, we know that the
+  function is not bounded.  We say the that for 1+i, it escaped on the
+  second iteration.  For our lab we will be coloring different points
+  in the complex plane according to when they escape.  To generate the
+  Mandelbrot set we do so by keeping those points which do not escape
+  with a given number of iterations.
+  </p>
+   
+  <p>
+  The goal of this lab is to make a function "mandelbrot" that
+  takes a stepsize, number of pixels, lower left real coordinate, and
+  a lower left complex coordinate and produces a picture of the
+  Mandelbrot set on the complex plane. Below I will give you some code
+  and plans to help you along the process.
+  </p>
+
+  <pre>
+  (mandelbrot 0.001 400 -2.0 -2.0)</pre>
+  <div style="text-align:center;"><img src="mandelbrot.jpg" alt="A Mandelbrot Set"/></div>
+
+  <h3>Language and Teachpack</h3>
+
+  <p>  
+
+  In this lab you should make use of the <tt>local</tt> function. You can
+  write the whole thing without it, but with it things are much
+  smaller and easier to read.  Because the teaching languages restrict
+  you so much, I suggest you use the
+  <strong>HTDP</strong>-><strong>Advanced Student</strong>. You
+  will also need the <tt>image.ss</tt> teachpack again.  Also make
+  sure you are using a current version of DrScheme (>= v371), if you
+  don't have one you can log on as guest in the MacLab and find a
+  recent version.  Please put what language and teachpack you use at
+  the beginning of your definitions window so I know which to use, for
+  example:
+
+  </p>
+
+  <pre>
+  ;; Name: Andy Terrel
+  ;; Date: October 9, 2006
+  ;; Class: CMSC 16100-1
+  ;; Language: Pretty Big
+  ;; Teachpack: image.ss</pre>
+
+  <h3>Determining When a Point Escapes</h3>
+
+  <p>
+  You will need to determine when the point escapes, and
+  then you can choose a color for that point.  My suggestion is to
+  write a function using iteration that either returns when the point
+  escapes or the maximum number of iterations allowed.  For example,
+  my function takes the real part of c, the imaginary part of c, and
+  the maximum iterations, so for our example above I would have:
+  </p>
+
+  <pre>
+  > (f_c^n_max 1 1 10)
+  1</pre>
+
+  <p>
+  As a reminder about complex numbers, let y = a + bi and z = c +
+  di, where a,b,c, and d are all real numbers. The real part of y is a
+  and imaginary part is b. The product of y and z multiply like
+  polynomials (except i<sup>2</sup>=-1):
+  </p>
+
+  <div style="text-align:center;">
+    y*z = (a + bi) * (c + di) = ((a*c) - (b*d)) + ((a*d) + (b*c)) i
+  </div><br/>
+
+  <p> 
+  Finally the magnitude of y is:
+  </p>
+
+  <div style="text-align:center;">
+    |y| = (sqrt (a<sup>2</sup>+b<sup>2</sup>))
+  </div><br/>
+  <p>
+  The complex plane is a plane with the real part on the x axis and
+  the complex part on the y axis.
+  </p>
+  <div style="text-align:center;"><img src="250px-Complex_plane.png" alt="The complex plane"/></div>
+  <p>
+  While there is a primitive form of complex numbers in Scheme, it is
+  simple to write your own functions separating the real and
+  imaginary parts in your function.  This will make things fairly
+  straight forward once you make your function to iterate over the
+  grid of pixels.
+  </p>
+
+  <h3>Getting the Color</h3>
+  <p>
+  The number of colors you use will determine your maximum number of
+  iterations for the first part.  I just used the spectrum
+  ('red,'orange,'yellow,...) but that's because I'm a physics nerd.
+  If you run out of colors just repeat them again.  Write a driver
+  function that returns the color corresponding to the iteration
+  number or returns 'black if max_iters are reached.
+  </p>
+  
+  
+  <h3>Iterating over the Complex Plane</h3>
+
+  <p>
+  In order to get the pretty fractal picture, we will color each pixel
+  in the complex plane by its escape iteration.  To do this we will
+  use the <tt>image.ss</tt> teachpack, iterating over each point and
+  placing a 1x1 rectangle in that spot.  This can be done with
+  overlaying a new rectangle on each iteration and producing a new
+  image. Here is some skeleton code of my implementation:
+  </p>
+
+  <pre>
+  ;; Contract: function, step size(float), number of pixels(int), 
+  ;;           lower left real (float), lower left imaginary (float) => image
+  (define (escape-iterate func step_size num_pixels ll_re ll_im)
+  (local {(define (add_point ...) (overlay/xy ... ... 
+				   (rectangle 1 1 'solid color)))))
+           (define (grid-iter ...)
+           ;;Given my re-pixel and im-pixel, determine point to find escape
+           ;;If I am complete return image, if I am done with row or column increment 
+           ;;  correct pixels and iter. 
+           ;;Else Determine escape number from the given function
+           ;;  add_point with correct color to image
+           ;;  give image to iterate again with incremented pixel numbers </pre>
+  <p>
+  For the picture I made, my maximum iteration was 20, but for
+  performances purposes you might implement a small number such as 5
+  and then increase it once everything works.  Also I wouldn't put
+  more than about 500 pixels in your call to "mandelbrot" and probably
+  no more than 100 for testing, this is not the fastest way to do
+  things but it works nicely for the elements of the language that we
+  have introduced.
+  </p>  
+    
+  <p>
+  If you would like to save your images, the teachpack
+  <tt><a href="save-image.ss">save-image.ss</a></tt> provides<br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt>save-image: img string symbol ->
+  bool </tt><br/> Its first argument is the image to save, the
+  second is the filename to be saved, and the third is the filetype
+  to save. Use 'png for the filetype. The function returns true when
+  the save operation was successful. For example, assuming M is an
+  image, you can say.
+  </p>    
+
+  <pre>
+    (save-image M "~\Desktop\cool-image.png" 'png) </pre>
+  <h3> Extra Credit - Part One - Julia Sets</h3>
+  <p>
+
+  Where the Mandelbrot set is generated by setting z = 0 and inputing
+  different values for c, a Julia set is generated by setting c to
+  some set value and inputing different values of z.  While there is
+  basically only one Mandelbrot set there are infinitely many Julia
+  sets, some very interesting others not even fractals.  If you have
+  followed my outline you can create a driver function almost
+  identical to the mandelbrot function, except you need to give the
+  c_real and c_imaginary as well. So for example the following call
+  produces:
+
+  </p>
+  <pre>
+  (julia -1 0 0.01 300 -1.75 -1.75)</pre>
+  <div style="text-align:center;"><img src="julia.jpg" alt="A Julia Set"/></div>   
+
+<!--  
+  <h3> Extra Credit - Part Two - Other iteration functions</h3>
+  <p>
+  The Mandelbrot and Julia set pictures we produced are an example of an escaped iteration fractal using z^2+c, you can actually use any function you want (some are not so interesting) one example I tried was:</p>
+  <div style="text-align:center;">f<sub>c</sub>(z) = z<sup>3</sup> + z + c</div><br/>
+  <p>
+  To have a nice complete program, write some other functions that will go into the escaped iteration that will be driven like mandlebrot or julia.  
+  </p>
+--> 
+  <h3>Turning Everything in</h3>
+  <p>
+  Add the appropriate test cases to the end of your definitions window
+  so I can see some examples, such as:
+  </p>
+
+  
+  <pre>
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;              Test Cases                           ;;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;(mandelbrot 0.1 50 -2.5 -2.5)
+  ;(julia -1 0 0.1 50 -2.5 -2.5)</pre>
+  <p>
+
+  Save the definitions window as (your_cnet_id)-Lab03.scm, and turn it
+  in on chalk. So for example I would save my file as
+  aterrel-Lab03.scm.  Also do yourself a favor and save your file
+  somewhere you can look back at it (email yourself or store it on
+  your own media).
+  </p>
+
+</div>
+ 
+<div id="footer">
+    <a href="/">Main</a> |
+    <a href="/Professional/">Professional</a> |
+    <a href="/Teaching/">Teaching</a>
+    <br/>&copy;2006-2009 Andy R. Terrel
+    </div>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-388278-1";
+urchinTracker();
+</script>
+
+</body>
+</html>

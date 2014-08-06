@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+<title>Andy R Terrel - CMSC 16100 - Escaping the Minotaur: Graph Game</title>
+
+<link type="text/css" href="../css/style.css" rel="StyleSheet"/>
+
+</head>
+
+
+<!-- Main Body -->
+<body>
+
+<!-- Title -->
+<div id="title">Lab 9 - Escaping the Minotaur: Graph Game</div>
+
+
+<!-- Content -->
+<div id="content2">
+  <h2>Introduction</h2>
+
+
+  <p>
+
+  This week we will be helping Heros Inc., develop and test some
+  inventions for escaping the Minotaur in a Labyrinth.  The problem is
+  that the Minotaur knows his dungeon well and always takes the
+  shortest path to the adventurer. On the plus side the millennia have
+  caught up to the beast so most adventurers can keep pace with him.
+  In order to test some inventions, we are going to simulate the
+  labyrinth with a graph, and we can simulate certain
+  characteristics of the adventurer by the way she picks her next
+  step.  For example, a poor unequipped adventurer might have to
+  resort to picking the next step in a completely random way, whereas
+  the smart adventurer with the Sight-o-Matic (&copy; Heros Inc.) will
+  know the next step to on the shortest path to the exit.
+
+  </p>
+
+  <p>
+  You may use <a href="Lab09-template.scm">my template</a> for this lab, and my version of <a href="CMSCGraphLib.ss">last week's lab</a>, if you so desire.
+  </p>
+  <hr/>
+  <h2>Part I -- Representing the Labyrinth as a graph</h2>
+
+  <p>
+
+  For the Labyrinth, we will represent every intersection as a node
+  and the edges as the possible paths leading away from the node.  It
+  is important to make sure that all your nodes are connected, that is
+  every node is reachable from every other node by following the
+  edges, or else there will be parts of your Labyrinth that are
+  unreachable.  You will need to provide your desired maze, see the 
+  template for the example below.
+
+  </p>
+
+  <p>
+
+  In this graph node 0 is in the top left hand corner and the nodes
+  are named 0 - 53 from left to right.  Feel free to make several
+  other mazes, I suggest writing them on paper then transferring the
+  edgelists to the screen.
+  </p>
+
+  <hr/>
+  <h2>Part II -- Making the simulator</h2>
+  <p>
+  
+  In order to sell the products, Heros Inc. would really like some
+  visuals to convince their buyers.  Nothing like a bit of gore and
+  blood to show someone how far a little prevention will take them.
+  </p>
+  <p>
+
+  Now we have our maze we are ready to make our simulation.  In order
+  to get an animation of the world you will be making an
+  "obect-oriented" function (as in your <a
+  href="http://mitpress.mit.edu/sicp/full-text/book/book-Z-H-20.html">text</a>),
+  and using the <tt>world.ss</tt> teachpack (see the helpdesk and your
+  template for use of the world.ss).  With the required functions
+  <tt>react</tt> for reacting to tick events and <tt>draw</tt> for
+  producing an image of the world, and any other state you might think
+  you need. Also the <tt>react</tt> function will need to test to see
+  if the adventurer has won (or gotten to the exit, which I just set
+  to be the 0 node) or if the Minotaur has won (i.e. the two crossed
+  paths) and if so call the <tt>end-of-time</tt> function..
+
+  </p>
+
+    <p>
+
+  The adventurer strategies should take some inputs (you decide) and
+  output the next node that the adventurer advances too, an alternate
+  design would be to put the strategies in the world to get some other
+  state information.  Since the
+  Minotaur always goes straight for the player, you don't need to
+  input a strategy for him, just use my function based on Dijkstra's
+  Algorithm.  You should make at least four new strategies for the
+  adventurer.  The <tt>random-neighbor</tt> where you pick a
+  random neighbor and advance has been provided.  Other possiblities include the <tt>Sight-O-Matic</tt> where the
+  adventurer goes straight for the exit, <tt>Torch</tt> where you
+  are able to see if the Minotaur is one of the neighboring nodes,
+  <tt>QuickWall</tt> which allows an adventurer can seal a passage way for
+  every QuickWall she has, any combination of other strategies, or
+  whatever else you can think up.  Be creative, remember you want the
+  most successful strategy.
+
+  </p>
+
+  <p>
+
+  Here is an example of my output.  Also you should note that you have
+  to change your code and re-evaluate to get a different
+  simulation up for each strategy.
+  </p>
+
+  <img src="maze_example.gif">
+  <hr/>
+  <h2>Part III -- Extra Credit - Visualization</h2>
+  <p>
+  While the visualization is nice, the quants in the room want to see
+  some more data.  To make a better argument do a Monte Carlo
+  simulation where a function will call the different strategies on
+  the different mazes you created putting the adventurer at random
+  node with a large number of trials (100 or so).  The reports the
+  number of eaten adventurers for each product. 
+  </p>
+
+
+  <hr/>
+  <h2>Turning Everything in</h2>
+  <p>
+  If you did not use my graph library, then turn in both the graph
+  library and the assignment to chalk; otherwise, only submit the assignment.
+  </p>
+
+</div>
+ 
+<div id="footer">
+    <a href="/">Main</a> |
+    <a href="/Professional/">Professional</a> |
+    <a href="/Teaching/">Teaching</a>
+    <br/>&copy;2006-2009 Andy R. Terrel
+    </div>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-388278-1";
+urchinTracker();
+</script>
+
+</body>
+</html>
+

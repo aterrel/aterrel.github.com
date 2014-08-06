@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+<title>Andy R Terrel - CMSC 16100 Lab 7 - Sorting and Counting Shakespeare</title>
+
+<link type="text/css" href="../css/style.css" rel="StyleSheet"/>
+
+</head>
+
+
+<!-- Main Body -->
+<body>
+
+<!-- Title -->
+<div id="title">Lab 7 - Sorting and Counting Shakespeare</div>
+
+
+<!-- Content -->
+<div id="content2">
+  <h2>Introduction</h2>
+
+  <p>
+  This week Adam Shaw has agreed to teach the lab section.  I will be in The Netherlands for the week, so things will more than likely not get graded this week, needless to say I will not be available for office hours or much correspondence.  Please make sure you turn something in by midnight but don't sweat it after that.  Also as I have said time and time again, keep your work, either email it to yourself, store it on your cs or harper account, or put it on a pen drive.
+  </p>
+
+  <p>
+  Today we will be working with some common algorithms for sorting things.  At the end of the lab, you will then use these algorithms to sort and count the words in some Shakespeare plays.  The first three sorting algorithms that we will use are insertion sort, quicksort, and mergesort.  In effort to make your code as reusable as possible you will provide the algorithm a comparison function and list to sort.  The second part of the lab, we will use a binary search tree to count the number of unique words in some of Shakespeare's plays.  This could certainly be done other ways, but this exercise will give you some experience dealing with a binary search tree data structure.
+  </p>
+
+  <hr/>
+  <h2>Part I - Sorting Algorithms</h2>
+  <p>
+  Below the insertion sort, quicksort, and mergesort algorithms are explained.  For each one, make a function that will take a comparison function and a list and return a sorted list with the order determined by the comparison function.  Your comparison function should take two elements from the list and return whether the first element is greater than, equal, or less than the second element.  For each algorithm, make a test case that will convince you the algorithm is working correctly.  (For sorting strings, look up string>? in the <strong>Help Desk</strong>.  You should be able to find some other string functions to use as well.)
+  </p>
+
+  <h3>Insertion sort</h3>
+  <p>
+  Insertion sort takes an element out of a list, sorts the rest of the list, and then inserts the element back into the list.  The intuition is just like sorting a rollerdex of cards -- it is easier to sort a smaller number of cards, and it is easier to insert into a sorted rollerdex.
+  </p>
+
+  <h3>Quicksort</h3>
+  <p>
+  Quicksort is a divide-and-conquer algorithm, meaning it divides its work somehow and performs its work on two smaller sets.  For quicksort, you pick an element from a list, then divide the list into two smaller list, things that are "smaller" and things that are "bigger". You sort these two lists and append everything to return a sorted list.  The efficiency of quicksort is highly dependent on how you pick the element to divide your sets, for this lab you can just use the first element of the list but just know that it is not the most efficient way of doing things.
+  </p>
+
+  <h3>Mergesort</h3>
+  <p>
+  Mergesort is another divide-and-conquer algorithm.  In mergesort, you divide your list into two equal parts, sort those parts, and then merge the two sorted lists.  The idea here is that merging two sorted lists is easy, and sorting smaller lists is also easier.  
+  </p>  
+
+  <hr/>
+  <h2>Part II - Counting words with Binary Search Tree</h2>
+  <p>
+  As you learned in class, a binary search tree is a binary tree such that the value of a node is greater than the values of its left predecessors and less than the values or its right predecessors.  For this exercise you will need to build a binary search tree such that the value at each node contains a word and a count.  When you insert a new item into the tree, if the word is already in the tree you will increment the count, otherwise you will add it in the appropriate spot. To order the words by count, you need to build a function that will take the binary tree to a list and then you can send it to one of the sorting algorithms with an appropriate compare function.  Make some small datasets to determine if your tree is working before trying to build one with one of the Shakespeare files.
+  </p>
+  
+  <p>
+  It is arguable that this binary tree method might not save anytime over just building a random list and checking the whole list on every word.  As you have learned in class, you can build a balanced binary search tree, such as a red-black tree, but doing so is a complex process which would take more time than this lab allows.  Thus this exercise is not quite what you would want to do if you were hired to do the job.
+  </p>
+
+  <p>
+  Now using the <a href="cs161_io.ss">cs161_io.ss</a> teachpack, use the <tt>read-from-file</tt> function to read one of the following Shakespeare plays: <a href="hamlet">Hamlet</a>, <a href="merchantofvenice">The Merchant of Venice</a>, or <a href="romeoandjuliet">Romeo and Juliet</a>.  In these three files I have taken out all the punctuation so that words such as 'Jessica', 'Jessica.', and 'Jessica's' are not counted as unique.  If you would like to use <a href="shakespeare.tar.gz">other plays</a> you can use some string processing and work on them.  For the list that the <tt>read-from-file</tt> returns you will still need to do things such as convert from symbols to strings and deal with capitals ('That' and 'that' should not be unique), please look up some string functions in the <strong>Help Desk</strong>.
+  </p>
+
+  <p>
+  Now to see how your different sort algorithms compare, do some timing with the <tt>time</tt> function. For example, I used these commands:
+  </p>
+
+  <pre>
+(time (car (insertionsort merchant-list entry-count-compare)))
+(time (car (quicksort merchant-list entry-count-compare)))
+(time (car (mergesort merchant-list entry-count-compare)))</pre>
+
+  <hr/>
+  <h2>Extra Credit -- Visualisation</h2>
+  <p>
+  One thing that search engines will do is look for repeated rare words in a text, this can be done by taking the middle of the word distribution.  That is, words that have a high count will probably be common words, such as 'the', 'but','and', and words with a low count might not be significant to the text, such as 'significant' or 'high' on this web page.  To get a sense for word density, using the image.ss teachpack write a function that visualises the word counts of the sorted list.  There are several issues to consider here, since there are many unique words in Shakespeare's plays do you really want to put a point or bar for each word, and so on.  At least visualise the three plays I provided without punctuation.  If you need a starting place you can look at my visualisation function from Lab 4 on <a href="http://chalk.cs.uchicago.edu">Chalk</a>.
+  </p>
+
+  <hr/>
+  <h2>Turning Everything in</h2>
+  <p>
+  Add appropriate test cases to the end of your file as usual.  Save the definitions window as (your_cnet_id)-Lab07.scm and put it in the <a href="http://maclab.cs.uchicago.edu/index.php?swap=dropbox">dropbox</a>.  So for example I would save my file as aterrel-Lab07.scm.  Also do yourself a favour and save your file somewhere you can look back at it (email yourself or store it on your own media). 
+  </p>
+
+</div>
+ 
+<div id="footer">
+    <a href="/">Main</a> |
+    <a href="/Professional/">Professional</a> |
+    <a href="/Teaching/">Teaching</a>
+    <br/>&copy;2006-2009 Andy R. Terrel
+    </div>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-388278-1";
+urchinTracker();
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,117 @@
+ body {
+   background: #a1a2ce url(../images/plt-web.jpg) no-repeat top right;
+   color: #282828;
+}
+
+pre {
+   background-color: #B9D6A8;
+   border: solid 1px #000000;
+}
+
+#sidebar {
+  float: left;
+  position: relative;
+  left: -1%;
+  width: 14%;
+  padding: .5em;
+  border-top: solid 1px #A52A2A;
+  border-right: solid 1px  #A52A2A;
+  border-bottom: solid 1px  #A52A2A;
+  background-color: #A09F54;
+}
+
+#content {
+  margin-left: 17%;
+  margin-right: 15%; 
+  padding: 10px;
+  border: dashed 1px black;
+  background-color: #CECDA1;
+  font-size: 1em;
+}
+
+#content a{
+  color: #606060;
+}
+		
+#content a:hover{
+  background-color: #a1a2ce;
+  color: #282828;
+  text-decoration: none;
+}
+
+
+/* Content, No Sidebar */
+#content2 {
+  margin-left: 5%;
+  margin-right: 15%; 
+  padding: 10px;
+  border: dashed 1px black;
+  background-color: #CECDA1;
+  font-size: 1em;
+}
+
+#content2 a{
+  color: #606060;
+}
+
+#content2 a:hover{
+  background-color: #a1a2ce;
+  color: #282828;
+  text-decoration: none;
+}
+
+
+#title {
+  text-align: left;
+  font-family:  Georgia, serif;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-left: 10%; 
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+/***************************************************
+ Footer
+ ***************************************************/
+#footer {
+  clear: both;
+  text-align: center;
+  padding: 2em;
+}
+#footer a {
+  text-decoration: none;
+  color: #303030;
+}
+#footer a:hover {
+  color: #EEE;
+}
+
+
+
+
+/* Links Class */
+.links{
+  line-height: 1.75em;
+  font-family:  Georgia, serif;
+
+}
+.links a{
+	color:  #006600;
+	text-decoration: none;
+	padding: 5px;
+}
+.links a:visited {
+	color: maroon;
+	text-decoration: none;
+	padding: 5px;
+}
+.links a:hover {
+	color: #282828;
+	background-color: #a1a2ce;
+	text-decoration: none;
+	border: dashed 1px black;
+	padding: 3px;
+
+}
+

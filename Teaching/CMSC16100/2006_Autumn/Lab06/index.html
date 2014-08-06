@@ -1,0 +1,465 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  
+  <title>Andy R Terrel - CMSC 16100 Lab 6 - Bracketed, Parametric, and Stochastic L-Systems</title>
+
+  <link type="text/css" href="../css/style.css" rel="StyleSheet"/>
+
+</head>
+
+
+<!-- Main Body -->
+<body>
+
+<!-- Title -->
+<div id="title">Lab 6 - Bracketed, Parametric, and Stochastic L-Systems</div>
+
+
+<!-- Content -->
+<div id="content2">
+  <div style="background:red;color:white;border:solid 1px black;padding:.3em">
+  <strong>Important</strong>:  There have been several of your colleagues who have either not saved their files properly or forgotten to turn things in.  I really shouldn't have to remind you guys of this, but save your work frequently and back up your work in case something happens to it.  I am sorry but I will not be able to give credit to work I do not receive.
+  </div>
+
+  <h2>Introduction to Bracketed, Parametric, and Stochastic L-systems</h2>
+  <p> 
+   This lab builds on last week's Generating Fractal Curves using L-systems.  There are three parts to this lab, adding three new features to the L-system productions:
+   </p>
+   <ol>
+     <li> <strong>Bracketed L-systems</strong>:  this allows branching needed in producing weeds, bushes and trees. </li>
+     <li> <strong>Parametric L-systems</strong>:  Parameters are added to the basic symbols allowing more realistic fractal patterns of natural occuring objects.</li>
+     <li> <strong>Stochastic L-systems</strong>:  Multiple production rules are allowed for a symbol, where the choice of rule to apply is determined at random.</li>
+   </ol>
+   <p>
+   You will need your code to interpret L-systems from last week's lab.  If you didn't keep your code, you can use mine from <a href="http://chalk.uchicago.edu">Chalk</a>.  From each set of examples, implement only two of them and then go to the next part.  You can return and do more if you finish all the parts, just be sure to add test cases for every example you do.
+   </p>
+ <hr/>
+ 
+ <h2>Part I:  Bracketed L-systems</h2>
+ <p>
+   How do we represent a branching structure (such as trees) using a
+     linear sequence of strings?  We will add a pair of matched symbols to
+     the production rules: '&lt; and '&gt; (these will always occur paired.)
+     '&lt; indicates that we are beginning a
+     new branch, so we will have to remember the current position and direction
+     of our turtle so we can return to this position and direction when we 
+     finish the branch.  The matching '&gt; indicates that the branch is finished
+     and we must re-position the turtle to its original position and direction
+     when we first encountered the branch.
+  </p>
+  <p>
+  Example:
+  </p>
+  <div style="position:relative;left:5%">
+     Axiom:  '(F)<br/>
+     Rule:   '(F &lt; + &gt; F)<br/>
+  </div>  
+  <p>
+   This example creates a line (the first 'F), then creates a new branch ('&lt;),
+      remembering its current position and direction, turns left ('+) on this
+      new branch and draws a line ('F).  When the branch finishes ('&gt;) the
+      turtle is repositioned at its original position and direction just before
+      it began the branch (when it encountered '&lt;), and continues by drawing a
+      line (the third 'F).
+   </p>
+   <p>
+   There are two problems you must handle when trying to interpret a sequence of symbols with branchings:
+   </p>
+   <ol>
+     <li>How do you determine the position and direction of the turtle
+         so you can return to the correct placement of the turtle when
+         the branch finishes?</li>
+     <li>When you encounter the end of a branch, '&gt; , how do you know
+         which branch has terminated?  For example, after two iterations
+         of our example, the sequence looks like:<br/>
+         '(F &lt; + F &gt;  F &lt; + F &lt; + F &gt;  F &gt;   F &lt; + F &gt;  F )<br/>
+         which has nested brackets.</li>
+    </ol>	 
+
+    <p>
+    <strong>Solving 1</strong>:  The easiest way to determine how to return to your starting
+      starting position is to record the sequence of steps you need to REVERSE
+      your travels in the current branch.  To do this, you will need to 
+      think about what it means to reverse each symbol.  You will find it 
+      useful to create a new symbol:
+    </p>
+    <div style="position:relative;left:5%">
+           '! :  turn 180 (which reverses your current direction)
+    </div>
+<!--- Stupid hint that should be obvious to students
+    <p>
+    Here is a further hint:  
+    </p>
+    <ul>
+     <li>To reverse '+, do '-</li>
+     <li>To reverse '-, do '+</li>
+     <li>Think very carefully how to reverse 'F  (you need not redraw the line).  </li>
+    </ul>
+-->
+    <p>
+     <strong>Solving 2</strong>:  You will use a stack data structure to record which branch
+        you are on.  Since brackets are nested, when you encounter a '&gt;  its
+        pairing '&lt; is the last left-bracket you encountered.  
+    </p>
+    <ul>
+      <li>As you encounter symbols record your steps for reversing your path.</li>
+      <li>When you encounter a '&lt;, place your current path-reversal on the stack, and begin a new path-reversal for the new branch.</li>
+      <li>When you encounter a '&gt; , the current path-reversal you are building will return you to the original position and direction, so you can place this down.  Now, remove the top of the stack, which is now the current branch and continue reversing your path.</li>
+    </ul>
+
+<pre>
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;   Name:  Simple Branching Structure
+;;;;   Description
+;;;;  
+;;;;   Alphabet:  'F, 'G, '+, '-
+;;;;   Axiom:  '(F)
+;;;;   Production Rule:
+;;;;       'F -&gt; '(F &lt; + F &gt; F)
+;;;;   Interpretation:
+;;;;       Angle:  36
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;   Name:  Weed I
+;;;;   Description
+;;;;  
+;;;;   Alphabet:  'F, 'G, '+, '-
+;;;;   Axiom:  '(F)
+;;;;   Production Rule:
+;;;;       'F -&gt; '(F &lt; + F &gt; F &lt; - F &gt; F)
+;;;;   Interpretation:
+;;;;       Angle:  25</pre>
+
+<hr/>
+<h2>Part II:  Parametric L-systems</h2>
+  <p>
+     Now, we will replace the simple symbols, like 'F and '+ with more complex entities 
+        which must carry some information.  This extra information will be the length of
+        the step or the angle to rotate (although the direction remains the same.)  We no
+        longer insist every step is the same length, or every rotation is by the same angle.
+  </p>
+  <ul>
+         <li>F[x], G[x] : x is the step length</li>
+         <li> +[y], -[y] : y is the angle to rotate (+ is rotate left, - is rotate right)</li>
+  </ul>
+  <p>   
+     Example:
+  </p>
+  <div style="position:relative;left:5%">
+        Alphabet:  F[x], G[x], B[x], +[y], -[y]<br/>
+        step (s):  (you will specify the length of a single step, just as before)<br/>
+        angle (a):  45<br/>
+        Axiom:  ( &lt; B[s] &gt;  -[4a] - B[s] )<br/>
+        Rule:  B[x] -&gt;  ( F[(0.65)x] &lt; +[a] B[(0.65)x] &gt;  &lt; -[a] B[(0.65)x] &gt;  )<br/>
+   </div>
+
+   <p>
+   the rule says (in our old syntax):
+   </p>
+     <div style="position:relative;left:5%">
+           'B -&gt;  '( 'F &lt; + B &gt;  &lt; - B &gt;  )
+     </div>
+   <p>
+      but now we decrease the step length on each iteration by 65% (0.65) on each iteration of the
+      rule for B.  All angles along a branch (B) remain 45 degrees, but in the axiom, there is a 
+      rotation of 180 degrees (-[4a], where a=45 degrees).
+  </p>
+  <p>
+  The easiest way to implement Parametric L-systems, is to replace the simple symbols, with structures
+      which contain a record of the step length or angle rotation.  (In this lab these are the only
+      pieces of information we will record, but you could also have color and line thickness or
+      other attributes as well.)
+  </p>
+
+<pre>
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;   Name: Big-H
+;;;;   Description
+;;;;  
+;;;;   Alphabet:  F[x], G[x], B[x], +[y], -[y]
+;;;;   Axiom:  ( &lt; B[s] &gt; -[2a] B[s] )
+;;;;   Production Rule:
+;;;;       B[x] -&gt; ( F[(0.65)x] &lt; +[a] B[(0.65)x] &gt; &lt; -[a] B[(0.65)x] &gt; )
+;;;;   Interpretation:
+;;;;       Angle (a):  90
+;;;;       Step (s):  you supply
+;;;;         B[x] :  Like F[x], draw line of length x
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;   Name: Tree III
+;;;;   Description
+;;;;  
+;;;;   Alphabet:  F[x], G[x], B[x], +[y], -[y]
+;;;;   Axiom:  ( B[s] )
+;;;;   Production Rule: 
+;;;;       B[x] -&gt; ( F[x] &lt; +[5a] B[(0.5)x] &gt; &lt; -[7a] B[(0.5)x] &gt; -[a] F[x]
+;;;;                 &lt; +[4a] B[(0.5)x] &gt; &lt; -[7a] B[(0.5)x] &gt; -[a] F[x]
+;;;;                 &lt; +[3a] B[(0.5)x) &gt; &lt; -[5a] B[(0.5)x] &gt; -[a] F[x] B[(0.5)x]
+;;;;   Interpretation:
+;;;;       Angle (a): 8 
+;;;;       Step (s):  you supply
+;;;;         B[x] :  Like F[x], draw line of length x</pre>
+
+<hr/>
+<h2>Part III:  Stochastic L-systems</h2>
+  <p>
+       In these L-systems we will add some NOISE to our L-system--allowing some chance determine
+       the fractal.  There are two ways we can do this:  by having multiple production rules for
+       some of our tokens, which we must choose with some probability, or by allowing the step
+       length or angle rotation to be determined with some randomness.  For example, by allowing 
+       branch angle to vary a few degrees.  The examples below are of multiple rules, each of
+       which is equally likely, and you must randomly choose which rule to apply.
+  </p>
+  <p>
+    For ease of presentation, these examples use the older notation.
+    You may assume all steps and angle are identical.  If you have time experiment with 
+    stochastic treatment of step length and angle of rotation.
+  </p>
+
+<pre>
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;   Name: Random Koch Island
+;;;;   Description
+;;;;  
+;;;;   Alphabet:  'F, 'G, '+, '-
+;;;;   Axiom:  '(F - - F - - F)
+;;;;   Production Rule:
+;;;;       'F -&gt; '(F + F - - F + F)  (probability 0.5)
+;;;;          -&gt; '(F - F + + F - F)   (probability 0.5)
+;;;;   Interpretation:
+;;;;       Angle:  60
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;   Name: Stochastic Weed III
+;;;;   Description
+;;;;  
+;;;;   Alphabet:  'F, 'G, '+, '-
+;;;;   Axiom:  '(F)
+;;;;   Production Rule:
+;;;;       'F -&gt; '(F &lt; + F &gt; F &lt; - F &gt; F) (probability 0.33)
+;;;;          -&gt; '(F &lt; + F &gt; F )    (probability 0.33)
+;;;;          -&gt; '(F &lt; - F &gt; F )    (probability 0.33)
+;;;;   Interpretation:
+;;;;       Angle:  25.7
+</pre>
+
+  <hr/>
+  <h2>More Examples</h2>
+  <h3>Bracketed Examples</h3>
+<pre>
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;   Name:  Bush I
+;;;;   Description:  Gets complex quickly
+;;;;  
+;;;;   Alphabet:  'F, 'G, '+, '-
+;;;;   Axiom:  '(F)
+;;;;   Production Rule:
+;;;;       'F -&gt; '(F F + &lt; + F - F - F &gt; - &lt; - F + F + F &gt; )
+;;;;   Interpretation:
+;;;;       Angle:  22
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;   Name:  Tree I
+;;;;   Description: Note how few lines are produced
+;;;;  
+;;;;   Alphabet:  'F, 'G, '+, '-, 'B
+;;;;   Axiom:  '(B)
+;;;;   Production Rule:
+;;;;       'F -&gt; '(F F)
+;;;;       'B -&gt; '(F &lt; - - B &gt; &lt; + B &gt; - B )
+;;;;   Interpretation:
+;;;;       Angle:  20
+;;;;       Symbols:  'B : Draw line (like 'F)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;   Name:  Sierpinski Rug
+;;;;   Description
+;;;;  
+;;;;   Alphabet:  'F, 'G, '+, '-
+;;;;   Axiom:  '(F - F - F - F)
+;;;;   Production Rule:
+;;;;       'F -&gt; '(F &lt; - F - F &gt; F F)
+;;;;   Interpretation:
+;;;;       Angle:  90
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;   Name:  Sierpinski Carpet
+;;;;   Description
+;;;;  
+;;;;   Alphabet:  'F, 'G, '+, '-
+;;;;   Axiom:  '(F - F - F - F)
+;;;;   Production Rule:
+;;;;       'F -&gt; '(F &lt; F &gt; - F + F + F &lt; - - F &gt; + F - F)
+;;;;   Interpretation:
+;;;;       Angle:  90
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;   Name:  Sierpinski Maze
+;;;;   Description
+;;;;  
+;;;;   Alphabet:  'F, 'G, '+, '-
+;;;;   Axiom:  '(F)
+;;;;   Production Rule:
+;;;;       'F -&gt; '(&lt; G F &gt; &lt; + G - - - F &gt; &lt; G + G + F >)
+;;;;       'G -&gt; '(G G)
+;;;;   Interpretation:
+;;;;       Angle:  60</pre>
+
+  <h3>Parametric Examples</h3>
+
+<pre>
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;   Name: Two-Y's
+;;;;   Description:  Broccoli
+;;;;  
+;;;;   Alphabet:  F[x], G[x], B[x], +[y], -[y]
+;;;;   Axiom:  ( &lt; B[s] &gt; -[4a] B[s] )
+;;;;   Production Rule:
+;;;;       B[x] -&gt; ( F[(0.65)x] &lt; +[a] B[(0.65)x] &gt; &lt; -[a] B[(0.65)x] &gt; )
+;;;;   Interpretation:
+;;;;       Angle (a):  45
+;;;;       Step (s):  you supply
+;;;;         B[x] :  Like F[x], draw line of length x
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;   Name: Tree II
+;;;;   Description
+;;;;  
+;;;;   Alphabet:  F[x], G[x], B[x], +[y], -[y]
+;;;;   Axiom:  ( B[s] )
+;;;;   Production Rule:
+;;;;       B[x] -&gt; ( F[x] &lt; -[3a] B[(0.5)x] &gt; &lt; +[3a] B[(0.5)x] &gt; 
+;;;;                 &lt; -[2a] B[(0.5)x]&gt; &lt; +[2a] B[(0.5)x] &gt; F[x] B[(0.5)x] )
+;;;;   Interpretation:
+;;;;       Angle (a):  20
+;;;;       Step (s):  you supply
+;;;;         B[x] :  Like F[x], draw line of length x
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;   Name: Weed II
+;;;;   Description
+;;;;  
+;;;;   Alphabet:  F[x], G[x], A[x], B[x], +[y], -[y]
+;;;;   Axiom:  ( +[9a] A[s] )
+;;;;   Production Rule:
+;;;;       A[x] -&gt; ( F[x] &lt; +[9a] A[(0.5)x] &gt; -[a] F[x] &lt; -[9a] B[(0.4)x] &gt; A[(0.6)x] )
+;;;;       B[x] -&gt; ( F[x] &lt; -[9a] B[(0.5)x] &gt; +[a] F[x] &lt; +[9a] A[(0.4)x] &gt; B[(0.6)x] )
+;;;;   Interpretation:
+;;;;       Angle (a):  10
+;;;;       Step (s):  you supply
+;;;;         A[x], B[x] :  Like F[x], draw line of length x
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;   Name: Parametric Koch Island
+;;;;   Description
+;;;;  
+;;;;   Alphabet:  F[x], G[x], +[y], -[y]
+;;;;   Axiom:  ( F[s] -[a] F[s] -[a] F[s] )
+;;;;   Production Rule:   Let p=0.3 q=0.7 k = (sqrt (* p q))
+;;;;       F[x] -&gt; (  F[px] +[a] F[kx] -[2a] F[kx] +[a] F[qx]  )
+;;;;   Interpretation:
+;;;;       Angle (a):  85
+;;;;       Step (s):  you supply
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;   Name: Alien Life
+;;;;   Description
+;;;;  
+;;;;   Alphabet:  F[x], G[x], B[x], +[y], -[y]
+;;;;   Axiom:  ( B[s] )
+;;;;   Production Rule:   Let k = (/ (sqrt 2) 2)
+;;;;       B[x] -&gt; ( &lt; -[a] F[kx] B[kx] &gt; G[x] &lt; -[3a] F[kx] B[kx] &gt; )
+;;;;   Interpretation:
+;;;;       Angle (a):  35
+;;;;       Step (s):  you supply
+;;;;         B[x] :  Like F[x], draw line of length x</pre>
+
+  <h3>Stochastic Examples</h3>
+<pre>
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;   Name: Stochastic Bush
+;;;;   Description
+;;;;  
+;;;;   Alphabet:  'F, 'G, 'B, '+, '-
+;;;;   Axiom:  '(F B)
+;;;;   Production Rule:
+;;;;       'B -&gt; '( &lt; + F B &gt; &lt; - F B >)   (probability 0.33)
+;;;;          -&gt; '( &lt; + + F B &gt; &lt; - - F B >)   (probability 0.33)
+;;;;          -&gt; '( &lt; + + + F B &gt; &lt; - - - F B >)   (probability 0.33)
+;;;;   Interpretation:
+;;;;       Angle:  10
+;;;;       'B :  Same as 'F</pre>
+
+
+  <hr/>
+  <h2>Turning Everything in</h2>
+  <p>
+  Add the appropriate test cases to the end of your definitions window so I can see some examples, such as:
+  </p>
+
+  <pre>
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;              Test Cases                           ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;(simple-branch 4)
+;(sierpinski-rug 4)
+;(sierpinski-carpet 4)
+;(sierpinski-maze 6)
+;(weed-I 4)
+;(bush-I 4)
+;(tree-I 6)
+;(two-y 6)
+;(big-h 5)
+;(tree-II 5)
+;(weed-II 6)
+;(tree-III 4)
+;(param-koch-island 5)
+;(alien-life 7)
+;(random-koch-island 4)
+;(weed-III 5)
+;(bush-II 8)  </pre>
+
+  <p>
+  Save the definitions window as (your_cnet_id)-Lab06.scm and put it in the <a href="http://maclab.cs.uchicago.edu/index.php?swap=dropbox">dropbox</a>.  So for example I would save my file as aterrel-Lab06.scm. Do yourself a favor and keep your work somewhere you can access it.
+  </p>
+
+</div>
+ 
+<div id="footer">
+    <a href="/">Main</a> |
+    <a href="/Professional/">Professional</a> |
+    <a href="/Teaching/">Teaching</a>
+    <br/>&copy;2006-2009 Andy R. Terrel
+    </div>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-388278-1";
+urchinTracker();
+</script>
+
+</body>
+</html>

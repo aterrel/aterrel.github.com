@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+<title>Andy R Terrel - CMSC 16100 - Escaping the Minotaur: Graph Traversals</title>
+
+<link type="text/css" href="../css/style.css" rel="StyleSheet"/>
+
+</head>
+
+
+<!-- Main Body -->
+<body>
+
+<!-- Title -->
+<div id="title">Lab 8 - Graphs</div>
+
+
+<!-- Content -->
+<div id="content2">
+  <h2>Graphs</h2>
+
+  <img src="6n-graf.png" alt="A 6 node graph" style="float:right">
+
+  <p>
+  A graph is a data structure that consists of a set of nodes, and a set of edges where an edge is a pair of nodes.  For example, the graph on the right is a 6 node graph with the nodes as the set {1,2,3,4,5,6} and the edges {(1,2),(1,5),(2,3),(2,5),(3,4),(4,5),(4,6)}.  While there are many ways to represent a graph, one common way is to keep a list of nodes, where each node is a name and a list of names of neighbors, that is a list of the names of nodes that are in the same edge pairs.  Thus the node associated with 1 might be (make-node 1 (list 2 5))).
+  </p>
+
+  <p> 
+  Your task is to take as input a description of a graph and display it using <tt>image.ss</tt>. Incidentally, you could do some work and find the best place to put the nodes on the canvas, but for this lab I suggest you add some position data to the node on your graph and just draw lines between them.  Some suggested functions for you graph structure are as follows:
+  </p>
+
+  <pre>
+  ;;Contract: make-graph-from-edgelist: list-of-edges -> graph
+  ;;Purpose: given an edgelist it will produce the appropriate nodes 
+  ;;         and return a graph with those nodes.
+
+  ;;Contract: graph-nodelist: graph -> list-of-nodes
+  ;;Purpose: given a graph it produces a list of nodes.
+
+  ;;Contract: graph-node: name graph -> node
+  ;;Purpose: given the name of a node and a graph 
+  ;;         it returns the appropriate node
+
+  ;;Contract: node-name: node -> name
+  ;;Purpose: given a node, it returns a name (which can be any type)
+
+  ;;Contract: node-neighbors: node -> list-of-node-names
+  ;;Purpose: given a node, it returns the list of neighboring nodes names.
+
+  ;;Contract: graph->image: graph -> image
+  ;;Purpose: take a graph and produce an image of that graph.</pre>
+
+
+  <p> 
+  Make several test cases for your graphs. Here is one that you might see if you fly southwest.
+  </p>
+
+  <pre>
+
+;(define TexasCities '(Amarillo ElPaso Austin Dallas FortWorth Houston SanAntonio Lubbock Midland Harlingen CorpusChristi))
+;(define SWA-Texas '((Harlingen Houston) (Harlingen Austin) (Harlingen SanAntonio) (Amarillo Dallas) (Lubbock Dallas)
+;                                        (Lubbock Austin) (Lubbock ElPaso) (Midland Dallas) (Midland Houston) (Midland ElPaso) (Midland Austin)
+;                                        (ElPaso Dallas) (ElPaso Houston) (ElPaso SanAntonio) (ElPaso Austin) (SanAntonio Houston) (SanAntonio Dallas)
+;                                        (Austin Houston) (Austin Dallas) (Houston Dallas) (Houston CorpusChristi)))
+
+;(define SWAT-graph (make-graph TexasCities SWA-Texas))
+</pre>
+  <p> 
+  You should modify my example to give positions of the nodes on your canvas so it is easy to see. For placement information see <a href="http://www.southwest.com/travel_center/routemap_dyn.html">Southwest's Travel Map</a>
+  </p>
+
+  <hr/>
+  <h3>Extra Credit - Dijkstra's Algorithm</h3>
+  <p>
+   To get the shortest path from any two point on a graph we use <a href="http://en.wikipedia.org/wiki/Dijkstra%27s_algorithm">Dijkstra's Algorithm</a>.  Dijkstra's Algorithm takes a graph and a node then computes the shortest path from that node to every other connected node in the graph.  It keeps two data structures a parent table and a distance table.  The parent table give the node that immediately preceded that node on the shortest path traversal of the graph. What my code will return is a list of pairs with the first of each pair the name of the node, and the second of the pair as the next step to on the shortest path to the source.  You can use this representation to make a function that returns an image with the shortest path between two locations colored red. 
+  </p>
+  <p>
+  For now you can use the code below, but you might take some time later to understand what is going on, it is an important algorithm that you will see later.  (For those who actually do look, I am cheating a bit here by sorting with every iteration instead of maintaining a priority queue, but for small n, O(n<sup>2</sup>) is about the same as O(n*log(n)).) 
+  </p>
+  <pre>
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;          Dijkstra's Algorithm                   ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Contract: graph node -> list
+;; Purpose: given a graph and a node it returns the minimum spanning tree of 
+;;          the graph with the node as the source in the form of node , parent pairs
+(define (Dijkstra graph begin)
+  ;; A table structure for setting up previous and distance tables
+  (define (build-table graph fill)
+    (foldr (lambda (a b) (cons (cons (node-name a) fill) b)) '() (graph-nodelist graph)))
+  ;; A accessor for the table
+  (define (table-ref nname table)
+    (let ((ref (filter (lambda (a) (equal? (car a) nname)) table)))
+      (if (null? ref) (error "table-ref: name not in table arguments --" nname table)
+          (car ref))))
+  ;; Set up tables previous fill with 'null and distance with infinity (or effectively infinity)
+  (let* ((previous-table (build-table graph 'null))
+         (distance-table (build-table graph 1000000)))
+    ;;The iteration is based on a queue, when the queue is empty the work is done
+    (define (iter done queue)
+      (if (null? queue) previous-table
+          ;;Find the next item in the queue to process (that is the one with the 
+          ;; smallest distance)
+          (let ((sorted-q (sort queue (lambda (a b) (< (cdr (table-ref a distance-table)) 
+                                                       (cdr (table-ref b distance-table)))))))
+            (process (car sorted-q) done (cdr sorted-q)))))
+    ;;To process a node we are going to check to update its neighbors, then if necessary add them to 
+    ;; the queue, and finally add the node to the done list
+    (define (process nname done queue)
+      (let* ((min-dist (+ (cdr (table-ref nname distance-table)) 1))
+             (neighbors (node-neighbors (graph-node nname graph)))
+             (update-list (filter (lambda (a) (> (cdr (table-ref a distance-table)) min-dist)) 
+                                  neighbors))                                
+             (add-to-queue (filter (lambda (a) (not (member? a done))) neighbors)))
+        (for-each (lambda (a) (set-cdr! (table-ref a distance-table) min-dist)) update-list)
+        (for-each (lambda (a) (set-cdr! (table-ref a previous-table) nname)) update-list)
+        (iter (cons nname done) (union add-to-queue queue))))
+    ;; Set the source node's distance to zero
+    (set-cdr! (table-ref begin distance-table) 0)
+    ;; Start the iteration with the source node in the queue
+    (iter '() (list begin))))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;           List Operations                       ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(define (member? element list)
+  (cond [(null? list) #f]
+        [(equal? (car list) element) #t]
+        [else (member? element (cdr list))]))
+
+(define (union list1 list2)
+  (cond [(null? list1) list2]
+        [(null? list2) list1]
+        [else (if (member? (car list2) list1) (union list1 (cdr list2))
+                  (union (cons (car list2) list1) (cdr list2)))]))</pre>
+
+
+  <hr/>
+  <h2>Turning Everything in</h2>
+  <p>
+  Add appropriate test cases to the end of your file as usual.  Save the definitions window as (your_cnet_id)-Lab08.scm and submitt it to Chalk.  So for example I would save my file as aterrel-Lab08.scm.  Also do yourself a favour and save your file somewhere you can look back at it (email yourself or store it on your own media). 
+  </p>
+
+</div>
+ 
+<div id="footer">
+    <a href="/">Main</a> |
+    <a href="/Professional/">Professional</a> |
+    <a href="/Teaching/">Teaching</a>
+    <br/>&copy;2006-2009 Andy R. Terrel
+    </div>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-388278-1";
+urchinTracker();
+</script>
+
+</body>
+</html>
+

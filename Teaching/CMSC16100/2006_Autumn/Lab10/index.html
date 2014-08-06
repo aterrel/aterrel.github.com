@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+<title>Andy R Terrel - CMSC 16100 - Creating an Internet Spider</title>
+
+<link type="text/css" href="../css/style.css" rel="StyleSheet"/>
+
+</head>
+
+
+<!-- Main Body -->
+<body>
+
+<!-- Title -->
+<div id="title">Lab 10 - Creating an Internet Spider</div>
+
+
+<!-- Content -->
+<div id="content2">
+  <h2>Introduction</h2>
+
+  <p>
+  Scheme is a scripting language, which means that it is able to do very high level operations with very few lines of code.  This week we are going to take advantage of this feature and create a spider to crawl webpages and extract email addresses.  Getting a webpage in Scheme is fairly easy using the <tt>url.ss</tt> library so the challenging part of this lab is deciding how to get the next webpage and extract the correct information.
+  </p>
+
+  <hr/>
+  <h2>HTML Desciption</h2>
+
+  <p>
+  For those who are not familiar with <a href="http://www.w3.org/MarkUp/Guide/">HTML</a>, it is incredibly easy to learn.  HTML is a markup language that means it uses marks to determine what to do with a specific bit of text.  For the purpose of this lab, you will only need to know about the <tt>href</tt> object of an <a href="http://www.w3.org/TR/html4/struct/links.html">A element</a>.  It is how a webpage will link to another webpage, an email address, any other type of file, and sometimes just javascript code.  If the <tt>href</tt> object links to a email address the then it will start with "mailto:".
+  </p>
+
+  <hr/>
+  <h2>Using url.ss</h2>
+  <p>
+  The function below will give you a list of html elements, where each element is a list of symbols or strings based off of the html.
+  </p>
+  <pre>
+(require (lib "url.ss" "net") (lib "html.ss" "html") (lib "xml.ss" "xml"))
+
+;; Contract: string -> list of html elements
+;; Purpose: given a string, get-web-page-exp will return a list of html elements
+(define (get-web-page-exp url-string)
+  (display "Fetching: ")
+  (display url-string)
+  (newline)
+   (map xml->xexpr
+        (read-html-as-xml (get-pure-port (string->url url-string)))))</pre>
+
+  <p>
+  First you will want to write a some functions that will be used to process the list by taking out all the webpages and email addresses you can find.  Remember, you probably don't care about .ico, .css, .js, .pdf, and other such file extensions if you are looking for webpages.
+  </p>
+ 
+  <hr/>
+  <h2>Making the spider</h2>
+  <p>
+  So the spider should be fairly simple.  It should process a webpage and then add any links it found to the pages that it will process and emails to the list of emails it found.  At the end it should display the emails it found.
+  </p>
+
+  <h3>The net is not so standard</h3>
+  <p>
+  You might find that you get a large number of errors depending on the webpages you traverse.  For example if you try to get http://www.uchicago.edu with the get-web-page-exp expression, you find it gives a Bad Request 400 error page.  You will find many pages that will give you errors, whether it is because the HTTP Request of url.ss is not the best (it puts an extra carriage return in the request and gets stuck on a few pages) or because the page is not even responding.  So you should find some pages that work and put them in your test cases, please don't just do what your neighbor is doing because we don't want to give any one server a flash crowd.
+  </p>
+
+  <h3>Isn't this malware?</h3>
+  <p>
+  Some of you might have some issues about just using a program to strip the net of its information.  I would like to point out that a large percentage of traffic on the internet is actually bots and not humans.  You will also find that of the emails you get, many will be unusable (try getting some from <a href="http://chicago.craigslist.org">craigslist</a>), that's because so many people have made such programs and filled our inboxes with junk.
+  </p>
+  <p>
+  Still even more important is the law and stripping content.  There are several major court cases, spanning all levels of the courts, about websites that strip information from another site and publish it.  This program you made is not a crime but it is something that could be used to publish in a way that is not completely a closed issue in copy right laws.  Don't worry I am sure you will learn all about how to make denial of service attacks and buffer overflow attacks in more advanced classes, so you will get to hear about committing crimes with your computer again.
+  </p>
+
+  <hr/>
+  <h2>Extra Credit</h2>
+  <p>
+  So the spider can be pretty basic, but it has some flaws.  How do you know if you have visited the site before?  How do you know whether you have gotten the email before?  Can you tell whether the email is usable?  I'm not expecting you to solve the last one perfectly but the first to are things you should know how to do.  So make any improvements you like, just be sure to tell me what they are in your code documentation.
+  </p>
+
+
+  <hr/>
+  <h2>Turning Everything in</h2>
+  <p>
+  Add appropriate test cases to the end of your file as usual.  Save the definitions window as (your_cnet_id)-Lab10.scm and put it in the <a href="http://maclab.cs.uchicago.edu/index.php?swap=dropbox">dropbox</a>.  So for example I would save my file as aterrel-Lab10.scm.  Also do yourself a favour and save your file somewhere you can look back at it (email yourself or store it on your own media). 
+  </p>
+
+  <p>
+  Good luck on finals!
+  </p>
+</div>
+ 
+<div id="footer">
+    <a href="/">Main</a> |
+    <a href="/Professional/">Professional</a> |
+    <a href="/Teaching/">Teaching</a>
+    <br/>&copy;2006-2009 Andy R. Terrel
+    </div>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-388278-1";
+urchinTracker();
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+<title>Andy R Terrel - CMSC 16100 Lab 4 - Linear Regression</title>
+
+<link type="text/css" href="../css/style.css" rel="StyleSheet"/>
+
+</head>
+
+
+<!-- Main Body -->
+<body>
+
+<!-- Title -->
+<div id="title">Lab 4 - Linear Regression</div>
+
+
+<!-- Content -->
+<div id="content2">
+<h2>Modeling Datasets</h2>
+
+<p>
+You will need three data definitions in order to do this exercise:
+<code>datum</code>, <code>dataset</code> and
+<code><nobr>linear-equation</nobr></code>. A <code>datum</code> will
+consist simply of an x and a y. A <code>dataset</code> will consist of
+at least one datum. A <code><nobr>linear-equation</nobr></code> will
+consist of a slope and a y-intercept (<i>m</i> and <i>b</i> from the
+familiar <nobr><i>y</i>=<i>mx</i>+<i>b</i>).</nobr>
+</p>
+
+<p>
+A linear regression analysis is applied to a set of data; its result
+is the line that mathematically best fits the data as it would appear
+on a two-dimensional plot. Operationally, with linear regression
+analysis, you put a dataset in and get a linear equation out. Your
+goal is to provide a function <code>linreg</code> whose contract is
+<blockquote> <code>;; linreg: dataset -> linear-equation</code>
+</blockquote>
+
+</p>
+
+<h2>Linear Regression</h2>
+
+<p>
+In the following discussion, assume that <b><i>n</i></b> is the number
+of datums in the given dataset.
+</p>
+
+<P></P> The best-fit slope for the linear model of a set of data is
+given by <BR><P></P> <DIV ALIGN="CENTER"> <!-- MATH
+\begin{displaymath}
+\frac{n\sum{xy}-\left(\sum{x}\right)\left(\sum{y}\right)}{n\sum{x^2}-\left(\sum{x}\right)^2}.
+\end{displaymath} -->
+
+<IMG
+ WIDTH="158" HEIGHT="47" BORDER="0"
+ SRC="Lab4-img6.png"
+ ALT="\begin{displaymath}\frac{n\sum{xy}-\left(\sum{x}\right)\left(\sum{y}\right)}{n\sum{x^2}-\left(\sum{x}\right)^2}.\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The <IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="Lab4-img2.png"
+ ALT="$y$">-intercept for the linear model of a set of data is given by
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{\left(\sum{y}\right)\left(\sum{x^2}\right)-\left(\sum{x}\right)\left(\sum{xy}\right)}{n\sum{x^2}-\left(\sum{x}\right)^2}.
+\end{displaymath}
+ -->
+
+<IMG WIDTH="210" HEIGHT="49" BORDER="0" SRC="Lab4-img7.png"
+ ALT="\begin{displaymath}\frac{\left(\sum{y}\right)\left(\sum{x^2}\right)-\left(\sum{x}\right)\left(\sum{xy}\right)}{n\sum{x^2}-\left(\sum{x}\right)^2}.\end{displaymath}">
+ </DIV> <BR CLEAR="ALL">
+
+<h2>The Linear Correlation Coefficient</h2>
+
+<p>
+A richer version of linear regression analysis includes the notion of
+a <i>linear correlation coefficient</i>. This coefficient is usually
+referred to as <b><i>r</i></b> and is a measure, roughly, of "how
+linear the data is." Typically a full-fledged linear regression
+analysis provides the value <b><i>r<sup>2</sup></i></b>; the closer
+<b><i>r<sup>2</sup></i></b> is to 1, the stronger the correlation
+between the data and the line modeling the data.
+</p>
+
+<p>
+With the inclusion of the linear correlation coefficient, we have a
+need for a new structure, an <code><nobr>analysis</nobr></code> which
+consists of two parts: a <code><nobr>linear-equation</nobr></code> and
+a <code>num</code>, the latter being the value of
+<b><i>r<sup>2</sup></i></b>. The challenge is to write a richer
+<code>linreg</code> with the contract <blockquote> <code>;;
+full-linreg: dataset -> analysis</code> </blockquote>
+</p>
+
+<p>
+Notes on how the linear correlation coefficient is computed
+follow.
+</p>
+<p>
+The <I>variance</I> of a set of numbers <!-- MATH $\{a_1,\ldots,a_n\}$
+ --> <IMG WIDTH="88" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="Lab4-img4.png" ALT="$\{a_1,\ldots,a_n\}$"> is the average of the
+ squares minus the square of the average; that is:
+ <DIV ALIGN="CENTER"> <!-- MATH \begin{displaymath}
+ \left(\sum_{i=1}^n{a_i^2}\right){}/n -
+ \left(\left(\sum_{i=1}^n{a_i}\right) /n\right)^2 .  \end{displaymath}
+ -->
+</p>
+
+<p>
+<IMG
+ WIDTH="224" HEIGHT="58" BORDER="0" SRC="Lab4-img5.png"
+ ALT="\begin{displaymath}\left(\sum_{i=1}^n{a_i^2}\right){}/n -
+ \left(\left(\sum_{i=1}^n{a_i}\right) /n\right)^2 .\end{displaymath}">
+ </DIV> <BR CLEAR="ALL">
+</p>
+
+<p>
+The <I>standard deviation</I> is the square root of the variance.
+</p>
+
+<P>
+The linear correlation coefficient <IMG
+ WIDTH="12" HEIGHT="13" ALIGN="BOTTOM" BORDER="0"
+ SRC="Lab4-img3.png"
+ ALT="$r$"> is given by
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<!-- MATH
+ \begin{displaymath}
+\frac{\overline{xy}-\left(\overline{x} \cdot \overline{y}\right)}{\sigma_x\sigma_y},
+\end{displaymath}
+ -->
+
+<IMG
+ WIDTH="85" HEIGHT="45" BORDER="0"
+ SRC="Lab4-img8.png"
+ ALT="\begin{displaymath}\frac{\overline{xy}-\left(\overline{x} \cdot \overline{y}\right)}{\sigma_x\sigma_y},\end{displaymath}">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+where <IMG
+ WIDTH="12" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="Lab4-img9.png"
+ ALT="$\overline{j}$"> is the mean of <IMG
+ WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="Lab4-img10.png"
+ ALT="$j$"> and <IMG
+ WIDTH="21" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="Lab4-img11.png"
+ ALT="$\sigma_k$"> is the standard deviation of <IMG
+ WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="Lab4-img12.png"
+ ALT="$k$">.
+</p>
+
+<p>
+Last, but not least, remember the full linear regression analysis
+should return <b><i>r<sup>2</sup></i></b>.
+</p>
+
+<h2>Reading a dataset from a file</h2>
+
+<p>
+Finally use the <a href="cs161_io.ss">cs161_io.ss</a> teachpack to read a file from disk and apply either of your linear regression functions to the data.  For testing you can use <a href="test.dat">my test file</a> or make your own.  The teachpack provides a function read-from-file which takes a filename and returns a list of values.  For this lab a test file will consist of two numbers representing the x and y with a space between them on each line.  Write a function dataset-from-file that takes a filename and returns a dataset to help with this process.
+</p>
+
+
+
+  <h2>Extra Credit - Visualization</h2>
+  <p>
+  So linear regression without looking at the dataset can often be misleading, but often it is easy to see when the dataset is plotted.  For extra credit use the image.ss teachpack to create a plot of the dataset and the linear equation resulting from the linear regression.  Please put an appropriate test case in so I can see how it works easily.
+  </p>
+
+  <h2>Turning Everything in</h2>
+  <p>
+  To test if things are working use Excel or Gnumeric to see if the linear regression numbers are correct, please don't ask me if your numbers are correct I will just tell you to read this sentence again.  Add the appropriate test cases to the end of your definitions window so I can see some examples, such as:
+  </p>
+
+  <pre>
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;              Test Cases                           ;;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  (define d (make-dataset (make-datum 1 1)
+                        (make-datum 2 2.3)
+                        (make-datum 3 2.7)))
+ 
+  (linreg d)
+  (full-linreg d)
+  (full-linreg (dataset-from-file "test.dat"))</pre>
+  <p>
+  Save the definitions window as (your_cnet_id)-Lab04.scm and put it in the <a href="http://maclab.cs.uchicago.edu/index.php?swap=dropbox">dropbox</a>.  So for example I would save my file as aterrel-Lab04.scm.  Also do yourself a favor and save your file somewhere you can look back at it (email yourself or store it on your own media). 
+  </p>
+
+</div>
+ 
+<div id="footer">
+    <a href="/">Main</a> |
+    <a href="/Professional/">Professional</a> |
+    <a href="/Teaching/">Teaching</a>
+    <br/>&copy;2006-2009 Andy R. Terrel
+    </div>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-388278-1";
+urchinTracker();
+</script>
+
+</body>
+</html>
+

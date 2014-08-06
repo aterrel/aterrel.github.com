@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+<title>Andy R Terrel - CMSC 16100 Lab 2 - Image Functions</title>
+
+<link type="text/css" href="../css/style.css" rel="StyleSheet"/>
+
+</head>
+
+
+<!-- Main Body -->
+<body>
+
+<!-- Title -->
+<div id="title">Lab 2 - Using the Image Library</div>
+
+
+<!-- Content -->
+<div id="content2">
+  <h2>The Image Library</h2>
+  <p> 
+  In this lab you will be making images and functions that make images using the teachpack <tt>image.ss</tt>.  To install the teachpack, look in the menu option <strong>Language</strong>=><strong>Add teachpack</strong>, then under the <tt>htdp</tt> directory.  This lab is easily implementable using the <i>Beginning Student</i> language, but if you wish to use another language please put the language you used in the header comments with you name and date.  For example if you used the <i>Advanced Student</i>:
+  </p>
+  <pre>
+  ;; Name: Andy Terrel
+  ;; Date: October 2, 2006
+  ;; Class: CMSC 16100-1
+  ;; Language: Advanced Student</pre>
+
+  <p> 
+  Documentation for the image library can be found by searching the helpdesk (<strong>Help</strong>=><strong>HelpDesk</strong>) for <tt>image.ss</tt>.  You are welcome to use any of the functions defined in the library but you will only need to use the following functions:
+  </p>
+  <ul>
+    <li>Basic Shapes (which includes modes and colors)</li>
+    <li>Penhole functions</li>
+    <li>Overlay functions</li>
+    <li>Image height and width</li>
+  </ul>
+  <p>
+  I suggest you not worry about the color lists and alpha channels right now, but if you can do some fun stuff with them once we learn a bit about data structures.
+  </p>  
+
+  <h3>A Composite Image</h3>
+  <p> 
+  Build an image called funny-face, that has at least a nose, a mouth, and eyes.  You are welcome to add anything you wish such as eyeglasses, a tie, or various piercings.  My suggestion is that you define each feature separately and only use overlay commands to line up the images for the funny face.  Make it simple at first and then you can add detail by only manipulating the different features later.
+  </p>
+
+  <h3>A Recursive Image</h3>
+  <p>
+  Make a function called rings.  It will take a number of rings, total radius, width of each ring, color1, and color2.  Have the image make a number of rings that alternate color and have the given width.  Do this with recursion.  For example my function produces the following:
+  </p>
+  <pre>
+  (rings 3 30 10 'black 'red) </pre>
+  <img src="target.jpg" alt="Rings Example"/>
+
+  <h3>Building a grid of images</h3>
+  <p>
+  Make a function called grid3x3 that will take three images and a width.  The function will return an image that is the three images lined up horizontally by their pinpoints with a specific width apart.  The width of 0 should have the images next to each other, not the pinpoints on top of each other.  Then have the three images repeated three times vertically. For example my code gives:
+  </p>
+  <pre>  (grid3x3 funny-face 
+           funny-face
+           funny-face
+           10)</pre>
+  <img src="grid.jpg" alt="Grid Example"/>
+  <p>
+  I suggest you make two helper functions, beside and above.  Each of these will take two images and a width and put the images side by side or above each other, respectively.  A helper function is a function that is used by another function but is not meant to be called by a user.  It helps us not have to rewrite code multiple times and provides for more elegant programming.  Later in the course you will learn how to make these functions only callable by certain other functions but for now just define them as we have all the other functions.  You don't have to use them but remember elegance counts.
+  </p>
+
+  <h2>Turning everything in</h2>
+  <p>
+  Remember to put your name, date, and class at the beginning of the definitions window.  Add the following test cases to the bottom of your code and make sure they are the only things that print out when you hit run.
+  </p>
+  <pre>
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;              Test Cases                           ;;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  (rings 3 30 10 'black 'red)
+  (rings 50 100 2 'black 'red)
+  (rings 100 30 10 'black 'red)
+  (rings 3 0 10 'black 'red)
+  (grid3x3 funny-face 
+           funny-face
+           funny-face
+           10)
+  (grid3x3 (move-pinhole funny-face 
+                         0 
+                         (quotient (image-height funny-face) 2))
+           (rings 30 30 1 'green 'red)
+           (move-pinhole funny-face 12 
+                         (quotient (image-height funny-face) 4))
+           10)</pre>
+  <p>
+  Save the definitions window as (your_cnet_id)-Lab02.scm and put it in the <a href="http://maclab.cs.uchicago.edu/index.php?swap=dropbox">dropbox</a>.  So for example I would save my file as aterrel-Lab02.scm.  Also do yourself a favor and save your file somewhere you can look back at it (email yourself or store it on your own media). 
+  </p>
+
+</div>
+ 
+<div id="footer">
+    <a href="/">Main</a> |
+    <a href="/Professional/">Professional</a> |
+    <a href="/Teaching/">Teaching</a>
+    <br/>&copy;2006-2009 Andy R. Terrel
+    </div>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-388278-1";
+urchinTracker();
+</script>
+
+</body>
+</html>

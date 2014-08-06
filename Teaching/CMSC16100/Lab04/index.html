@@ -1,0 +1,366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+<title>Andy R Terrel - CMSC 16100 Lab 4 - L-Systems and Fractals</title>
+
+<link type="text/css" href="../css/style.css" rel="StyleSheet"/>
+
+</head>
+
+
+<!-- Main Body -->
+<body>
+
+<!-- Title -->
+<div id="title">Lab 4 - L-Systems and Fractals</div>
+
+
+<!-- Content -->
+<div id="content2">
+  <h2>Introduction to L-systems</h2>
+  <p> 
+  The first exercise we are going to generate some L-systems (L for Lindenmayer), which were first introduced by a botanist Aristid Lindenmayer in 1968 to give a formal description of the growth of multicellular organisms.  It is also related to the way Chomsky developed his grammars for studying natural language.  As a side note, today we using context-free grammars, but you will find out more about this subject later in some of your more advanced coursework.
+ </p>
+ <p>
+ An L-system consists of three parts:
+ </p>
+ <ul>
+    <li>An alphabet consisting of a list of symbols.</li>
+    <li>An initial state, or axiom, consisting of a sequence of symbols from the alphabet, and which is the starting state.</li>
+    <li>A collection of production rules, or a grammar, which are rules for how to replace a single symbol in the alphabet by a new combination of symbols (all occurring in the alphabet.)</li>
+  </ul>
+  <p>
+  For example, the Fibonacci grammar:
+  </p>
+  <ul>
+    <li>Alphabet: <tt>'A, 'B</tt></li>
+    <li>Axiom: <tt>'(A)</tt></li>
+    <li>Grammar:
+    <ul>
+      <li><tt>'A => '(B)</tt></li>
+      <li><tt>'B => '(A B) </tt></li>
+    </ul>
+    </li>
+  </ul>
+  <p>
+  To generate the system, you apply the grammar on the list of symbols from the previous iteration.  So for example the Fibonacci grammar produces:
+  </p>
+  <div style="position: relative;left: 10%;">
+    n=0: <tt>(A)</tt><br/>
+    n=1: <tt>(B)</tt><br/>
+    n=2: <tt>(A B)</tt><br/>
+    n=3: <tt>(B A B)</tt><br/>
+    n=4: <tt>(A B B A B)</tt><br/>
+    n=5: <tt>(B A B A B B A B)</tt>
+  </div>
+  <p>
+  Write a function <tt>generate-list</tt> that will take a grammar, an axiom, and a number of steps, then produce the appropriate sequence.  Test it out with the Fibonacci grammar to make sure it works.
+  </p>
+
+  <hr/>
+  <h2>The Turtle Drawing Paradigm</h2>
+  <p>
+  Turtle graphics originated as part of the Logo programming language developed at Berkeley in the late sixties. It was originally an adaptation of LISP (without parentheses!!) The idea of turtle graphics is that a turtle with a pen strapped to its tail can be instructed to do simple commands:
+  </p>
+  <ul>
+    <li> Move with pen down. (Draw a line)</li>
+    <li> Move with pen up. (Move without drawing a line)</li>
+    <li> Turn left.</li>
+    <li> Turn right. </li>
+  </ul>
+  <p>
+  In fact, some early versions of Logo really did control a mechanical turtle (who even rang a bell!!).  With the value-turtles.ss module, we can implement simple turtle commands. A snapshot is like an image, but it contains a turtle (literally!), and the turtle knows only simple commands for drawing (search the <strong>Help Desk</strong> to find them).  For this lab load the value-turtle module by putting the following line at the beginning of your definitions window (it is how to include libraries for more information search the <strong>Help Desk</strong>):
+  </p>
+  <pre>
+  (require (lib "value-turtles.ss" "graphics"))</pre>
+
+  <p>
+  So for example to draw a equilateral triangle, you might do:
+  </p>
+  <pre>
+  (draw 40 
+       (turn 120 
+            (draw 40 
+                  (turn 120 
+                        (draw 40 
+                              (turtles 100 100 30 60 0))))))</pre>
+
+  <p> 
+  For the fractal generation, we will interpret the following symbols, and ignore all others:
+  </p>
+  <ul>
+    <li> <tt>'F</tt> - Draw a line of given length</li>
+    <li> <tt>'G</tt> - Move a given length without drawing a line</li>
+    <li> <tt>'+</tt> - Turn counterclockwise a given angle</li>
+    <li> <tt>'-</tt> - Turn clockwise a given angle </li>
+  </ul>
+
+  <p>
+  Write a function, <tt>turtle-draw</tt>, that takes a list of symbols, a length, an angle, and a turtle snapshot and returns a drawing according to the commands given by the symbols in the list.
+  </p>
+
+  <hr/>
+  <h2>Drawing Fractals</h2>
+  <p>
+  Now with the previous two parts of the lab, we are ready to draw some more fractals based off L-systems.  For each of these definitions, you will generate a L-system list that you can then give to your <tt>turtle-draw</tt> function.  For each of these fractals, putting the turtle in the center of the canvas is not always the best idea, so I am giving a suggested initial turtle-snapshot to use.  I will run through the Koch Curve example but then the rest are up to you.
+  </p>
+  <pre>
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;;;   Koch Curve
+  ;;;;      One of the simplest examples of a fractal.  Actually discovered in
+  ;;;;         the first decade of the twentieth century.
+  ;;;;  
+  ;;;;   Alphabet:  'F, 'G, '+, '-
+  ;;;;   Axiom:  '(F)
+  ;;;;   Grammar:
+  ;;;;       'F -> '(F + F - - F + F)
+  ;;;;       'G -> '(G)
+  ;;;;       '+ -> '(+)
+  ;;;;       '- -> '(-)
+  ;;;;   Interpretation:
+  ;;;;       Angle:  60
+  ;;;;   Suggested Turtle: (turtles 750 250 5 245 0)</pre>
+
+  <p>
+  Typically if a symbol does not change, we do not include it as part of the grammar, but it is done in this example for clarity.  So for a few iterations we will get the following list of symbols:
+  </p>
+  <div style="position:relative;left:10%">
+  n=0 : <tt>(F)</tt><br/>
+  n=1 : <tt>(F + F - - F + F)</tt><br/>
+  n=2 : <tt>(F + F - - F + F + F + F - - F + F - - F + F - - F + F + F + F - - F + F)</tt>
+  </div>
+  <p> This corresponds to recursively constructing the images as such:</p>
+  <div style="text-align:center;"><img src="koch.gif" alt="Koch Curve"/></div>
+  <p>This gives us the following iterations:</p>
+  <div style="text-align:center;">
+  2: <img src="vonkoch2.gif" alt="Koch Curve"/><br/>
+  3: <img src="vonkoch3.gif" alt="Koch Curve"/><br/>
+  4: <img src="vonkoch4.gif" alt="Koch Curve"/><br/>
+  </div>
+  <p>
+  Now it is up to you to implement the following curves, you can uses these comments in your code instead of a purpose.
+  </p>
+  <pre>
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;;;   Koch Island
+  ;;;;      Snowflake design, differs from Koch Curve by starting Axiom
+  ;;;;  
+  ;;;;   Alphabet:  'F, 'G, '+, '-
+  ;;;;   Axiom:  '(F + + F + + F)
+  ;;;;   Grammar:
+  ;;;;       'F -> '(F - F + + F - F)
+  ;;;;   Interpretation:
+  ;;;;       Angle:  60
+  ;;;;   Suggested Turtles: (turtles 400 400 5 300 0)
+
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;;;   Sierpinski Triangle
+  ;;;;      Best known fractal
+  ;;;;  
+  ;;;;   Alphabet:  'F, 'G, '+, '-
+  ;;;;   Axiom:  '(F + + F + + F)
+  ;;;;   Grammar:
+  ;;;       'F -> '(F + + F + + F + + G G)
+  ;;;       'G -> '(G G)
+  ;;;;   Interpretation:
+  ;;;;       Angle:  60
+  ;;;;   Suggested Turtles: (turtles 340 300 10 290 0)
+
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;;;   Dragon-Curve
+  ;;;;     A space-filling curve--it is a single continuous curve with ONLY
+  ;;;;        right angles.  This curve takes about 12 iterations to fill-out.
+  ;;;;
+  ;;;;  Alphabet:  'F, 'G, 'D, 'E, '+, '-
+  ;;;;  Axiom:  '(D)
+  ;;;;  Grammar:
+  ;;;;       'D -> '(- D + + E)
+  ;;;;       'E -> '(D - - E +)
+  ;;;;  Interpretation:
+  ;;;;     Angle:  45
+  ;;;;        'D :  '(- - F + + F)
+  ;;;;        'E :  '(F - - F + +)
+  ;;;;   Suggested Turtles: (turtles 300 300 100 100 0)
+
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;;;   Hilbert-Curve
+  ;;;;     A space-filling curve which is self-avoiding:   there are no places 
+  ;;;;       where the curve intersects or touches itself.  Discovered a year
+  ;;;;       after Peano found his curve.  David Hilbert was one of the greatest
+  ;;;;       mathematicians.
+  ;;;;
+  ;;;;   Alphabet:  'F, 'G, 'L, 'R, '+, '-
+  ;;;;   Axiom:  '(L)
+  ;;;;   Grammar:
+  ;;;;        'L --> '(+ R F - L F L - F R +)
+  ;;;;        'R --> '(- L F + R F R + F L -)
+  ;;;;    Interpretation:
+  ;;;;       Angle:  90
+  ;;;;          'L : '(+ F - F - F +)
+  ;;;;          'R : '(- F + F + F -)
+  ;;;;   Suggested Turtles: (turtles 340 340 10 330 0)
+
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;;;  Kolam
+  ;;;;     Kolam's are curves found in Indian (East Asia) religious art.  The
+  ;;;;       patterns are often generated using ground rice flour, and colored
+  ;;;;       clay or spices.  The designs are centuries old.
+  ;;;;  Anklet of Krishna Kolam:
+  ;;;;    Alphabet:  'F, 'G, 'Y, '+, '-
+  ;;;;    Axiom:  '(- Y - - Y)
+  ;;;;    Grammar:
+  ;;;;      'Y --> '(Y F Y - - Y F Y)
+  ;;;;    Interpretation:
+  ;;;;       Angle:  45
+  ;;;;          'Y : '(F - - F)
+  ;;;;   Suggested Turtles: (turtles 500 500 250 50 0)</pre>
+
+  <p>
+  Here are some more to do if you have some extra time.
+  </p>
+  <pre>
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;;;   Sierpinski necklace
+  ;;;;      Elegant 
+  ;;;;  
+  ;;;;   Alphabet:  'F, 'G, '+, '-
+  ;;;;   Axiom:  '(F +  F + F + F)
+  ;;;;   Grammar:
+  ;;;       'F -> '(F F + F + F + F + F + F - F)
+  ;;;;   Interpretation:
+  ;;;;       Angle:  90
+  ;;;;   Suggested Turtles: (turtles 425 425 315 395 0)
+
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;;;   Sierpinski Square
+  ;;;;      
+  ;;;;   Alphabet:  'F, 'G, '+, '-
+  ;;;;   Axiom:  '(F + F + F + F)
+  ;;;;   Grammar:
+  ;;;       'F -> '(F F + F + F + F + F F)
+  ;;;;   Interpretation:
+  ;;;;       Angle:  90
+  ;;;;   Suggested Turtles: (turtles 350 350 10 340 0)
+
+
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;;;   Peano-Curve
+  ;;;;     Simplest example of a space-filling curve (each point eventually will
+  ;;;;       lie on the curve.)  Discovered in the late 19th century and first
+  ;;;;       example of such a curve.
+  ;;;;
+  ;;;;   Alphabet 'F, 'G, '+, '-
+  ;;;;   Axiom:  F
+  ;;;;   Grammar:
+  ;;;;      'F --> '(F F + F + F + F F + F + F - F)
+  ;;;;   Interpretation:
+  ;;;;       Angle:  90
+  ;;;;   Suggested Turtles: (turtles 300 300 10 150 0)
+
+
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;;;   Sierpinski Arrowhead
+  ;;;;     Closely related to the Sierpinski gadget.  Uses 'L, 'R just as in the
+  ;;;;       previous Hilbert Curve.
+  ;;;;
+  ;;;;   Alphabet:  'F, 'G, 'L, 'R, '+, '-
+  ;;;;   Axiom:  '(L)
+  ;;;;   Grammar:
+  ;;;;        'L --> '(+ R - L - R +)
+  ;;;;        'R --> '(- L + R + L -)
+  ;;;;    Interpretation:
+  ;;;;       Angle:  60
+  ;;;;          'L : '(+ F - F - F +)
+  ;;;;          'R : '(- F + F + F -)
+  ;;;;   Suggested Turtles: (turtles 400 350 10 340 0)
+
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;;;   S-Shaped Peano-Curve
+  ;;;;     A space-filling, self-avoiding curve built from S and Z shapes.
+  ;;;;
+  ;;;;  Alphabet: 'F, 'G, 'S, 'Z, '+, '-
+  ;;;;  Axiom:  '(S)
+  ;;;;  Grammar:
+  ;;;;      'S --> '(S F Z F S + F + Z F S F Z - F - S F Z F S)
+  ;;;;      'Z --> '(Z F S F Z - F - S F Z F S + F + Z F S F Z)
+  ;;;;  Interpretation:
+  ;;;;     Angle:  90
+  ;;;;        'S :  '(F F + F + F F - F - F F)
+  ;;;;        'Z :  '(F F - F - F F + F + F F)
+  ;;;;   Suggested Turtles: (turtles 500 500 10 490 0)
+
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;;;  Snake Kolam:
+  ;;;;    Alphabet:  'F, 'G, 'X, '+, '-
+  ;;;;    Axiom:  '(F + X F + F + X F)
+  ;;;;    Grammar:
+  ;;;;      'X --> '(X F - F - F + X F + F + X F - F - F + X)
+  ;;;;    Interpretation:
+  ;;;;       Angle:  90
+  ;;;;          'X : '(F - F - F + F + F + F - F - F + )
+  ;;;;   Suggested Turtles: (turtles 500 500 10 490 0)</pre>
+
+
+  
+
+  <h2>Turning Everything in</h2>
+  <p>
+  Add the appropriate test cases to the end of your definitions window so I can see some examples, such as:
+  </p>
+
+  <pre>
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;              Test Cases                           ;;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;(generate-list '(a a) fib-grammar 2)
+  ;;(koch-curve 6)
+  ;;(koch-island 4)
+  ;;(sierpinski-necklace 4)
+  ;;(sierpinski-square 4)
+  ;;(sierpinski-triangle 6)
+  ;;(peano-curve 4)
+  ;;(dragon-curve 12)
+  ;;(hilbert-curve 5)
+  ;;(sierpinski-arrowhead 6)
+  ;;(s-peano-curve 3)
+  ;;(snake-kolam 4)
+  ;;(krishna-kolam 5)</pre>
+
+  <p>
+  Save the definitions window as (your_cnet_id)-Lab04.scm and submit it via chalk.  So for example I would save my file as aterrel-Lab04.scm. Be sure and keep this file, put it someplace you can get it for next week!
+  </p>
+
+</div>
+ 
+<div id="footer">
+    <a href="/">Main</a> |
+    <a href="/Professional/">Professional</a> |
+    <a href="/Teaching/">Teaching</a>
+    <br/>&copy;2006-2009 Andy R. Terrel
+    </div>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-388278-1";
+urchinTracker();
+</script>
+
+</body>
+</html>

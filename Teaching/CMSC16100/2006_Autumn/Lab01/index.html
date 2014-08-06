@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+<title>Andy R Terrel - CMSC 16100 Lab 1 - Intro to Dr. Scheme</title>
+
+<link type="text/css" href="../css/style.css" rel="StyleSheet"/>
+
+</head>
+
+
+<!-- Main Body -->
+<body>
+
+<!-- Title -->
+<div id="title">Lab 1 - Intro to Dr. Scheme</div>
+
+
+<!-- Content -->
+<div id="content2">
+  <h2>The Development Environment</h2>
+  <p> 
+  For this lab course we will be using the <a
+  href="http://www.drscheme.org">Dr. Scheme</a> Integrated Development
+  Environment (IDE). This environment is nice for basic programming
+  and will provide you with some experience that will allow you to
+  quickly learn other IDE's.  For those of you who have never
+  programmed, a development environment is a computer environment in
+  which you program.  It is usually dependent on your OS, language
+  compiler/interpreter, text editor and other such things.  An IDE is
+  a development environment that knows how to compile and run programs
+  on your project, it sometimes bolds keywords and such as well.
+  </p>
+
+  <p> 
+  For this lab you are to first complete the Dr. Scheme Tutorial.
+  Then you will make some example programs and save them to turn in
+  using the maclab dropbox..
+  </p>
+
+  <h3>Learning Dr. Scheme</h3>
+  <ul>
+    <li> Go to the <a
+  href="http://www.maclab.cs.uchicago.edu/tutorials/DrScheme.html">Dr.
+  Scheme Tutorial</a> off the maclab website.</li>
+    <li> Read through the tutorial, we will actually be using the dropbox instead of the handin script.  For further info on the drop box, <a href="http://maclab.cs.uchicago.edu/index.php?swap=dropbox">look here</a></li>
+    <li> Play around with the interaction and definition windows to get use to things.  If you have questions just ask.</li>
+  </ul>
+
+  <h3>Writing you own program</h3>
+  <p>You will be writing three functions today.  The notorious "Hello World", a program to return a person's name and salutation, and a function to print out the factorial of an integer.  Please remember to comment your code in the manner described in class:
+  </p>
+  <pre>
+  ;; Purpose: The purpose of the program
+  ;; Contract: type in -> type out
+  ;; Example: (function input) -> output  </pre>
+  <p>
+  Also at the beginning of any file you turn in please add the following comments to aid the graders.
+  </p>
+  <pre>
+  ;; Name: My Name
+  ;; Date: today's date
+  ;; Class: CMSC 16100-1  </pre>
+
+  <h4>Hello World</h4>
+  <p> 
+  To print a string in Scheme, you use the display command, that is (display string) but alas this doesn't work in Beginner Student Mode of Dr. Scheme.  To print out "Hello World!" bind a variable to the string and call it at the end of your definitions window. 
+  </p>
+
+  <h4>Conditional Hello</h4>
+  <p>
+  In class you learned how to use the cond statement.  Using the cond statement write a function that will take as input a name and sex.  The function should return Hello Mr or Ms (depending on sex) name, use the string-append and equal? commands.  
+  </p>
+
+  <h4>Factorial</h4>
+  <p>
+  To jump ahead a bit you will write a function that returns the factorial of a number.  To do this have a function take a number as input, if the number is zero return one, else return the number times the factorial of one minus the number.  You can do this by calling the same function with the number minus one as its argument.
+  </p>
+
+  <h4> Hand in </h4>
+  <p>
+  For this lab you only need to hand in the definitions window, but I would appreciate it if you left test cases in your definitions window.  That is at the bottom of the window add the function calls such as:
+  </p>
+  <pre>
+  hello_world
+  (hello "Andy" "m")
+  (fact 3) </pre>
+
+  <p>
+  Save your file as (your-cnet-id)-Lab01.scm and use the dropbox to turn it in.  If you ever need to make changes after you have already dropped something off, you can turn in a newer version and mark it by saving as (original_name)-version-x.scm, I will only look at the latest version.  
+  </p>
+
+  <p>
+  That's all for today, there will be more next week.
+  </p>
+</div>
+
+<div id="footer">
+    <a href="/">Main</a> |
+    <a href="/Professional/">Professional</a> |
+    <a href="/Teaching/">Teaching</a>
+    <br/>&copy;2006-2009 Andy R. Terrel
+    </div>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-388278-1";
+urchinTracker();
+</script>
+
+
+</body>
+</html>

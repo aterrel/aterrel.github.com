@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+<title>Andy R Terrel - CMSC 16100 Lab 3 - Numerical Integration</title>
+
+<link type="text/css" href="../css/style.css" rel="StyleSheet"/>
+
+</head>
+
+
+<!-- Main Body -->
+<body>
+
+<!-- Title -->
+<div id="title">Lab 3 - Numerical Integration</div>
+
+
+<!-- Content --> <div id="content2">
+  <h2>Simple Numerical Integration rules</h2>
+  <p>
+  Numerical integration routines are as old as Archimedes and are a
+  great example of treating functions as higher order objects.  The
+  difference between these different rules come in the number of
+  function evaluations and the order of error dependent on the step
+  size.  For this lab, you will be implementing several simple
+  integration rules, use a routine to see the difference in error, and
+  then use these rules with a heirarchical algorithm.
+  </p>
+
+  <p>
+  To compute the integral,
+  </p>
+  <div style="text-align:center;">
+  <font face="Cursive">I</font> = &int;<sub>a</sub><sup>b</sup> f(x) dx,
+  </div>
+  <p>
+  We will approximate it with a series of sums, based upon function
+  evaluation.  For example:
+  </p>
+  <ul>
+    <li> Midpoint rule: <font face="Cursive">I</font><sub>h</sub> = h &Sigma; f(x<sub>i+1/2</sub>) , for i=0,1,2,...,n-1</li>
+    <li> Trapezoid rule: <font face="Cursive">I</font><sub>h</sub> = h/2 &Sigma; f(x<sub>i</sub>) + f(x<sub>i+1</sub>), for i=0,1,2,...,n-1 </li>
+    <li> Simpson 1/3 rule: <font face="Cursive">I</font><sub>h</sub> = h/3 &Sigma; f(x<sub>i-1</sub>) + 4
+    f(x<sub>i</sub>)  + f(x<sub>i+1</sub>), for i=1,3,5,...,n-1</li>
+<!--    <li> Simpson 3/8 rule: <font face="Cursive">I</font><sub>h</sub> =
+    3h/8 &Sigma; f(x<sub>i</sub>) + 3 f(x<sub>i+1/3</sub>)  + 3 f(x<sub>i+2/3</sub>)  + f(x<sub>i+1</sub>) </li>
+-->
+  </ul>
+
+   <div style="text-align:center;"><img src="example.png" alt="Midpoint Rule Example"/></div>
+
+  <p>
+  For each rule make an integration function that takes the following
+  inputs and returns <font face="Cursive">I</font><sub>h</sub>. 
+  <ul>
+    <li>function (f(x)),</li>
+    <li>start (a),</li>
+    <li>stop (b),</li>
+    <li>k (where h=(b-a)/2<sup>k</sup>),</li>
+  </ul>
+  </p>
+  <p>
+
+  <hr/>
+  <h2> Checking Convergence </h2>
+  <p>
+
+  To numerically see the trade off between order of accuracy and
+  number function evaluations, create a function to measure the error
+  different rules give on with a range of values for k.  The function
+  should accept an integration rule that it can input the testing f(x).
+  For an example, you can integrate x<sup>7</sup> from 0 to 1 which
+  has the exact solution .125.  For each integration rule, add to your
+  Test Cases section an evalution with k = 1,2,3, and separate the
+  different integration rules with a display statement, for example:
+
+  </p>
+    <pre>
+(display "Midpoint\n")
+(chk_error ...)
+(chk_error ...)
+(chk_error ...)
+(chk_error ...)
+(display "Trapezoid\n")
+(chk_error ...)
+...
+</pre>
+
+  <hr/>
+  <h2> Romberg's Rule </h2>
+
+  <p>
+  
+  
+  Romberg's rule is a heirarchical method that for each level corrects
+  with the solution of the previous level.  It repeats this process m
+  times, and for m=0 applies the provided integration rule with
+  2<sup>k</sup> points.
+
+  Thus the algorithm has two cases:
+  <ul>
+    <li> R(<font face="Cursive">I</font><sub>h</sub>,f,0,k,a,b) = <font
+    face="Cursive">I</font><sub>h</sub>(f, k, a,b)</li>
+    <li> R(<font face="Cursive">I</font><sub>h</sub>,f,m,k,a,b) = D (C *
+  R(<font face="Cursive">I</font><sub>h</sub>,f,m-1,k,a,b) - R(<font
+  face="Cursive">I</font><sub>h</sub>,f,m-1,k-1,a,b))<br/>
+    where C = 4<sup>m</sup> and D = 1/(C-1)</li>
+  </ul>
+  <p>
+  Please note k must be larger than m, have your code display an
+  error (search the helpdesk) if this inequality is not satified.
+  Implement Romberg's rule, and add calls to your chk_error function for (m,k) =
+  (1,2),(2,3),(2,5),(3,4) for each simple rule (again separated
+  by the display)
+  </p> 
+
+
+  <hr/>
+  <h2>Extra-Credit: Integrating Mulitple Dimensions</h2>
+  <p>
+  Doing multiple dimensions can be done applying the rule to one
+  direction at a time. This can be done in our setup by accumulating
+  the error for a value along one direction (by applying the appropriate
+  <font face="Cursive">I</font><sub>h</sub>), then combining the
+  results these results for the other direction is the same way as
+  done for one direction.
+  </p>
+  <p>
+  Make a two dimensional Midpoint and Trapezoid rule, add an error
+  checker, and add appropriate Test Cases.
+  </p>  
+    
+  <hr/>
+  <h2>Turning Everything in</h2>
+  <p>
+  Add the appropriate test cases to the end of your definitions window so I can see your examples:
+  </p>
+
+  <pre>
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;                            Test Cases                                     ;;
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;</pre>
+
+  <p>
+  Save the definitions window as (your_cnet_id)-Lab03.scm and put it
+  in the Lab 3 assignment on chalk.  So for example I would save my
+  file as aterrel-Lab03.scm.  Also do yourself a favor and save your
+  file somewhere you can look back at it (email yourself or store it
+  on your own media).  
+  </p>
+
+</div>
+ 
+<div id="footer">
+    <a href="/">Main</a> |
+    <a href="/Professional/">Professional</a> |
+    <a href="/Teaching/">Teaching</a>
+    <br/>&copy;2006-2009 Andy R. Terrel
+    </div>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-388278-1";
+urchinTracker();
+</script>
+
+</body>
+</html>

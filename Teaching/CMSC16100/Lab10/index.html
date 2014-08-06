@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+<title>Andy R Terrel - CMSC 16100 - Escaping the Minotaur: Graph Game</title>
+
+<link type="text/css" href="../css/style.css" rel="StyleSheet"/>
+
+</head>
+
+
+<!-- Main Body -->
+<body>
+
+<!-- Title -->
+<div id="title">Lab 10 - Google-lite Algorithm</div>
+
+
+<!-- Content -->
+<div id="content2">
+  <h2>Introduction</h2>
+
+
+   <p>
+   This week we are combining several themes of the last few labs to
+   implement the <a
+   href="http://www.classes.cs.uchicago.edu/archive/2007/winter/25000-1/ieee99.ps">HITS
+   algorithm</a>, which is more or less a Google-lite Algorithm. Since
+   this is 10th week and this lab is more a challenge of putting past
+   work together I am demanding that you work no more than 3 hours on
+   it.  Get as far as you can but do not let it dominate your
+   studying.
+  
+  </p>
+
+  <h2>HITS Algorithm</h2>
+  The algorithm has three sections; complete each section as you please and document what you accomplish.
+
+  <ol>
+  <li>Determine a list of associated webpages</li>
+  <li>Apply a graph structure to these webpages based upon links</li>
+  <li>Compute the "authorities" and "hubs" based upon the graph</li>
+  </ol>
+
+  <hr/>
+  <h2>Associated webpages</h2>
+
+  <p>
+
+  Either use your internet web spider or a list of generated webpages
+  to get a set of pages.  With these pages use Professor Levow's IR
+  notes to get a list of pages that match a query.  Use these webpages
+  as your set of pages for the next step.
+
+  </p>
+
+  <h2>Graph structure</h2>
+  
+  <p>
+
+  With your webpages, create a node with neighbors such that webpage q
+  is a neighbor of webpage p if and only if p contains a hyperlink to
+  q.  Notice that just because q is a nieghbor to p, this does not
+  mean that p is a neighbor of q.
+
+  </p>
+
+  <h2>Computation</h2>
+  
+  <p>
+
+  A webpage is an authority if many pages link to it, and a webpage is
+  a hub if it links to an authority.  You might notice that this is a
+  bit of a catch-22 statement. How do you know if the webpages is a hub if
+  you don't know which are authorities?  We discover this by iterating!
+  
+  </p>
+
+  <p>
+  We will use a vector x<sub>p</sub> to represent authority weights
+  and y<sub>q</sub> to represent hub weights.  Where p and q are the
+  webpages.  Initially let all values of x and y be 1. Then iterate through the following process a number of times (lets just say 3):
+  </p>
+
+  <ul>
+  <li> For all webpages p, set x<sub>p</sub> = the sum of y<sub>q</sub> where q are webpages linking to p</li>
+  <li> For all webpages p, set y<sub>p</sub> = the sum of x<sub>q</sub> where q are webpages linked to by p</li>
+  </ul>
+
+  <p>
+  The highest weights of x are your "authorities" and the highest weights of y are your "hubs".  This is typical information used by internet search algorithms.
+  </p>
+
+</div>
+ 
+<div id="footer">
+    <a href="/">Main</a> |
+    <a href="/Professional/">Professional</a> |
+    <a href="/Teaching/">Teaching</a>
+    <br/>&copy;2006-2009 Andy R. Terrel
+    </div>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-388278-1";
+urchinTracker();
+</script>
+
+</body>
+</html>
+
