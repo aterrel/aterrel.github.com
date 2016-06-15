@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Codematician</title><link>http://andy.terrel.us/</link><description>Homepage of Andy R. Terrel</description><atom:link href="/feeds/software-engineering-tag.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 01 Nov 2012 10:00:00 -0700</lastBuildDate><item><title>A Rule of Software on Usabilty</title><link>http://andy.terrel.us/blog/2012/11/01/a-rule-of-software-usability/</link><description>&lt;p&gt;Make your software useful.  That is the point without usefulness there is no
+<rss version="2.0"><channel><title>Codematician</title><link>http://andy.terrel.us/</link><description>Homepage of Andy R. Terrel</description><lastBuildDate>Thu, 01 Nov 2012 10:00:00 -0700</lastBuildDate><item><title>A Rule of Software on Usabilty</title><link>http://andy.terrel.us/blog/2012/11/01/a-rule-of-software-usability/</link><description>&lt;p&gt;Make your software useful.  That is the point without usefulness there is no
 need for existence.&lt;/p&gt;
 &lt;p&gt;If you write a function that is not useful, scrub it from your text editors
 as not to offend the blessed pixels. Do not fear throwing away non-useful parts
@@ -52,4 +52,4 @@ manager wants features that are not useful, give them a shovel and ask them to
 remove dirt from the parched earth only to have them place it back again for
 they have forgotten the first rule and should be left to sisyphean
 tasks. When other programmers check in code that is not useful, give them the
-rule and ask them if they are on the path to manager or guru.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andy R. Terrel</dc:creator><pubDate>Thu, 01 Nov 2012 10:00:00 -0700</pubDate><guid>tag:andy.terrel.us,2012-11-01:blog/2012/11/01/a-rule-of-software-usability/</guid><category>Software Engineering</category></item></channel></rss>
+rule and ask them if they are on the path to manager or guru.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andy R. Terrel</dc:creator><pubDate>Thu, 01 Nov 2012 10:00:00 -0700</pubDate><guid isPermaLink="false">tag:andy.terrel.us,2012-11-01:blog/2012/11/01/a-rule-of-software-usability/</guid><category>Software Engineering</category></item></channel></rss>
