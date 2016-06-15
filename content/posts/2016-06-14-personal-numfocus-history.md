@@ -6,11 +6,9 @@ slug:
 
 ![NumFOCUS logo][pic1]
 
-# A personal history of NumFOCUS
+# A NumFOCUS History: Sustaining Open Source Scientific Codes
 
 After a few of the last board meetings and discussions on board votes, I’ve been pondering a number of questions. Questions about who is NumFOCUS and why we exist. Where we are going and what problems in the world we would like to solve. I feel that our small organization has started to make a big turn in our journey. We are receiving more attention from the organizations we serve and the wider community. The PyData conference has begun to become a profitable enterprise that allows us to see a sustainable path but also requires a great amount of our time. At the same time we need to support our projects and programs in a functional way that promotes our mission.
-
-With all these pieces going on I’ve prepared my thoughts and would appreciate any feedback. I think there is probably some parts of this document that could be broken out into different sections, so don’t think of it as a single document that can’t be broken up. It’s one long train of thought because I’m trying to gather everything in one narrative.
 
 ## Why NumFOCUS
 
@@ -22,7 +20,7 @@ While Travis and John brought a strong passion to help corporations to give back
 
 In that initial set of founders, we had several project leaders for AstroPy, IPython, NumPy, SciPy, and MatPlotLib. Each of these projects are free and open source built in a bazaar model of development. Meaning everything was done in the open, accepting patches and bugs from anyone who gave enough attention to make them. These projects also strived to not form any restrictions on their use, as seen by the base layer for much of the NumFOCUS ecosystem. While this may seem like a minor point, it becomes a bit of a defining feature of the tools. While many frameworks will take over a program and prevent portability, these libraries were intended to be used by anyone. Notably the licenses for these projects were also quite liberal preferring BSD-like licenses. These decisions made the projects viable options to the enterprise thus are critical to their sustainability.
 
-The initial board was formed and Leah Silen was hired as our Executive Director to help us organize the non profit and daily actions. I don’t have much to say about those early days as the organization tried to form itself. Looking back it was clear there wasn’t as straight a path forward as the initial fervor of the four founders might have liked. Additionally tragedy struck as John suddenly passed away mid 2012. And Travis left his position at Enthought to form Continuum Analytics.
+The initial board was formed and Leah Silen was hired as our Executive Director to help us organize the non profit and daily actions. I don’t have much to say about those early days as the organization tried to form itself. Looking back it was clear there wasn’t as straight a path forward as the initial fervor of the five founders might have liked. Additionally tragedy struck as John suddenly passed away mid 2012. And Travis left his position at Enthought to form Continuum Analytics.
 
 ## Getting started
 
