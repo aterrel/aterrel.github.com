@@ -5,30 +5,9 @@ save_as: vita/index.html
 About
 -----
 
-Dr. Andy R. Terrel is a Research Associate Scientist for the [Computational Hydraulics Group](http://chg.ices.utexas.edu/) at the [Institute for Computational Engineering and Science](http://www.ices.utexas.edu/) which is at the [Universiy of Texas at Austin](http://www.utexas.edu).  Previously, Andy was a High Performance Computing researcher at the [Texas Advanced Computing Center](http://www.tacc.utexas.edu/).
+Dr. Andy R. Terrel , is the CTO of Fashion Metric, where he is bringing his experience building smart scalable data systems to the fashion industry. You will also find him leading the board of the NumFOCUS foundation. As a passionate advocate for open source scientific codes Andy has been involved in the wider scientific Python community since 2006, contributing to numerous projects in the scientific stack.
 
-Andy's research includes utilizing supercomputers with Python and studying methods for speeding up computational fluid dynamics. He graduated from the [University of Chicago](http://www.uchicago.edu/") with a PhD in [Computer Science](http://cs.uchicago.edu/) in 2010 and has been programming in Python for the last decade. Andy has contributed to numerous open source projects notably the [FEniCS Project](http://fenicsproject.org/) and [Sympy](http://sympy.org/).
-
-
-Contact
--------
-
-### Physical
-
-Institute for Computational Engineering and Sciences  
-University of Texas at Austin  
-Peter O'Donnell Building  
-Office 6.432  
-
-### Mailing
-
-201 East 24th St, Stop C0200,  
-Austin, Texas 78712-1229  
-
-### Digital
-
-email: [andy.terrel@gmail.com](mailto:andy.terrel@gmail.com),  
-web: [http://andy.terrel.us/](http://andy.terrel.us/)  
+Dr. Andy R. Terrel was previously a Research Associate Scientist for the [Computational Hydraulics Group](http://chg.ices.utexas.edu/) at the [Institute for Computational Engineering and Science](http://www.ices.utexas.edu/) which is at the [Universiy of Texas at Austin](http://www.utexas.edu) and High Performance Computing researcher at the [Texas Advanced Computing Center](http://www.tacc.utexas.edu/). Andy's research included utilizing supercomputers with Python and studying methods for speeding up computational fluid dynamics. He graduated from the [University of Chicago](http://www.uchicago.edu/") with a PhD in [Computer Science](http://cs.uchicago.edu/) in 2010 and has been programming in Python for the last decade. Andy has contributed to numerous open source projects notably the [FEniCS Project](http://fenicsproject.org/) and [Sympy](http://sympy.org/).
 
 Education
 ---------
@@ -163,8 +142,8 @@ Teaching Experience
 
 **Lecturer**, World Wide Web Programming: Java and SQL, Computer Science Department, University of Chicago, Spring 2009.
 
--   Prepared curriculum and materials,  
--   Lectured 3 hours a week, and  
+-   Prepared curriculum and materials,
+-   Lectured 3 hours a week, and
 -   Oversaw teaching assistants for grading and lab section.
 
 **Lab Assistant**, Honors introductory computer science, Computer Science Department, University of Chicago, Autumn 2006 and 2007.
@@ -185,9 +164,9 @@ Teaching Experience
 
 ### Day/Week Trainings
 
-**Python beyond the GPU**, PyCon Conference, Santa Clara, Spring 2013.  
-**Software Carpentry Bootcamp**, University of Texas at Austin, Fall 2012.  
-**Python in HPC**, Supercomputing Conference Fall 2012, TACC Training each semester 2010 - 2013.  
+**Python beyond the GPU**, PyCon Conference, Santa Clara, Spring 2013.
+**Software Carpentry Bootcamp**, University of Texas at Austin, Fall 2012.
+**Python in HPC**, Supercomputing Conference Fall 2012, TACC Training each semester 2010 - 2013.
 
 
 ### Certificates
@@ -235,15 +214,15 @@ First stage start-up company developing a network storage appliance.
 Service
 -------
 
-**Board Member** NumFOCUS Foundation, 2013 - present.  
-**Co-Chair** SciPy 2013 Conference  
-**Organizer** Supercomputing conference 2011-2012, Birds of a Feather, Python in HPC  
-**Program Committee** Supercomputing conference 2011-2012, Python in HPC workshop  
-**Organizer** Scientific Software Days Workshop.  
-**Program Co-Chair** SciPy 2012 Conference 
-**Organizer** of FEniCS 2011 Conference.  
-**Participant** of Austin GiveCamp 2011.  
-**Mentor** for Google Summer of Code, Summer 2009 and 2010.  
+**Board Member** NumFOCUS Foundation, 2013 - present.
+**Co-Chair** SciPy 2013 Conference
+**Organizer** Supercomputing conference 2011-2012, Birds of a Feather, Python in HPC
+**Program Committee** Supercomputing conference 2011-2012, Python in HPC workshop
+**Organizer** Scientific Software Days Workshop.
+**Program Co-Chair** SciPy 2012 Conference
+**Organizer** of FEniCS 2011 Conference.
+**Participant** of Austin GiveCamp 2011.
+**Mentor** for Google Summer of Code, Summer 2009 and 2010.
 **Reviewer** for
 
 -   Scientific Computing,
@@ -253,7 +232,7 @@ Service
     Springer-Verlag, and
 -   Java textbook published by Pearson Addison Wesley.
 
-**Session aide**, AAAS Annual meeting, Chicago, IL, January 2009.  
+**Session aide**, AAAS Annual meeting, Chicago, IL, January 2009.
 **Session chair**, SIAM Conference on Parallel Processing for Scientific Computing, Atlanta, GA, February 2008.
 
 PUBLIC SOFTWARE
@@ -296,4 +275,3 @@ I have a wide array of programming skills, see chart below, coming from both pro
   Source Control             GIT, Mercurial, SVN, CVS
   Documents                  LaTeX, Sphinx, MS Office
 -->
-
