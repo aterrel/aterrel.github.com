@@ -103,6 +103,7 @@ cf_upload: publish
 github: publish
 	git checkout master
 	cp -r output/* .
+	touch .nojekyll
 	git add -A
 	git commit -m "Update site at `date`"
 	git push origin master
