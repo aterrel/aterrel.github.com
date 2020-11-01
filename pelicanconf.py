@@ -73,7 +73,6 @@ PLUGINS = ['summary',
            'liquid_tags.include_code',
            # 'liquid_tags.notebook',
            'liquid_tags.literal',
- #          'pelican.plugins.disqus_static',
            ]
 
 # The theme file should be updated so that the base header contains the line:
