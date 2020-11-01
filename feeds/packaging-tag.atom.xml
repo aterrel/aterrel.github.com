@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Codematician</title><link href="http://andy.terrel.us/" rel="alternate"></link><link href="/feeds/packaging-tag.atom.xml" rel="self"></link><id>http://andy.terrel.us/</id><updated>2012-10-28T20:08:00-07:00</updated><entry><title>Python Packaging</title><link href="http://andy.terrel.us/blog/2012/10/28/python-packaging/" rel="alternate"></link><published>2012-10-28T20:08:00-07:00</published><author><name>Andy R. Terrel</name></author><id>tag:andy.terrel.us,2012-10-28:blog/2012/10/28/python-packaging/</id><summary type="html">&lt;p&gt;There are two major hurdles to Python disrupting the entire HPC work stack:
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Codematician - Packaging</title><link href="http://andy.terrel.us/" rel="alternate"></link><link href="/feeds/packaging-tag.atom.xml" rel="self"></link><id>http://andy.terrel.us/</id><updated>2012-10-28T20:08:00-07:00</updated><subtitle>Homepage of Andy R. Terrel</subtitle><entry><title>Python Packaging</title><link href="http://andy.terrel.us/blog/2012/10/28/python-packaging/" rel="alternate"></link><published>2012-10-28T20:08:00-07:00</published><updated>2012-10-28T20:08:00-07:00</updated><author><name>Andy R. Terrel</name></author><id>tag:andy.terrel.us,2012-10-28:/blog/2012/10/28/python-packaging/</id><summary type="html">&lt;p&gt;There are two major hurdles to Python disrupting the entire HPC work stack:
+packaging and &lt;a href="http://pyvideo.org/video/1201/solving-the-import-problem-scalable-dynamic-load"&gt;dynamic loading&lt;/a&gt;. Today I want to discuss the packaging issue.
+While there are many people working on these hurdles, it is my opinion that the
+community needs to seek out methods to solve these hurdles …&lt;/p&gt;</summary><content type="html">&lt;p&gt;There are two major hurdles to Python disrupting the entire HPC work stack:
 packaging and &lt;a href="http://pyvideo.org/video/1201/solving-the-import-problem-scalable-dynamic-load"&gt;dynamic loading&lt;/a&gt;. Today I want to discuss the packaging issue.
 While there are many people working on these hurdles, it is my opinion that the
 community needs to seek out methods to solve these hurdles together in a
@@ -141,4 +144,4 @@ one that prevents a large number of people from effectively using our
 ecosystem.  I would like to see more funds and community resources put forward
 to create working solutions. Finally a homework for everyone who has read this
 far. I invite you to send me your versions of how you fix Python
-packaging for your work so I can collect the best ideas.&lt;/p&gt;</summary><category term="Python"></category><category term="Packaging"></category></entry></feed>
+packaging for your work so I can collect the best ideas.&lt;/p&gt;</content><category term="Code"></category><category term="Python"></category><category term="Packaging"></category></entry></feed>

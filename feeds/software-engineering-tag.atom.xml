@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Codematician</title><link href="http://andy.terrel.us/" rel="alternate"></link><link href="/feeds/software-engineering-tag.atom.xml" rel="self"></link><id>http://andy.terrel.us/</id><updated>2012-11-01T10:00:00-07:00</updated><entry><title>A Rule of Software on Usabilty</title><link href="http://andy.terrel.us/blog/2012/11/01/a-rule-of-software-usability/" rel="alternate"></link><published>2012-11-01T10:00:00-07:00</published><author><name>Andy R. Terrel</name></author><id>tag:andy.terrel.us,2012-11-01:blog/2012/11/01/a-rule-of-software-usability/</id><summary type="html">&lt;p&gt;Make your software useful.  That is the point without usefulness there is no
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Codematician - Software Engineering</title><link href="http://andy.terrel.us/" rel="alternate"></link><link href="/feeds/software-engineering-tag.atom.xml" rel="self"></link><id>http://andy.terrel.us/</id><updated>2012-11-01T10:00:00-07:00</updated><subtitle>Homepage of Andy R. Terrel</subtitle><entry><title>A Rule of Software on Usabilty</title><link href="http://andy.terrel.us/blog/2012/11/01/a-rule-of-software-usability/" rel="alternate"></link><published>2012-11-01T10:00:00-07:00</published><updated>2012-11-01T10:00:00-07:00</updated><author><name>Andy R. Terrel</name></author><id>tag:andy.terrel.us,2012-11-01:/blog/2012/11/01/a-rule-of-software-usability/</id><summary type="html">&lt;p&gt;Make your software useful.  That is the point without usefulness there is no
+need for existence.&lt;/p&gt;
+&lt;p&gt;If you write a function that is not useful, scrub it from your text editors
+as not to offend the blessed pixels. Do not fear throwing away non-useful parts
+of your code, better to …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Make your software useful.  That is the point without usefulness there is no
 need for existence.&lt;/p&gt;
 &lt;p&gt;If you write a function that is not useful, scrub it from your text editors
 as not to offend the blessed pixels. Do not fear throwing away non-useful parts
@@ -52,4 +56,4 @@ manager wants features that are not useful, give them a shovel and ask them to
 remove dirt from the parched earth only to have them place it back again for
 they have forgotten the first rule and should be left to sisyphean
 tasks. When other programmers check in code that is not useful, give them the
-rule and ask them if they are on the path to manager or guru.&lt;/p&gt;</summary><category term="Software Engineering"></category></entry></feed>
+rule and ask them if they are on the path to manager or guru.&lt;/p&gt;</content><category term="Code"></category><category term="Software Engineering"></category></entry></feed>
