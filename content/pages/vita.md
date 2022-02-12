@@ -5,7 +5,7 @@ save_as: vita/index.html
 About
 -----
 
-Dr. Andy R. Terrel , is the VP, Data and Algorithms of Xometry, where he is bringing his experience building smart scalable data systems to the manufacturing industry. You will also find him leading the infrastructure committee of the NumFOCUS foundation. As a passionate advocate for open source scientific codes Andy has been involved in the wider scientific Python community since 2006, contributing to numerous projects in the scientific stack.
+Dr. Andy R. Terrel is the VP, Data and Algorithms of Xometry, Inc. where he is bringing his experience building smart scalable data systems to the manufacturing industry. You will also find him leading the infrastructure committee of the NumFOCUS foundation. As a passionate advocate for open source scientific codes Andy has been involved in the wider scientific Python community since 2006, contributing to numerous projects in the scientific stack.
 
 Dr. Andy R. Terrel was previously a Research Associate Scientist for the [Computational Hydraulics Group](http://chg.ices.utexas.edu/) at the [Institute for Computational Engineering and Science](http://www.ices.utexas.edu/) which is at the [Universiy of Texas at Austin](http://www.utexas.edu) and High Performance Computing researcher at the [Texas Advanced Computing Center](http://www.tacc.utexas.edu/). Andy's research included utilizing supercomputers with Python and studying methods for speeding up computational fluid dynamics. He graduated from the [University of Chicago](http://www.uchicago.edu/") with a PhD in [Computer Science](http://cs.uchicago.edu/) in 2010 and has been programming in Python for the last decade. Andy has contributed to numerous open source projects notably the [FEniCS Project](http://fenicsproject.org/) and [Sympy](http://sympy.org/).
 
@@ -28,7 +28,7 @@ University, Lubbock, Texas.
 
 Industry Experience
 -------------------
-**VP Data and Algorithms**, Xometry, 2017-2021.
+**VP Data and Algorithms**, Xometry, 2021-present.
 
 **Chief Data Scientist**, REX Homes, 2017-2021.
 
