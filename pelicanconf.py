@@ -66,14 +66,20 @@ THEME_NAME = "tuxlite_tbs"
 THEME = os.path.join(THEME_DIR, THEME_NAME)
 RECENT_ARTICLES_COUNT = 3
 
-PLUGIN_PATHS = ['/Users/aterrel/dev/pelican-plugins/']
+PLUGIN_PATHS = ['/workspaces/aterrel.github.com/pelican-plugins/']
 PLUGINS = ['summary',
-           'liquid_tags.img',
-           'liquid_tags.video',
-           'liquid_tags.include_code',
+           'liquid_tags',
+#           'liquid_tags.img',
+#           'liquid_tags.video',
+#           'liquid_tags.include_code',
            # 'liquid_tags.notebook',
-           'liquid_tags.literal',
+#           'liquid_tags.literal',
            ]
+LIQUID_TAGS = ['img',
+               'video',
+               'include_code',
+               'literal',
+               ]
 
 # The theme file should be updated so that the base header contains the line:
 #
