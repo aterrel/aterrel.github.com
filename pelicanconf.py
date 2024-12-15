@@ -66,7 +66,7 @@ THEME_NAME = "tuxlite_tbs"
 THEME = os.path.join(THEME_DIR, THEME_NAME)
 RECENT_ARTICLES_COUNT = 3
 
-PLUGIN_PATHS = ['pelican-plugins/']
+PLUGIN_PATHS = ['../pelican-plugins/']
 PLUGINS = ['summary',
            'liquid_tags',
 #           'liquid_tags.img',
