@@ -66,7 +66,7 @@ THEME_NAME = "tuxlite_tbs"
 THEME = os.path.join(THEME_DIR, THEME_NAME)
 RECENT_ARTICLES_COUNT = 3
 
-PLUGIN_PATHS = ['/workspaces/aterrel.github.com/pelican-plugins/']
+PLUGIN_PATHS = ['pelican-plugins/']
 PLUGINS = ['summary',
            'liquid_tags',
 #           'liquid_tags.img',
@@ -108,8 +108,8 @@ TWITTER_SHOW_FOLLOWER_COUNT = 'true'
 FEED_DOMAIN = SITEURL
 FEED_ATOM = 'atom.xml'
 FEED_RSS = 'rss.xml'
-TAG_FEED_ATOM = 'feeds/%s-tag.atom.xml'
-TAG_FEED_RSS = 'feeds/%s-tag.rss.xml'
+#TAG_FEED_ATOM = 'feeds/%s-tag.atom.xml'
+#TAG_FEED_RSS = 'feeds/%s-tag.rss.xml'
 
 # Search
 SEARCH_BOX = True
