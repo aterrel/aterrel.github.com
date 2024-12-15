@@ -41,11 +41,11 @@ GITHUB_SHOW_USER_LINK = True
 #          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL =  (('Twitter', 'http://twitter.com/aterrel'),
-           ('Github', 'http://github.com/aterrel'),
-           ('Bitbucket', 'https://bitbucket.org/aterrel/'),
-           ('Google Scholar', 'http://scholar.google.com/citations?user=ALzCmCEAAAAJ&hl=en'),
-           ('LinkedIn', 'http://www.linkedin.com/in/aterrel'))
+SOCIAL =  (('Twitter', '//twitter.com/aterrel'),
+           ('Github', '//github.com/aterrel'),
+           ('Bitbucket', '//bitbucket.org/aterrel/'),
+           ('Google Scholar', '//scholar.google.com/citations?user=ALzCmCEAAAAJ&hl=en'),
+           ('LinkedIn', '//www.linkedin.com/in/aterrel'))
 # (('You can add links in your config file', '#'),
 #          ('Another social link', '#'),)
 
