@@ -14,7 +14,7 @@ I've been thinking why I joined the board again. I had been on the board from 20
 It would be naive to say that was the only reason I wanted to rejoin. There has also been a bit of a challenge with watching the board from the side. Various events have led me to believe that the organization has lost touch with the community that put so much time and effort to build it. The classic story of serving more than one master. In this case it is very hard to know exactly what went wrong, but it was clear with Jupyter's exit that projects have started to feel less happy with the arrangement. My hope is that I will be able to bring back the spirit of the early days, but the truth is that it may be that the world has just moved on.
 
 
-## Fist week back
+## First week back
 
 The first surprising thing to me is that the new board is only supposed to meet once a quarter. I'm skeptical that this will work out super well. The first task is to define strategic direction and the second is to profide fiscal oversight. It will be very difficult to know how the organization can structure itself strategically if reports are only once a quarter. I've been part of the Advisory Council which has a nebulous duty of giving advice but gain no right of a director, or be required to be heard (see [bylaws](https://numfocus.org/wp-content/uploads/2020/04/NumFOCUS-Bylaws-Approved-16-May-2019.pdf)). To be frank, the advisory board seems to be a thing where a bunch of folks are updated on things going on but I don't think there has ever been time for a lot of discussion.
 
