@@ -88,9 +88,9 @@ Publications
 
 C. Burstedde, D. Calhoun, K.T. Mandli, and A.R. Terrel, **ForestClaw: Hybrid forest-of-octrees AMR for hyperbolic conservation laws**, to appear ParCo 2013, [arXiv:1308.1472](http://arxiv.org/abs/1308.1472)
 
-M.G. Knepley and A.R. Terrel, **[Finite Element Integration on GPUs](|filename|/papers_and_talks/KnepleyTerrel2012.pdf)**, ACM Transactions on Mathematical Software (TOMS), Volume 39 Issue 2, February 2013 Article No. 10. [doi 10.1145/2427023.2427027](http://dx.doi.org/10.1145/2427023.2427027)
+M.G. Knepley and A.R. Terrel, **[Finite Element Integration on GPUs](|static|/papers_and_talks/KnepleyTerrel2012.pdf)**, ACM Transactions on Mathematical Software (TOMS), Volume 39 Issue 2, February 2013 Article No. 10. [doi 10.1145/2427023.2427027](http://dx.doi.org/10.1145/2427023.2427027)
 
-A.R. Terrel and K.T. Mandli, **[ManyClaw: Slicing and dicing Riemann solvers for next generation highly parallel architectures](|filename|/papers_and_talks/tacc-intel2012.pdf)**, TACC-Intel Symposium on Highly Parallel Architectures. 2012.
+A.R. Terrel and K.T. Mandli, **[ManyClaw: Slicing and dicing Riemann solvers for next generation highly parallel architectures](|static|/papers_and_talks/tacc-intel2012.pdf)**, TACC-Intel Symposium on Highly Parallel Architectures. 2012.
 
 A.R. Terrel, R.C. Kirby, M.G. Knepley, L.R. Scott, and G.N. Wells, **Finite elements for incompressible fluids**, in A. Logg, K.A. Mardal, and G. N. Wells, editors. *Automated solutions of differential equations by the finite element mehod*. Springer-Verlag. Lecture Notes in Computational Science and Engineering, Vol 84, 2011.
 
@@ -99,18 +99,18 @@ R.C. Kirby, A. Logg, and A.R. Terrel,**Common and unusual finite elements**, in 
 
 R.C. Kirby, M.G. Knepley, A. Logg, L.R. Scott, and A.R. Terrel, **Discrete optimization of finite element matrix evaluation**, in A. Logg, K.A. Mardal, and G. N. Wells, editors. *Automated solutions of differential equations by the finite element mehod*. Springer-Verlag. Lecture Notes in Computational Science and Engineering, Vol 84, 2011.
 
-A.R. Terrel, **[“From equations to code: Automated Scientific Computing”](|filename|/papers_and_talks/Terrel2011.pdf)**, Computing in Science and Engineering, March 2011.
+A.R. Terrel, **[“From equations to code: Automated Scientific Computing”](|static|/papers_and_talks/Terrel2011.pdf)**, Computing in Science and Engineering, March 2011.
 
-A.R. Terrel, L.R. Scott, M.G. Knepley, R.C. Kirby, **[“Automated FEM Discretizations for the Stokes Equation”](|filename|/papers_and_talks/TerrelScottKnepleyKirby2008_AutoFEMDisc.pdf)**, BIT Numerical Mathematics, July 2008, Vol 48, pp 389–404.
+A.R. Terrel, L.R. Scott, M.G. Knepley, R.C. Kirby, **[“Automated FEM Discretizations for the Stokes Equation”](|static|/papers_and_talks/TerrelScottKnepleyKirby2008_AutoFEMDisc.pdf)**, BIT Numerical Mathematics, July 2008, Vol 48, pp 389–404.
 
-R.C. Kirby, A. Terrel, L.R. Scott, A. Logg, **[“Topological optimization of the evaluation of finite element matrices”](|filename|/papers_and_talks/KirbyTerrelScottLogg_TopOptFEM_2006.pdf)**, SIAM Journal of Scientific Computing, January 2006, Vol 28 No 1, pp 224-240.
+R.C. Kirby, A. Terrel, L.R. Scott, A. Logg, **[“Topological optimization of the evaluation of finite element matrices”](|static|/papers_and_talks/KirbyTerrelScottLogg_TopOptFEM_2006.pdf)**, SIAM Journal of Scientific Computing, January 2006, Vol 28 No 1, pp 224-240.
 
-A.R. Terrel, **[“Finite element method automation for non-Newtonian fluid models”](|filename|/papers_and_talks/Terrel_PhDThesis.pdf)**, PhD Thesis, University of Chicago, Department of Computer Science April 2010.
+A.R. Terrel, **[“Finite element method automation for non-Newtonian fluid models”](|static|/papers_and_talks/Terrel_PhDThesis.pdf)**, PhD Thesis, University of Chicago, Department of Computer Science April 2010.
 
-A.R. Terrel, **[“FEM Optimization with a case study of the Stokes equations”](|filename|/papers_and_talks/Terrel_MastersPaper.pdf)**, Master’s Thesis, University of Chicago, Department of Computer Science March 2007.
+A.R. Terrel, **[“FEM Optimization with a case study of the Stokes equations”](|static|/papers_and_talks/Terrel_MastersPaper.pdf)**, Master’s Thesis, University of Chicago, Department of Computer Science March 2007.
 
 A.R. Terrel and K. R. Long, **[“Evaluation of Level Set Topology Optimization Formulations for the Design of Minimum-Dispersion
-Microfluidic Devices”](|filename|/papers_and_talks/MinDispTopOpt_NECIS_2006.pdf)**, NECIS Summer Proceedings 2006, Sandia National Labs.
+Microfluidic Devices”](|static|/papers_and_talks/MinDispTopOpt_NECIS_2006.pdf)**, NECIS Summer Proceedings 2006, Sandia National Labs.
 
 A.R. Terrel, and B. Thacker, **[“A Global View of Cognitive Structure and Implications for Instruction and Assessment”](http://arxiv.org/abs/0707.3106)**.
 
@@ -125,18 +125,18 @@ A.R. Terrel, **“Rheagen: rheology application engine”**, Mini-Symposium, SIA
 
 A.R. Terrel, **“FEniCS tutorial”**, 2nd European Seminar on Coupled Problems, Pilzen, Czech Republic. June 2010.
 
-A.R. Terrel, **[“Mathematical Interfaces for Automated Scientific Computing”](|filename|/papers_and_talks/MathInterfaces_Kansas_2007.pdf)**, Computing Techniques Seminar, Fermi National Accelerator Laboratory, Batavia, IL, November 2009 and ITTC Seminar, University of Kansas, Lawrence, Kansas, November 2007.
+A.R. Terrel, **[“Mathematical Interfaces for Automated Scientific Computing”](|static|/papers_and_talks/MathInterfaces_Kansas_2007.pdf)**, Computing Techniques Seminar, Fermi National Accelerator Laboratory, Batavia, IL, November 2009 and ITTC Seminar, University of Kansas, Lawrence, Kansas, November 2007.
 
 A.R. Terrel, **“Algorithms for the Grade-Two Fluid Model”**, Simula Laboratories, Oslo, Norway, September 2008.
 
-A.R. Terrel and M. G. Knepley, **[“FEniCS and Sieve Tutorial”](|filename|/papers_and_talks/FEniCS08Tutorial.pdf)**, Automated
+A.R. Terrel and M. G. Knepley, **[“FEniCS and Sieve Tutorial”](|static|/papers_and_talks/FEniCS08Tutorial.pdf)**, Automated
 Scientific Computing Workshop, CCT center Louisiana State University, Baton Rouge, Louisiana, March 2008.
 
-A.R. Terrel, **[“Abstractions in FEM Software”](|filename|/papers_and_talks/AbsFEMSoft_FEniCS_2006.pdf)**, FEniCS’06, Delft Technology Institute, Delft, The Netherlands, November 2006.
+A.R. Terrel, **[“Abstractions in FEM Software”](|static|/papers_and_talks/AbsFEMSoft_FEniCS_2006.pdf)**, FEniCS’06, Delft Technology Institute, Delft, The Netherlands, November 2006.
 
-A.R. Terrel, **[“Topology Optimizations with Applications in Microfluidics: a Comparison of Level Set Methods”](|filename|/papers_and_talks/TopOpt_TexasTech_2006.pdf)**, Applied Mathematics Seminar, Department of Mathematics and Statistics, Texas Tech University, Lubbock, September 2006.
+A.R. Terrel, **[“Topology Optimizations with Applications in Microfluidics: a Comparison of Level Set Methods”](|static|/papers_and_talks/TopOpt_TexasTech_2006.pdf)**, Applied Mathematics Seminar, Department of Mathematics and Statistics, Texas Tech University, Lubbock, September 2006.
 
-A.R. Terrel, **[“A Novice Uses FEniCS”](|filename|/papers_and_talks/NovFEn_FEniCS_2005.pdf)**, FEniCS’05, Toyota Technical Institute at Chicago, Chicago, IL October 2005.
+A.R. Terrel, **[“A Novice Uses FEniCS”](|static|/papers_and_talks/NovFEn_FEniCS_2005.pdf)**, FEniCS’05, Toyota Technical Institute at Chicago, Chicago, IL October 2005.
 
 A.R. Terrel, **“Code Generation in Python”**, Supercomputing 2011, Birds of a feather session: Python in HPC, Seattle, WA, Nov 2011.
 
@@ -146,13 +146,13 @@ A.R. Terrel and M.G. Knepley, **“FEM automation of Oldroyd-B fluids”**, USNC
 
 A.R. Terrel and M. G. Knepley, **“Automation of Finite Element Assembly using a Topology Based Mesh Library”**, BIT Numerical Circus, Oslo, Norway, August 2008.
 
-A.R. Terrel and M. G. Knepley, **[“Finite Element Assembly on Arbitrary Meshes”](|filename|/papers_and_talks/SIAMPP08.pdf)**, SIAM Conference on Parallel Processing for Scientific Computing, Atlanta, Georgia, March 2008.
+A.R. Terrel and M. G. Knepley, **[“Finite Element Assembly on Arbitrary Meshes”](|static|/papers_and_talks/SIAMPP08.pdf)**, SIAM Conference on Parallel Processing for Scientific Computing, Atlanta, Georgia, March 2008.
 
-A.R. Terrel, **[“FEM Automations with a case study on the Stokes Equations”](|filename|/papers_and_talks/FEMAuto_Masters_2007.pdf)**, Masters Presentation, Department of Computer Science, University of Chicago, Chicago, IL, March 2007.
+A.R. Terrel, **[“FEM Automations with a case study on the Stokes Equations”](|static|/papers_and_talks/FEMAuto_Masters_2007.pdf)**, Masters Presentation, Department of Computer Science, University of Chicago, Chicago, IL, March 2007.
 
-A.R. Terrel, **[“A Case for Developing with a PDE Language”](|filename|/papers_and_talks/DevPDELang_CSE_2007.pdf)**, SIAM Computer Science and Engineering, Costa Mesa, CA, February 2007.
+A.R. Terrel, **[“A Case for Developing with a PDE Language”](|static|/papers_and_talks/DevPDELang_CSE_2007.pdf)**, SIAM Computer Science and Engineering, Costa Mesa, CA, February 2007.
 
-A.R. Terrel, **[“Optimizing Local Matrix Computations for Finite Element Methods”](|filename|/papers_and_talks/TopOptFEM_SIAM_2005.pdf)**, SIAM Annual Meeting, New Orleans, June 2005.
+A.R. Terrel, **[“Optimizing Local Matrix Computations for Finite Element Methods”](|static|/papers_and_talks/TopOptFEM_SIAM_2005.pdf)**, SIAM Annual Meeting, New Orleans, June 2005.
 
 Research Experience
 -------------------

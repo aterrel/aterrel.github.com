@@ -1,13 +1,13 @@
 Title: Joining the Big Data Brain Drain
 Author: Andy R. Terrel
 Date: 2013-11-21
-tags: 
+tags:
 slug: joining-big-data-brain-drain
 
 
 ![21 Gun Salute][pic1]
 
-So long academia and thanks for all the debates!  
+So long academia and thanks for all the debates!
 
 Today is my last day of a wonderful three years at the University of Texas at
 Austin. Starting Monday, following Jake Vanderplas'
@@ -54,7 +54,7 @@ to no part of mine, the grant was cut in half. My own deliverables were
 slipping so the rest of the money was on a slippery slope. The government
 sequestration and shutdown meant that my money would definitely be out before
 it could be renewed.  Just like that, I went from well funded PI to soft
-money beggar.  
+money beggar.
 
 This presented with a choice of bouncing around on other PI's grants and hoping to get
 a more permanent position or moving to industry.  I shopped around my CV to
@@ -138,4 +138,4 @@ Martin. [Public domain], <a
 href="http://commons.wikimedia.org/wiki/File%3AUS_Navy_021023-N-4211M-001_21_gun_salute_at_Naval_Air_Station_Lemoore.jpg">via
 Wikimedia Commons</a>
 
-[pic1]: |filename|/figures/21GunSalute.jpg "21 Gun Salute" width="45%"
+[pic1]: {static}/figures/21GunSalute.jpg "21 Gun Salute" width="45%"

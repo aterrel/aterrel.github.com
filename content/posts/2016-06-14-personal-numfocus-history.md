@@ -104,4 +104,4 @@ For now we have some basic income and can start thinking again about better ways
 
 
 
-[pic1]: |filename|/figures/numfocus_logo.png "NumFOCUS Logo" width="45%"
+[pic1]: {static}/figures/numfocus_logo.png "NumFOCUS Logo" width="45%"
