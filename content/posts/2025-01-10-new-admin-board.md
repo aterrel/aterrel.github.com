@@ -1,0 +1,15 @@
+Title: The new NumFOCUS Admin Board
+Author: Andy R. Terrel
+Date: 2025-01-10
+Tags: numfocus
+Slug: new-admin-board
+
+The new NumFOCUS admin board met for the first time this week and I can say that I am truly honored to serve the community in this capacity. NumFOCUS has been a leading example of how to build open source culture and provide services to our scientific tool makers. With almost 100 scientific software projects representing fields from Astrophysics, Biology, Economics, Engineering, Statistics, Medical Imaging, Data Science, Computer Science, and so on, I feel the impact of our work will be felt for  generations. With all that said, the admin board has some important work to get done this term and we set forth doing it right away.
+
+First and formost, in keeping with the value of Transparency, the admin board’s first resolution was to make the notes become default public. This allows us to post minutes much faster than previous boards which required approval from a quorum to post minutes. You can see the board minutes at [our site](https://numfocus.github.io/numfocus-board/2025/20250108/). Under the new resolution, a board member will have to propose a discussion item be voted private to be removed. I believe this was an important step to transition to steer the organization to a more radically transparent operations. While NumFOCUS has won awards for transparency from non-profit watchdogs, many in the community have asked for more visibility in the discussions of these board meetings. Our community standards of transparency have evolved in the decade we have been operating and this is an opportunity to re-evaluate all NumFOCUS practices.
+
+Perhaps the second most important action is a resolution to create a hiring committee for our Executive Director (ED) position. As has been announced in the previous board term, our faithful founding ED, Leah Silen, has stepped down. She will continue to serve in this role for a few more months, which means we need to hire ASAP. Leah has been such an inspiring leader for the community and will leave a huge impression for the community going forward. The community owes Leah a debt of graditude for her hard work. 
+
+Finally our last resolution was to install a temporary set of officers which I was nominated for the secretary position. We focused on temporary because of two reasons. First only 4 of the 6 members of the current board were able to attend this special session. Second, under the new structure, the technical steering committee has the right to appoint a voting admin board member, but that has not happened yet. Considering we only have a few months to start a hiring committee, find a search firm, interview candidates, and bring the community to a consensus on the new ED, I certainly felt we should get a full set of officers now. 
+
+Well it was a productive meeting and I am super excited to be along for the journey. I can say this admin board feels charged to help the community and keep building the future that NumFOCUS promises, i.e. more open scientific tools for better scientific progress. 
