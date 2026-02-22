@@ -93,3 +93,15 @@ Remember: This is a personal blog, not a content mill. SEO should enhance discov
 - Natural writing flow
 
 When in doubt, favor authenticity over optimization.
+
+## Handoff to Publisher
+
+After saving the optimized draft, **automatically launch the Publisher agent** to complete the pipeline:
+
+```
+Use the Task tool with:
+- subagent_type: "general-purpose"
+- prompt: "Read agents/publisher.md and publish agents/handoffs/final-{slug}.md"
+```
+
+This completes the content pipeline: Writer → Editor → SEO → Publisher

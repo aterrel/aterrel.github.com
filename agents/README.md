@@ -10,36 +10,61 @@ The pipeline transforms a topic idea into a published blog post through four spe
 Topic → Writer → Editor → SEO → Publisher → Live Post
 ```
 
-## Workflow
+**Automated handoffs**: Each agent automatically launches the next agent in the pipeline using the Task tool, so you only need to invoke the Writer to start the full workflow.
 
-### 1. Writer Agent
-**Invoke with:** `claude "Read agents/writer.md and create a post about [TOPIC]"`
+## Quick Start (Automated Pipeline)
 
-- Takes a topic idea or outline
-- Creates initial draft with proper Pelican metadata
-- Outputs to `agents/handoffs/draft-{slug}.md`
+Just invoke the Writer agent—it will automatically chain through all stages:
 
-### 2. Editor Agent
-**Invoke with:** `claude "Read agents/editor.md and edit agents/handoffs/draft-{slug}.md"`
+```bash
+claude "Read agents/writer.md and create a post about [TOPIC]"
+```
 
-- Reviews draft for clarity, grammar, and flow
-- Ensures consistent tone with existing posts
-- Outputs to `agents/handoffs/edited-{slug}.md`
+The pipeline will:
+1. **Writer** creates draft → launches Editor
+2. **Editor** refines draft → launches SEO
+3. **SEO** optimizes → launches Publisher
+4. **Publisher** publishes to `content/posts/`
 
-### 3. SEO Agent
-**Invoke with:** `claude "Read agents/seo.md and optimize agents/handoffs/edited-{slug}.md"`
+## Manual Workflow
 
-- Optimizes tags for discoverability
-- Reviews title and slug for engagement
-- Outputs to `agents/handoffs/final-{slug}.md`
+If you prefer to run each stage manually (for review between steps):
 
-### 4. Publisher Agent
-**Invoke with:** `claude "Read agents/publisher.md and publish agents/handoffs/final-{slug}.md"`
+```bash
+# Stage 1: Write
+claude "Read agents/writer.md and create a post about Python packaging best practices"
 
-- Moves file to `content/posts/` with proper naming
-- Sets final publication date
-- Runs `make html` to verify build
-- Optionally deploys with `make github`
+# Stage 2: Edit (review draft first, then continue)
+claude "Read agents/editor.md and edit agents/handoffs/draft-python-packaging-best-practices.md"
+
+# Stage 3: SEO (review edits first, then continue)
+claude "Read agents/seo.md and optimize agents/handoffs/edited-python-packaging-best-practices.md"
+
+# Stage 4: Publish (review final draft, then continue)
+claude "Read agents/publisher.md and publish agents/handoffs/final-python-packaging-best-practices.md"
+```
+
+## Agent Details
+
+### 1. Writer Agent (`writer.md`)
+- **Input**: Topic idea or outline
+- **Output**: `agents/handoffs/draft-{slug}.md`
+- **Next**: Launches Editor agent
+
+### 2. Editor Agent (`editor.md`)
+- **Input**: Draft from Writer
+- **Output**: `agents/handoffs/edited-{slug}.md`
+- **Next**: Launches SEO agent
+
+### 3. SEO Agent (`seo.md`)
+- **Input**: Edited draft
+- **Output**: `agents/handoffs/final-{slug}.md`
+- **Next**: Launches Publisher agent
+
+### 4. Publisher Agent (`publisher.md`)
+- **Input**: Final optimized draft
+- **Output**: `content/posts/{date}-{slug}.md`
+- **Final**: Reports publication status
 
 ## File Naming Convention
 
@@ -50,16 +75,23 @@ agents/handoffs/final-{slug}.md    # After SEO
 content/posts/{date}-{slug}.md     # After Publisher
 ```
 
-## Quick Start
-
-```bash
-# Full pipeline example
-claude "Read agents/writer.md and create a post about Python packaging best practices"
-claude "Read agents/editor.md and edit agents/handoffs/draft-python-packaging-best-practices.md"
-claude "Read agents/seo.md and optimize agents/handoffs/edited-python-packaging-best-practices.md"
-claude "Read agents/publisher.md and publish agents/handoffs/final-python-packaging-best-practices.md"
-```
-
 ## Handoffs Directory
 
-The `handoffs/` subdirectory is the working area where drafts move between agents. Files here are intermediate and can be cleaned up after publishing.
+The `handoffs/` subdirectory is the working area where drafts move between agents. Files here are intermediate and are cleaned up after successful publication.
+
+## How Agents Chain Together
+
+Each agent uses the Task tool to launch the next:
+
+```
+Writer completes → Task(subagent_type="general-purpose",
+                        prompt="Read agents/editor.md and edit agents/handoffs/draft-{slug}.md")
+
+Editor completes → Task(subagent_type="general-purpose",
+                        prompt="Read agents/seo.md and optimize agents/handoffs/edited-{slug}.md")
+
+SEO completes → Task(subagent_type="general-purpose",
+                     prompt="Read agents/publisher.md and publish agents/handoffs/final-{slug}.md")
+```
+
+This enables a fully automated content pipeline from topic to published post.

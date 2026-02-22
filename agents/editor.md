@@ -66,9 +66,21 @@ Preserve the original slug from the input filename.
 
 ## Handoff Notes
 
-At the end of your editing session, briefly note:
+At the end of your editing session, add a comment block noting:
 - Major changes made
 - Any concerns flagged for the author
 - Whether the post is ready for SEO optimization
 
 This helps the SEO agent understand the editorial state.
+
+## Handoff to SEO
+
+After saving the edited draft, **automatically launch the SEO agent** to continue the pipeline:
+
+```
+Use the Task tool with:
+- subagent_type: "general-purpose"
+- prompt: "Read agents/seo.md and optimize agents/handoffs/edited-{slug}.md"
+```
+
+This continues the content pipeline: Writer → Editor → SEO → Publisher

@@ -53,6 +53,18 @@ agents/handoffs/draft-{slug}.md
 
 Use a URL-friendly slug derived from the title (lowercase, hyphens, no special characters).
 
+## Handoff to Editor
+
+After saving the draft, **automatically launch the Editor agent** to continue the pipeline:
+
+```
+Use the Task tool with:
+- subagent_type: "general-purpose"
+- prompt: "Read agents/editor.md and edit agents/handoffs/draft-{slug}.md"
+```
+
+This continues the content pipeline: Writer → Editor → SEO → Publisher
+
 ## Example Workflow
 
 User request: "Write a post about my experience at PyCon 2025"
@@ -63,4 +75,4 @@ User request: "Write a post about my experience at PyCon 2025"
    - Slug: reflections-pycon-2025
 3. Write 400-600 words covering the experience
 4. Save to `agents/handoffs/draft-reflections-pycon-2025.md`
-5. Inform user the draft is ready for the Editor agent
+5. Launch the Editor agent to continue the pipeline

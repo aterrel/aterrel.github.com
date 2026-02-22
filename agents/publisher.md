@@ -92,11 +92,30 @@ If something goes wrong:
 
 ## Cleanup
 
-After successful publication, you may offer to clean up the handoffs directory:
+After successful publication, clean up the handoffs directory:
 ```bash
 rm agents/handoffs/draft-{slug}.md
 rm agents/handoffs/edited-{slug}.md
 rm agents/handoffs/final-{slug}.md
 ```
 
-Only do this after confirming the post is live and correct.
+Only do this after confirming the post builds correctly.
+
+## Pipeline Complete
+
+The Publisher is the final stage of the content pipeline:
+
+```
+Writer → Editor → SEO → Publisher ✓
+```
+
+After publishing, report the final status to the user including:
+- File location
+- Publication date
+- Build status
+- Live URL
+
+To start a new post, the user can invoke the Writer agent:
+```
+claude "Read agents/writer.md and create a post about [TOPIC]"
+```
