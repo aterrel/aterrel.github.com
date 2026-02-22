@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /Users/aterrel/Dev/aterrel/aterrel.github.com log --oneline -20)",
+      "Bash(wc:*)",
+      "Bash(git -C /Users/aterrel/Dev/aterrel/aterrel.github.com branch:*)",
+      "Bash(git -C /Users/aterrel/Dev/aterrel/aterrel.github.com remote -v)",
+      "Bash(make html:*)",
+      "Bash(git checkout:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ]
+  }
+}
